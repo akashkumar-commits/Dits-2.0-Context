@@ -1,0 +1,112 @@
+
+{
+  "schema_version": "1.0",
+  "package_version": "0.1.0",
+  "industry": "healthcare",
+  "segments": [
+    {
+      "id": "hospitals-clinics",
+      "name": "Hospitals and Clinics",
+      "definition": "Organizations providing in-person healthcare services through facilities, clinicians, departments, or coordinated care teams.",
+      "common_audiences": ["patients", "caregivers", "clinicians", "administrative_staff", "referring_providers"],
+      "possible_business_goals": ["service_discovery", "appointment_access", "patient_communication", "operational_efficiency", "referral_management"],
+      "possible_website_capabilities": ["service_directory", "specialty_pages", "provider_profiles", "location_directory", "appointment_requests", "patient_instructions", "secure_portal"],
+      "possible_workflows": ["service_discovery_to_booking", "referral_to_consultation", "appointment_to_follow_up"],
+      "possible_integrations": ["scheduling_system", "EHR_EMR", "patient_portal", "CRM", "payment_system"],
+      "discovery_questions": ["Which services and specialties are offered?", "Who is eligible to book?", "Is booking a request or a confirmed appointment?", "Which system owns the schedule?", "Which locations and jurisdictions are served?"],
+      "do_not_assume": ["All specialties are available at every location", "Website bookings are confirmed automatically", "All visitors are patients", "The organization accepts every insurance plan"],
+      "risk_flags": ["patient_data", "clinical_information", "appointment_integrity", "provider_credential_claims"],
+      "classification_cues": ["hospital", "clinic", "medical center", "outpatient care", "specialty practice"]
+    },
+    {
+      "id": "diagnostic-labs",
+      "name": "Diagnostic Laboratories",
+      "definition": "Organizations performing or coordinating diagnostic testing, sample processing, or laboratory services.",
+      "common_audiences": ["patients", "clinicians", "laboratory_staff", "referring_organizations", "institutional_customers"],
+      "possible_business_goals": ["test_discovery", "sample_collection_coordination", "service_requests", "result_access", "quality_visibility"],
+      "possible_website_capabilities": ["test_catalog", "preparation_guidance", "collection_locations", "booking_requests", "institutional_services", "authorized_result_access"],
+      "possible_workflows": ["test_request_to_collection", "specimen_receipt_to_result_authorization", "institutional_order_to_reporting"],
+      "possible_integrations": ["LIS", "EHR_EMR", "scheduling_system", "identity_provider", "messaging_service"],
+      "discovery_questions": ["Which tests are offered?", "Who can order each test?", "How are samples collected and transported?", "Who authorizes results?", "How are results securely delivered?", "Which quality standards and accreditations are verified?"],
+      "do_not_assume": ["Every test is available for direct patient booking", "Turnaround times are identical for all tests", "A website should display results without authorization", "The laboratory holds an unverified accreditation"],
+      "risk_flags": ["diagnostic_accuracy", "specimen_handling", "result_confidentiality", "medical_claims"],
+      "classification_cues": ["diagnostic laboratory", "pathology lab", "clinical testing", "specimen testing", "laboratory services"]
+    },
+    {
+      "id": "telehealth",
+      "name": "Telehealth Providers",
+      "definition": "Organizations delivering or coordinating healthcare services through remote communication or digital channels.",
+      "common_audiences": ["patients", "caregivers", "clinicians", "care_coordinators", "administrative_staff"],
+      "possible_business_goals": ["remote_service_access", "appointment_conversion", "geographic_reach", "care_continuity", "administrative_efficiency"],
+      "possible_website_capabilities": ["service_explanations", "eligibility_check", "provider_directory", "booking", "secure_consultation_entry", "technical_preparation", "follow_up_information"],
+      "possible_workflows": ["eligibility_to_booking", "booking_to_remote_consultation", "consultation_to_follow_up"],
+      "possible_integrations": ["telehealth_platform", "scheduling_system", "EHR_EMR", "identity_provider", "payment_system"],
+      "discovery_questions": ["Are consultations live, asynchronous, or both?", "Which locations are supported?", "Who provides the service?", "What are the eligibility criteria?", "What happens when remote care is unsuitable?", "Which system handles the consultation?"],
+      "do_not_assume": ["The service is available in every country", "All appointments are clinically appropriate for remote care", "The website itself provides clinical care", "The service provides emergency response"],
+      "risk_flags": ["cross_jurisdiction_care", "clinical_triage", "patient_data", "provider_licensure"],
+      "classification_cues": ["virtual care", "online consultation", "remote consultation", "telemedicine", "digital clinic"]
+    },
+    {
+      "id": "healthcare-marketplaces",
+      "name": "Healthcare Marketplaces",
+      "definition": "Platforms connecting people or organizations with healthcare professionals, facilities, services, or related providers.",
+      "common_audiences": ["service_seekers", "caregivers", "providers", "institutional_buyers", "marketplace_administrators"],
+      "possible_business_goals": ["provider_discovery", "matching", "booking", "provider_onboarding", "transaction_support"],
+      "possible_website_capabilities": ["search_and_filter", "provider_profiles", "credential_display", "availability", "booking", "inquiries", "payments", "listing_management"],
+      "possible_workflows": ["search_to_provider_selection", "provider_application_to_verification", "booking_to_service_completion"],
+      "possible_integrations": ["scheduling_system", "payment_processor", "identity_provider", "credential_verification_service", "CRM"],
+      "discovery_questions": ["Who are the marketplace participants?", "Who delivers the service?", "Who contracts with the customer?", "Who collects payments?", "How are listings and credentials verified?", "What happens when a booking is disputed?"],
+      "do_not_assume": ["The marketplace itself provides healthcare", "Every listing is clinically verified", "The platform can publish reviews without moderation", "Every transaction uses a commission model"],
+      "risk_flags": ["credential_misrepresentation", "payment_handling", "sensitive_data", "marketplace_liability"],
+      "classification_cues": ["find a doctor", "provider marketplace", "healthcare directory", "caregiver marketplace", "book healthcare services"]
+    },
+    {
+      "id": "rpm",
+      "name": "Remote Patient Monitoring",
+      "definition": "Services and systems supporting remote collection, transmission, review, or management of patient-related measurements or observations.",
+      "common_audiences": ["patients", "caregivers", "clinicians", "monitoring_staff", "operations_staff", "device_support_staff"],
+      "possible_business_goals": ["remote_visibility", "measurement_review", "care_coordination", "device_adoption", "operational_monitoring"],
+      "possible_website_capabilities": ["enrollment", "device_setup", "device_status", "measurement_views", "alerts", "care_team_dashboard", "communication", "support"],
+      "possible_workflows": ["enrollment_to_device_setup", "measurement_to_review", "alert_to_configured_response"],
+      "possible_integrations": ["medical_devices", "device_gateway", "RPM_platform", "EHR_EMR", "identity_provider", "notification_service"],
+      "discovery_questions": ["Which measurements are collected?", "Which devices are supported?", "Who reviews the data?", "What do thresholds mean?", "Who receives alerts?", "What response service is promised?", "What happens when data are missing?"],
+      "do_not_assume": ["A threshold is a diagnosis", "Every alert is reviewed immediately", "A device is clinically validated for every use", "The service is an emergency monitoring service"],
+      "risk_flags": ["clinical_safety", "alert_escalation", "device_accuracy", "patient_data", "service_availability"],
+      "classification_cues": ["remote monitoring", "connected medical devices", "patient vitals", "home monitoring", "device telemetry"]
+    },
+    {
+      "id": "behavioral-health",
+      "name": "Behavioral Health Services",
+      "definition": "Services addressing mental health, psychological, counseling, addiction-related, or other behavioral health needs within the provider's actual scope of practice.",
+      "common_audiences": ["service_users", "caregivers", "therapists", "counselors", "clinical_staff", "administrators"],
+      "possible_business_goals": ["service_discovery", "appropriate_access", "appointment_requests", "continuity_of_support", "trust_and_clarity"],
+      "possible_website_capabilities": ["service_pages", "provider_profiles", "booking", "intake", "secure_messaging", "group_program_information", "crisis_resources"],
+      "possible_workflows": ["service_discovery_to_intake", "intake_to_provider_matching", "session_to_follow_up"],
+      "possible_integrations": ["scheduling_system", "EHR_EMR", "secure_messaging", "telehealth_platform", "identity_provider"],
+      "discovery_questions": ["Which services are offered?", "Which ages and populations are served?", "What qualifications do providers hold?", "How is intake handled?", "What are confidentiality limits?", "What local crisis resources and escalation arrangements apply?"],
+      "do_not_assume": ["Every provider can treat every condition", "Confidentiality has no exceptions", "A booking form is suitable for crisis intervention", "A treatment outcome can be guaranteed"],
+      "risk_flags": ["sensitive_personal_data", "crisis_handling", "provider_qualifications", "medical_or_therapeutic_claims"],
+      "classification_cues": ["mental health", "psychotherapy", "counseling", "behavioral health", "addiction support"]
+    },
+    {
+      "id": "medical-devices",
+      "name": "Medical Devices and Diagnostics Technology",
+      "definition": "Organizations developing, manufacturing, distributing, maintaining, or supporting medical devices, diagnostic equipment, and related technology.",
+      "common_audiences": ["clinicians", "laboratory_staff", "procurement_teams", "distributors", "service_engineers", "quality_teams", "patients_where_applicable"],
+      "possible_business_goals": ["product_discovery", "technical_evaluation", "sales_leads", "documentation_access", "service_support", "training"],
+      "possible_website_capabilities": ["product_catalog", "technical_specifications", "instructions_for_use", "compatibility_information", "support_portal", "maintenance_requests", "training", "inquiries"],
+      "possible_workflows": ["product_discovery_to_evaluation", "purchase_to_installation", "device_issue_to_service_resolution"],
+      "possible_integrations": ["CRM", "ERP", "service_management", "inventory_system", "documentation_repository", "device_platform"],
+      "discovery_questions": ["What is the intended use?", "Which markets are served?", "What is the verified regulatory status in each market?", "Which product claims are approved?", "Who maintains the product?", "Which configurations and accessories are compatible?"],
+      "do_not_assume": ["A product is approved or cleared in every market", "A device has a particular risk classification", "All technical claims are approved for marketing", "All users can access service documentation"],
+      "risk_flags": ["regulatory_claims", "intended_use", "product_safety", "technical_accuracy", "post_market_support"],
+      "classification_cues": ["medical equipment", "diagnostic devices", "IVD", "medical device manufacturer", "device maintenance"]
+    }
+  ],
+  "classification_policy": {
+    "allow_multiple_segments": true,
+    "require_customer_confirmation_for_ambiguous_cases": true,
+    "never_infer_regulatory_status_from_segment_alone": true,
+    "never_infer_actual_workflows_from_segment_alone": true
+  }
+}

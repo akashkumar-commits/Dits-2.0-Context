@@ -1,0 +1,76 @@
+
+{
+  "schema_version": "1.0",
+  "principles": [
+    {
+      "id": "RP001",
+      "principle": "Separate public website access from authenticated product access.",
+      "examples": [
+        "A public visitor can read service descriptions.",
+        "An authenticated user may access restricted functionality only after authorization."
+      ]
+    },
+    {
+      "id": "RP002",
+      "principle": "Separate identity from permission.",
+      "description": "Knowing who a user is does not automatically establish which records or actions they may access."
+    },
+    {
+      "id": "RP003",
+      "principle": "Apply least privilege.",
+      "description": "Give each role only the access required for its confirmed responsibilities."
+    },
+    {
+      "id": "RP004",
+      "principle": "Validate delegated access.",
+      "description": "Caregiver, guardian, proxy, or representative access must follow the organization's verified authorization and consent rules."
+    },
+    {
+      "id": "RP005",
+      "principle": "Separate read, create, update, approve, export, and delete permissions.",
+      "description": "These actions must not be treated as equivalent."
+    },
+    {
+      "id": "RP006",
+      "principle": "Require explicit review for high-impact actions.",
+      "examples": [
+        "Changing clinical records",
+        "Changing access to patient information",
+        "Approving regulated product claims",
+        "Publishing safety-critical instructions",
+        "Deleting or exporting sensitive records"
+      ]
+    },
+    {
+      "id": "RP007",
+      "principle": "Use auditable authorization decisions.",
+      "description": "For protected systems, define how permissions are granted, checked, changed, reviewed, and revoked."
+    }
+  ],
+  "permission_template": {
+    "role_id": "replace_with_confirmed_role",
+    "resource": "replace_with_confirmed_resource",
+    "actions": [
+      "read",
+      "create",
+      "update",
+      "approve",
+      "export",
+      "delete"
+    ],
+    "allowed_actions": [],
+    "restricted_actions": [],
+    "scope": "unknown",
+    "authorization_basis": "unknown",
+    "approval_required": true,
+    "audit_required": "confirm",
+    "source_or_customer_confirmation": "required"
+  },
+  "agent_constraints": [
+    "Do not invent the customer's role-permission matrix.",
+    "Do not infer access from a job title alone.",
+    "Do not expose protected information in public website content.",
+    "Do not implement access-control behavior based solely on a generated persona.",
+    "Require customer and security review before finalizing sensitive permissions."
+  ]
+}

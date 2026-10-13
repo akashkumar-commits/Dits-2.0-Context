@@ -1,0 +1,98 @@
+
+{
+  "schema_version": "1.0",
+  "package_version": "0.1.0",
+  "industry": "healthcare",
+  "business_models": [
+    {
+      "id": "direct_care_provider",
+      "name": "Direct Care Provider",
+      "description": "An organization that directly delivers healthcare services to individuals or groups.",
+      "common_examples": ["hospital", "clinic", "specialty practice", "behavioral health provider"],
+      "value_created": ["access_to_care", "clinical_service_delivery", "continuity_of_care"],
+      "customer_groups": ["patients", "caregivers", "referring_providers", "institutional_buyers"],
+      "possible_payment_sources": ["patient_payment", "insurer_or_payer", "employer_or_sponsor", "public_funding"],
+      "possible_website_objectives": ["explain_services", "help_users_find_services", "support_appointment_requests", "provide_location_information", "support_trust"],
+      "key_questions": ["Which services are delivered directly?", "Who can access them?", "Who pays?", "How is care scheduled?", "Which regions are served?"],
+      "do_not_assume": ["Every service is reimbursed by insurance", "Every provider accepts direct bookings", "Every location offers the same services"]
+    },
+    {
+      "id": "diagnostic_service_provider",
+      "name": "Diagnostic Service Provider",
+      "description": "An organization that performs, coordinates, or provides diagnostic testing and related services.",
+      "common_examples": ["clinical laboratory", "diagnostic imaging provider", "specialized testing center"],
+      "value_created": ["access_to_testing", "diagnostic_information", "provider_support", "testing_operations"],
+      "customer_groups": ["patients", "clinicians", "hospitals", "laboratories", "institutional_clients"],
+      "possible_payment_sources": ["patient_payment", "payer_reimbursement", "institutional_contract", "public_or_program_funding"],
+      "possible_website_objectives": ["publish_test_information", "explain_collection_services", "support_referral_or_ordering", "coordinate_appointments", "support_institutional_sales"],
+      "key_questions": ["Which tests are offered?", "Who can request them?", "Who performs the test?", "How are results authorized and delivered?", "What service limitations apply?"],
+      "do_not_assume": ["All tests can be ordered online", "All customers are patients", "All test results are delivered through the website"]
+    },
+    {
+      "id": "digital_health_software_vendor",
+      "name": "Digital Health Software Vendor",
+      "description": "A business providing software or digital infrastructure to healthcare organizations, professionals, patients, or other participants.",
+      "common_examples": ["healthcare SaaS provider", "clinical workflow software vendor", "health data platform"],
+      "value_created": ["workflow_support", "information_management", "coordination", "operational_visibility"],
+      "customer_groups": ["healthcare_organizations", "clinicians", "operations_teams", "IT_teams", "patients_where_applicable"],
+      "possible_payment_sources": ["subscription", "enterprise_contract", "usage_based_fee", "implementation_and_support_services"],
+      "possible_website_objectives": ["explain_product_value", "demonstrate_capabilities", "generate_sales_leads", "support_product_evaluation", "provide_documentation"],
+      "key_questions": ["Who uses and purchases the software?", "Is it a clinical or administrative product?", "What outcomes can be evidenced?", "How is the product deployed?", "What integrations are supported?"],
+      "do_not_assume": ["The software is a medical device", "The software has a specific certification", "Every listed integration is production-ready"]
+    },
+    {
+      "id": "healthcare_marketplace",
+      "name": "Healthcare Marketplace",
+      "description": "A platform connecting service seekers with healthcare professionals, organizations, or services.",
+      "common_examples": ["provider discovery platform", "care service marketplace", "healthcare staffing marketplace"],
+      "value_created": ["discovery", "matching", "access", "transaction_facilitation"],
+      "customer_groups": ["service_seekers", "providers", "institutional_buyers", "platform_operators"],
+      "possible_payment_sources": ["commission", "subscription", "listing_fee", "lead_fee", "transaction_fee", "enterprise_contract"],
+      "possible_website_objectives": ["increase_relevant_discovery", "improve_matching", "onboard_providers", "facilitate_bookings", "support_transactions"],
+      "key_questions": ["Who supplies the service?", "Who contracts with the customer?", "How are providers verified?", "How does the platform earn revenue?", "Who handles disputes and cancellations?"],
+      "do_not_assume": ["The platform itself delivers care", "Every provider is verified", "A commission model applies"]
+    },
+    {
+      "id": "remote_monitoring_service",
+      "name": "Remote Monitoring Service",
+      "description": "A service or platform supporting remote collection, transmission, review, or management of patient-related measurements or observations.",
+      "common_examples": ["remote patient monitoring service", "connected care platform", "device-enabled monitoring service"],
+      "value_created": ["remote_visibility", "measurement_review", "care_coordination", "device_support"],
+      "customer_groups": ["healthcare_providers", "patients", "caregivers", "monitoring_teams", "institutional_buyers"],
+      "possible_payment_sources": ["subscription", "enterprise_contract", "service_fee", "device_and_service_bundle", "reimbursement_where_applicable"],
+      "possible_website_objectives": ["explain_monitoring_services", "support_enrollment", "describe_device_compatibility", "support_customer_acquisition", "provide_device_support"],
+      "key_questions": ["Who monitors the data?", "Who responds to alerts?", "Which devices are supported?", "What service level is promised?", "Who pays for the service?"],
+      "do_not_assume": ["The platform provides emergency response", "Reimbursement is available in every region", "Every device supports every measurement"]
+    },
+    {
+      "id": "medical_device_manufacturer",
+      "name": "Medical Device or Diagnostics Manufacturer",
+      "description": "A business developing or manufacturing medical devices, diagnostic products, or related equipment.",
+      "common_examples": ["medical equipment manufacturer", "IVD manufacturer", "connected device company"],
+      "value_created": ["clinical_or_operational_product_capability", "diagnostic_support", "equipment_availability", "product_support"],
+      "customer_groups": ["healthcare_providers", "laboratories", "procurement_teams", "distributors", "service_partners"],
+      "possible_payment_sources": ["product_sales", "distribution_contracts", "leasing", "maintenance_contracts", "consumables"],
+      "possible_website_objectives": ["product_discovery", "technical_evaluation", "documentation_access", "sales_inquiries", "service_support"],
+      "key_questions": ["What is the intended use?", "Which markets are served?", "What regulatory status is verified?", "Who purchases and maintains the product?", "Which product claims are approved?"],
+      "do_not_assume": ["Regulatory status is identical across markets", "Every product is intended for patient use", "Every marketing claim is approved"]
+    },
+    {
+      "id": "healthcare_consulting_and_services",
+      "name": "Healthcare Consulting or Managed Services",
+      "description": "A business providing professional, operational, technology, quality, or administrative services to healthcare organizations.",
+      "common_examples": ["health IT consultancy", "laboratory quality consultancy", "managed healthcare operations"],
+      "value_created": ["specialist_expertise", "operational_improvement", "implementation_support", "risk_management"],
+      "customer_groups": ["healthcare_executives", "operations_leaders", "clinical_leaders", "IT_teams", "quality_teams"],
+      "possible_payment_sources": ["project_fee", "retainer", "managed_service_contract", "time_and_materials"],
+      "possible_website_objectives": ["communicate_expertise", "explain_service_offerings", "demonstrate_verified_results", "generate_qualified_leads"],
+      "key_questions": ["What deliverables are provided?", "Which expertise is verified?", "What outcomes can be evidenced?", "Is the engagement advisory or operational?", "Which markets and customer types are served?"],
+      "do_not_assume": ["The provider gives legal or clinical advice", "Outcomes are guaranteed", "Past client results generalize to every customer"]
+    }
+  ],
+  "classification_guidance": {
+    "multiple_models_allowed": true,
+    "classify_by_value_delivery_not_branding_alone": true,
+    "payment_model_must_be_confirmed": true,
+    "website_objectives_are_hypotheses_until_confirmed": true
+  }
+}

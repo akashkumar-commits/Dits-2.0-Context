@@ -1,0 +1,469 @@
+
+{
+  "schema_version": "1.0",
+  "knowledge_domain": "healthcare_users_and_personas",
+  "personas": [
+    {
+      "persona_id": "patient_or_care_seeker",
+      "name": "Patient or Care Seeker",
+      "description": "A person exploring healthcare services for a health concern, preventive care, diagnosis, treatment, or ongoing support.",
+      "applicable_segments": [
+        "hospitals-clinics",
+        "diagnostic-labs",
+        "telehealth",
+        "healthcare-marketplaces",
+        "rpm",
+        "behavioral-health"
+      ],
+      "primary_goals": [
+        "Understand available services",
+        "Determine whether a service meets their needs",
+        "Find a suitable provider or location",
+        "Understand preparation, costs, and next steps",
+        "Contact the organization or initiate a service"
+      ],
+      "common_tasks": [
+        "Browse services and specialties",
+        "Search for a provider",
+        "Review location and availability information",
+        "Understand appointment requirements",
+        "Request or book an appointment if supported",
+        "Find contact details and directions"
+      ],
+      "information_needs": [
+        "Service descriptions",
+        "Provider credentials where relevant",
+        "Locations and operating hours",
+        "Appointment process",
+        "Pricing or insurance information where available",
+        "Preparation instructions",
+        "Contact and support options"
+      ],
+      "trust_concerns": [
+        "Accuracy of service information",
+        "Provider qualifications",
+        "Privacy of submitted information",
+        "Clarity of costs and policies",
+        "Credibility of health-related claims"
+      ],
+      "candidate_features": [
+        "Service directory",
+        "Provider directory",
+        "Location pages",
+        "Appointment request or booking",
+        "FAQs",
+        "Contact options"
+      ],
+      "data_sensitivity": "May involve sensitive health information depending on the journey.",
+      "validation_required": [
+        "Actual services offered",
+        "Booking method",
+        "Provider selection criteria",
+        "Payment and insurance processes",
+        "Target patient population"
+      ]
+    },
+    {
+      "persona_id": "caregiver_or_authorized_representative",
+      "name": "Caregiver or Authorized Representative",
+      "description": "A person who assists a patient with care coordination, appointments, communication, or administrative tasks, when permitted.",
+      "applicable_segments": [
+        "hospitals-clinics",
+        "telehealth",
+        "rpm",
+        "behavioral-health"
+      ],
+      "primary_goals": [
+        "Help coordinate care",
+        "Understand instructions and next steps",
+        "Support appointment and service logistics",
+        "Communicate with the care team through permitted channels"
+      ],
+      "common_tasks": [
+        "Find caregiver guidance",
+        "Help arrange appointments",
+        "Review approved care instructions",
+        "Contact the organization",
+        "Access permitted information if an authorized portal exists"
+      ],
+      "information_needs": [
+        "Care coordination instructions",
+        "Appointment information",
+        "Contact and escalation channels",
+        "Caregiver eligibility and authorization requirements",
+        "Accessible support resources"
+      ],
+      "trust_concerns": [
+        "Clear boundaries on permitted access",
+        "Patient consent and authorization",
+        "Confidentiality",
+        "Clarity about who can receive updates"
+      ],
+      "candidate_features": [
+        "Caregiver information pages",
+        "Authorized proxy access",
+        "Appointment support",
+        "Contact and help resources"
+      ],
+      "data_sensitivity": "High when patient-specific records or communications are involved.",
+      "validation_required": [
+        "Whether caregiver access is supported",
+        "How patient authorization is established",
+        "What information caregivers may access",
+        "How access is revoked"
+      ]
+    },
+    {
+      "persona_id": "clinician_or_care_provider",
+      "name": "Clinician or Care Provider",
+      "description": "A healthcare professional delivering or coordinating clinical services.",
+      "applicable_segments": [
+        "hospitals-clinics",
+        "telehealth",
+        "rpm",
+        "behavioral-health"
+      ],
+      "primary_goals": [
+        "Understand available clinical services and workflows",
+        "Access authorized clinical tools",
+        "Coordinate patient care",
+        "Find professional resources or organizational guidance"
+      ],
+      "common_tasks": [
+        "Review service and referral procedures",
+        "Access an authorized clinical portal if available",
+        "Find clinical contact information",
+        "Review workflow instructions",
+        "Coordinate with relevant teams"
+      ],
+      "information_needs": [
+        "Service and referral criteria",
+        "Clinical workflow guidance",
+        "Professional contact details",
+        "Role-specific instructions",
+        "System access requirements"
+      ],
+      "trust_concerns": [
+        "Accuracy and currency of information",
+        "Role-appropriate access",
+        "Auditability of protected actions",
+        "Clear separation between public content and clinical tools"
+      ],
+      "candidate_features": [
+        "Professional service pages",
+        "Referral information",
+        "Secure portal entry",
+        "Professional resources"
+      ],
+      "data_sensitivity": "Potentially high when clinical records or patient-specific workflows are involved.",
+      "validation_required": [
+        "Clinician roles",
+        "Clinical systems used",
+        "Authorization model",
+        "Referral and documentation workflows",
+        "Clinical governance requirements"
+      ]
+    },
+    {
+      "persona_id": "referring_provider",
+      "name": "Referring Provider",
+      "description": "A clinician or healthcare organization referring patients to another provider, service, or diagnostic facility.",
+      "applicable_segments": [
+        "hospitals-clinics",
+        "diagnostic-labs",
+        "telehealth"
+      ],
+      "primary_goals": [
+        "Determine referral eligibility",
+        "Understand available services",
+        "Submit referrals through supported channels",
+        "Understand result delivery and follow-up"
+      ],
+      "common_tasks": [
+        "Review referral criteria",
+        "Find referral forms or instructions",
+        "Check test or service availability",
+        "Contact the receiving organization",
+        "Access an authorized referral portal if offered"
+      ],
+      "information_needs": [
+        "Referral criteria",
+        "Required documentation",
+        "Service availability",
+        "Specimen or patient preparation requirements where relevant",
+        "Result delivery processes"
+      ],
+      "trust_concerns": [
+        "Referral accuracy",
+        "Confidential handling of patient information",
+        "Reliable communication",
+        "Clear turnaround expectations where substantiated"
+      ],
+      "candidate_features": [
+        "Referral pages",
+        "Downloadable forms",
+        "Secure referral submission",
+        "Professional contact details"
+      ],
+      "data_sensitivity": "High when referrals include identifiable patient or clinical information.",
+      "validation_required": [
+        "Accepted referral types",
+        "Referral submission channels",
+        "Required documentation",
+        "Result sharing process"
+      ]
+    },
+    {
+      "persona_id": "laboratory_professional",
+      "name": "Laboratory Professional",
+      "description": "A laboratory worker, technician, scientist, or authorized supervisor using diagnostic or laboratory services and systems.",
+      "applicable_segments": [
+        "diagnostic-labs",
+        "medical-devices"
+      ],
+      "primary_goals": [
+        "Understand test procedures and requirements",
+        "Complete assigned laboratory tasks",
+        "Access equipment or quality information",
+        "Report issues through approved workflows"
+      ],
+      "common_tasks": [
+        "Review test instructions",
+        "Check specimen requirements",
+        "Access laboratory resources",
+        "Review equipment maintenance guidance",
+        "Report errors or quality issues"
+      ],
+      "information_needs": [
+        "Test and specimen requirements",
+        "Equipment instructions",
+        "Quality control procedures",
+        "Maintenance and troubleshooting guidance",
+        "Escalation contacts"
+      ],
+      "trust_concerns": [
+        "Correctness of procedures",
+        "Version control",
+        "Traceability",
+        "Access restricted to authorized personnel"
+      ],
+      "candidate_features": [
+        "Test catalog",
+        "Professional resource library",
+        "Secure laboratory portal",
+        "Equipment documentation",
+        "Issue reporting"
+      ],
+      "data_sensitivity": "Varies; may include confidential laboratory, operational, or patient data.",
+      "validation_required": [
+        "Laboratory role definitions",
+        "Applicable quality standards",
+        "Equipment and test scope",
+        "Portal and access requirements"
+      ]
+    },
+    {
+      "persona_id": "medical_device_buyer",
+      "name": "Medical Device Buyer or Evaluator",
+      "description": "A procurement specialist, clinician, laboratory leader, distributor, or technical evaluator assessing medical devices.",
+      "applicable_segments": [
+        "medical-devices"
+      ],
+      "primary_goals": [
+        "Evaluate product suitability",
+        "Understand specifications and intended use",
+        "Compare support and service options",
+        "Request a demonstration, quotation, or technical discussion"
+      ],
+      "common_tasks": [
+        "Review product specifications",
+        "Check intended use and compatibility",
+        "Download product documentation",
+        "Review service and maintenance information",
+        "Contact sales or technical support"
+      ],
+      "information_needs": [
+        "Product specifications",
+        "Intended use and limitations",
+        "Compatibility information",
+        "Validated certifications or regulatory status",
+        "Service and support terms"
+      ],
+      "trust_concerns": [
+        "Accuracy of technical claims",
+        "Regulatory and certification evidence",
+        "Product suitability",
+        "Availability of support"
+      ],
+      "candidate_features": [
+        "Product catalog",
+        "Technical documentation",
+        "Product comparison",
+        "Request a quote",
+        "Technical support pages"
+      ],
+      "data_sensitivity": "Usually commercial or technical; may become sensitive in support or clinical contexts.",
+      "validation_required": [
+        "Target buyer roles",
+        "Markets served",
+        "Approved product claims",
+        "Regulatory status",
+        "Sales and support process"
+      ]
+    },
+    {
+      "persona_id": "healthcare_professional_job_seeker",
+      "name": "Healthcare Professional or Job Seeker",
+      "description": "A healthcare worker, specialist, caregiver, or other qualified professional exploring employment or professional opportunities.",
+      "applicable_segments": [
+        "hospitals-clinics",
+        "healthcare-marketplaces",
+        "behavioral-health"
+      ],
+      "primary_goals": [
+        "Find relevant professional opportunities",
+        "Assess role requirements",
+        "Understand employer or client expectations",
+        "Submit an application or professional profile"
+      ],
+      "common_tasks": [
+        "Search available roles",
+        "Filter opportunities",
+        "Review qualifications and location requirements",
+        "Create a profile if supported",
+        "Submit an application"
+      ],
+      "information_needs": [
+        "Role description",
+        "Required credentials",
+        "Location and work arrangement",
+        "Compensation information if provided",
+        "Application process",
+        "Verification requirements"
+      ],
+      "trust_concerns": [
+        "Legitimacy of listings",
+        "Handling of identity and credential data",
+        "Transparent application requirements",
+        "Clear platform fees or terms where applicable"
+      ],
+      "candidate_features": [
+        "Job listings",
+        "Search and filters",
+        "Professional profiles",
+        "Credential verification",
+        "Application tracking"
+      ],
+      "data_sensitivity": "May include identity, employment, credential, and other personal information.",
+      "validation_required": [
+        "Employment or marketplace model",
+        "Credential verification process",
+        "Application lifecycle",
+        "Candidate data handling"
+      ]
+    },
+    {
+      "persona_id": "healthcare_administrator",
+      "name": "Healthcare Administrator or Operations Manager",
+      "description": "A person responsible for operational, administrative, service, facility, or workforce coordination.",
+      "applicable_segments": [
+        "hospitals-clinics",
+        "diagnostic-labs",
+        "rpm",
+        "medical-devices"
+      ],
+      "primary_goals": [
+        "Understand and coordinate operations",
+        "Manage staff, services, or resources",
+        "Monitor operational performance",
+        "Reduce manual work where feasible"
+      ],
+      "common_tasks": [
+        "Review service and process information",
+        "Coordinate staff or resources",
+        "Access operational dashboards if available",
+        "Manage approved administrative workflows",
+        "Escalate operational issues"
+      ],
+      "information_needs": [
+        "Operational procedures",
+        "Service availability",
+        "Staff responsibilities",
+        "System workflows",
+        "Performance indicators"
+      ],
+      "trust_concerns": [
+        "Operational accuracy",
+        "Clear permissions",
+        "Reliable reporting",
+        "Traceable administrative actions"
+      ],
+      "candidate_features": [
+        "Operations portal",
+        "Staff directory",
+        "Service management",
+        "Reporting tools",
+        "Administrative documentation"
+      ],
+      "data_sensitivity": "Varies by access to workforce, patient, financial, and operational information.",
+      "validation_required": [
+        "Administrative responsibilities",
+        "Systems of record",
+        "Approval hierarchy",
+        "Reporting requirements"
+      ]
+    },
+    {
+      "persona_id": "healthcare_business_buyer",
+      "name": "Healthcare Business Buyer or Partner",
+      "description": "An organization or professional evaluating a healthcare vendor, platform, partnership, or outsourced service.",
+      "applicable_segments": [
+        "telehealth",
+        "healthcare-marketplaces",
+        "rpm",
+        "medical-devices"
+      ],
+      "primary_goals": [
+        "Assess organizational fit",
+        "Understand capabilities and implementation needs",
+        "Evaluate security, integration, and support",
+        "Request a consultation or proposal"
+      ],
+      "common_tasks": [
+        "Review service offerings",
+        "Assess case studies and evidence",
+        "Review integration capabilities",
+        "Check implementation and support models",
+        "Contact sales or partnerships"
+      ],
+      "information_needs": [
+        "Capabilities and limitations",
+        "Implementation approach",
+        "Integration options",
+        "Security and privacy information",
+        "Service and support model",
+        "Evidence of outcomes"
+      ],
+      "trust_concerns": [
+        "Unsupported performance claims",
+        "Security and compliance evidence",
+        "Vendor reliability",
+        "Unclear commercial commitments"
+      ],
+      "candidate_features": [
+        "Solutions pages",
+        "Case studies",
+        "Integration documentation",
+        "Security overview",
+        "Consultation request"
+      ],
+      "data_sensitivity": "Usually commercial; may involve confidential organizational information.",
+      "validation_required": [
+        "Target buyer roles",
+        "Sales cycle",
+        "Procurement requirements",
+        "Available evidence and approved claims"
+      ]
+    }
+  ]
+}

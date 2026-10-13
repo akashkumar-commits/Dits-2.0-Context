@@ -1,0 +1,133 @@
+
+{
+  "schema_version": "1.0",
+  "package_version": "0.1.0",
+  "terms": [
+    {
+      "term": "Care pathway",
+      "aliases": ["patient pathway", "care journey"],
+      "definition": "A sequence of activities, decisions, and interactions associated with prevention, assessment, diagnosis, treatment, monitoring, or follow-up.",
+      "agent_note": "The actual sequence varies by service and organization."
+    },
+    {
+      "term": "Clinical workflow",
+      "aliases": ["care workflow", "clinical process"],
+      "definition": "A sequence of clinical or clinical-support activities performed by people and systems.",
+      "agent_note": "Do not derive a clinical workflow from a website page or generic industry pattern alone."
+    },
+    {
+      "term": "EHR",
+      "aliases": ["electronic health record"],
+      "definition": "A digital record system for health information, often designed to support care across encounters or settings.",
+      "agent_note": "Capabilities and interoperability vary by product and deployment."
+    },
+    {
+      "term": "EMR",
+      "aliases": ["electronic medical record"],
+      "definition": "A digital record of medical information, commonly associated with a provider or care setting.",
+      "agent_note": "Usage of EHR and EMR terminology varies across markets and vendors."
+    },
+    {
+      "term": "LIS",
+      "aliases": ["laboratory information system"],
+      "definition": "A system used to manage laboratory information and workflows.",
+      "agent_note": "Confirm which functions are handled by the customer's actual LIS."
+    },
+    {
+      "term": "PACS",
+      "aliases": ["picture archiving and communication system"],
+      "definition": "A system used to store, retrieve, manage, and distribute medical imaging.",
+      "agent_note": "Confirm integration requirements and supported imaging workflows."
+    },
+    {
+      "term": "RPM",
+      "aliases": ["remote patient monitoring"],
+      "definition": "Remote collection, transmission, review, or management of patient-related measurements or observations.",
+      "agent_note": "The term alone does not establish clinical responsibility, response time, or intended use."
+    },
+    {
+      "term": "Telehealth",
+      "aliases": ["telemedicine", "virtual care"],
+      "definition": "Use of communication or digital technologies to support healthcare services at a distance.",
+      "agent_note": "Telehealth and telemedicine definitions can differ by jurisdiction and context."
+    },
+    {
+      "term": "IVD",
+      "aliases": ["in vitro diagnostic", "in vitro diagnostic device"],
+      "definition": "A diagnostic product category involving examination of specimens outside the human body; the precise regulatory definition depends on the applicable jurisdiction.",
+      "agent_note": "Do not infer regulatory classification from this term alone."
+    },
+    {
+      "term": "Intended use",
+      "aliases": ["intended purpose"],
+      "definition": "The use or purpose for which a product is intended, as established by relevant manufacturer information and applicable regulatory context.",
+      "agent_note": "Use verified product documentation and regulatory review for public claims."
+    },
+    {
+      "term": "PHI",
+      "aliases": ["protected health information"],
+      "definition": "A defined category of health-related information under applicable United States HIPAA rules when those rules apply.",
+      "agent_note": "Do not treat PHI as a universal legal category across all countries."
+    },
+    {
+      "term": "Personal data",
+      "aliases": ["personal information"],
+      "definition": "Information relating to an identified or identifiable person, as defined by applicable law.",
+      "agent_note": "The definition and obligations vary by jurisdiction."
+    },
+    {
+      "term": "Business associate",
+      "aliases": [],
+      "definition": "A defined role under United States HIPAA rules for certain persons or organizations performing specified functions or services involving protected health information on behalf of a covered entity or another business associate.",
+      "agent_note": "Do not apply this legal role to other jurisdictions or assume every vendor has this status."
+    },
+    {
+      "term": "Interoperability",
+      "aliases": ["system interoperability", "health data interoperability"],
+      "definition": "The ability of systems or organizations to exchange information and use the exchanged information appropriately.",
+      "agent_note": "Confirm data formats, APIs, implementation guides, terminology, authorization, and operational constraints."
+    },
+    {
+      "term": "Referral",
+      "aliases": ["care referral", "provider referral"],
+      "definition": "A request or direction for a person to obtain a service, assessment, or care from another provider or organization.",
+      "agent_note": "Referral rules, required information, and authorization vary by service and location."
+    },
+    {
+      "term": "Triage",
+      "aliases": [],
+      "definition": "A process for prioritizing or directing people according to assessed needs, urgency, or defined criteria.",
+      "agent_note": "Clinical triage logic requires appropriate clinical governance and validation."
+    },
+    {
+      "term": "EQA",
+      "aliases": ["external quality assessment"],
+      "definition": "An external process used to assess a laboratory's performance against relevant comparison or assessment criteria.",
+      "agent_note": "The specific scheme, schedule, criteria, and required response must be confirmed."
+    },
+    {
+      "term": "Credential verification",
+      "aliases": ["provider verification"],
+      "definition": "A process for checking specified qualifications, licenses, registration, identity, or other claimed credentials against appropriate evidence.",
+      "agent_note": "Define which credentials are checked, by whom, how often, and in which jurisdiction."
+    },
+    {
+      "term": "Clinical decision support",
+      "aliases": ["CDS"],
+      "definition": "Tools or information designed to assist clinical decisions.",
+      "agent_note": "Intended use, clinical risk, evidence, oversight, and regulatory implications require assessment."
+    },
+    {
+      "term": "Audit trail",
+      "aliases": ["audit log"],
+      "definition": "A record of specified events or actions that supports review, accountability, or investigation.",
+      "agent_note": "Required events, retention, access, and integrity controls must be defined for the system."
+    },
+    {
+      "term": "Minimum necessary",
+      "aliases": [],
+      "definition": "A principle associated with limiting certain uses, disclosures, or requests for protected health information under HIPAA, subject to the rule's scope and exceptions.",
+      "agent_note": "Do not present this phrase as a universal rule for every jurisdiction or data context."
+    }
+  ]
+}

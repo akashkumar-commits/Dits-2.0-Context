@@ -1,0 +1,161 @@
+
+{
+  "schema_version": "1.0",
+  "package_version": "0.1.0",
+  "purpose": "Classify a healthcare business using available evidence and identify the information needed before making website recommendations.",
+  "input_contract": {
+    "accepted_inputs": [
+      "customer_description",
+      "existing_website_content",
+      "website_url",
+      "uploaded_documents",
+      "product_catalog",
+      "service_catalog",
+      "workflow_descriptions",
+      "customer_answers"
+    ],
+    "input_trust_rule": "Treat supplied material as evidence to evaluate, not as unquestionable truth. Record its origin, date, and uncertainty when relevant."
+  },
+  "classification_rules": [
+    {
+      "segment_id": "hospitals-clinics",
+      "indicators": ["physical care facilities", "clinical departments", "in-person consultations", "hospital or clinic services"],
+      "counter_indicators": ["organization only manufactures devices", "organization only operates a provider directory"],
+      "minimum_evidence": "At least one credible indication that the organization directly operates or delivers facility-based healthcare services."
+    },
+    {
+      "segment_id": "diagnostic-labs",
+      "indicators": ["diagnostic testing", "specimen collection", "laboratory analysis", "test reporting"],
+      "counter_indicators": ["organization only sells laboratory equipment", "organization only lists independent laboratories"],
+      "minimum_evidence": "Evidence of performing, coordinating, or directly offering diagnostic laboratory services."
+    },
+    {
+      "segment_id": "telehealth",
+      "indicators": ["remote consultations", "virtual care delivery", "asynchronous clinical services", "online clinician access"],
+      "counter_indicators": ["website only publishes healthcare information", "video is used only for nonclinical marketing"],
+      "minimum_evidence": "Evidence of remote healthcare service delivery or coordination."
+    },
+    {
+      "segment_id": "healthcare-marketplaces",
+      "indicators": ["multiple providers listed", "search and matching", "provider onboarding", "cross-provider booking"],
+      "counter_indicators": ["single provider's informational website", "internal staff directory only"],
+      "minimum_evidence": "Evidence that the platform connects distinct service seekers and providers, or facilitates transactions or service discovery between them."
+    },
+    {
+      "segment_id": "rpm",
+      "indicators": ["remote patient measurements", "connected patient devices", "transmitted vitals", "monitoring dashboards", "configured alert routing"],
+      "counter_indicators": ["generic fitness content only", "device sales without a monitoring service"],
+      "minimum_evidence": "Evidence of remote collection, transmission, review, or management of patient-related measurements or observations."
+    },
+    {
+      "segment_id": "behavioral-health",
+      "indicators": ["mental health services", "psychotherapy", "counseling", "behavioral health programs", "addiction-related services"],
+      "counter_indicators": ["general wellness content with no behavioral health service", "software vendor serving unrelated industries"],
+      "minimum_evidence": "Evidence that behavioral health services or specialized behavioral health products are a material part of the business."
+    },
+    {
+      "segment_id": "medical-devices",
+      "indicators": ["medical device manufacturing", "diagnostic equipment", "device software", "medical equipment maintenance", "IVD products"],
+      "counter_indicators": ["care provider only using devices", "general technology consultancy without a medical technology offering"],
+      "minimum_evidence": "Evidence that the organization develops, manufactures, distributes, maintains, or supports medical devices or diagnostic technology."
+    }
+  ],
+  "decision_rules": [
+    "Classify from evidence rather than a company name or visual design alone.",
+    "Allow multiple segments when the business has multiple verified operating models.",
+    "Identify a primary segment only when the evidence supports it.",
+    "If the evidence is insufficient, return an uncertain classification and ask targeted questions.",
+    "Do not infer legal entity type, regulatory status, clinical authority, or certification from the segment.",
+    "Separate the organization's business model from the type of website it needs.",
+    "Separate existing functionality from requested future functionality.",
+    "Do not assume a requested feature is clinically, legally, or technically appropriate."
+  ],
+  "discovery_questions": [
+    {
+      "id": "business_role",
+      "question": "What does the organization directly provide, manufacture, coordinate, or sell?",
+      "why_it_matters": "Distinguishes providers, marketplaces, manufacturers, and supporting technology businesses."
+    },
+    {
+      "id": "audience",
+      "question": "Who uses the website or platform: patients, caregivers, clinicians, laboratories, institutions, distributors, or another group?",
+      "why_it_matters": "Establishes primary audiences and likely user journeys."
+    },
+    {
+      "id": "primary_outcome",
+      "question": "What should a visitor or user be able to accomplish?",
+      "why_it_matters": "Distinguishes marketing, information, booking, transactions, care delivery, and operational software."
+    },
+    {
+      "id": "service_location",
+      "question": "Where are the services offered and where are the intended users located?",
+      "why_it_matters": "Identifies potential geographic, language, licensing, privacy, and regulatory dependencies."
+    },
+    {
+      "id": "data_sensitivity",
+      "question": "Will the website collect, display, transmit, or store patient-related or other sensitive personal information?",
+      "why_it_matters": "Determines whether privacy, access control, security, and data-flow analysis are needed."
+    },
+    {
+      "id": "clinical_involvement",
+      "question": "Does the proposed experience influence clinical decisions, care delivery, monitoring, or medical product use?",
+      "why_it_matters": "Identifies potential clinical safety and expert-review requirements."
+    },
+    {
+      "id": "systems",
+      "question": "Which existing systems must remain, be replaced, or integrate with the new website?",
+      "why_it_matters": "Establishes migration and integration constraints."
+    },
+    {
+      "id": "success",
+      "question": "How will the organization measure whether the new or migrated website succeeds?",
+      "why_it_matters": "Defines business outcomes and later evaluation criteria."
+    }
+  ],
+  "output_contract": {
+    "required_fields": [
+      "primary_segment",
+      "secondary_segments",
+      "classification_confidence",
+      "supporting_evidence",
+      "unresolved_questions",
+      "website_type_hypotheses",
+      "potential_risk_flags",
+      "recommended_next_discovery_step"
+    ],
+    "confidence_values": ["high", "medium", "low", "insufficient_evidence"],
+    "requirements": [
+      "Every classification must explain its evidence.",
+      "Confidence must reflect the quality and completeness of evidence.",
+      "Website types are hypotheses until confirmed.",
+      "Risks are screening flags, not legal or clinical conclusions.",
+      "Unknown values must remain explicitly unknown."
+    ]
+  },
+  "example_output": {
+    "primary_segment": "diagnostic-labs",
+    "secondary_segments": [],
+    "classification_confidence": "medium",
+    "supporting_evidence": [
+      {
+        "claim": "The organization offers laboratory testing.",
+        "evidence_type": "customer_supplied",
+        "verified": false
+      }
+    ],
+    "unresolved_questions": [
+      "Does the laboratory accept direct patient bookings?",
+      "How are test results delivered?",
+      "Which locations and test types are supported?"
+    ],
+    "website_type_hypotheses": [
+      "informational_marketing_website",
+      "service_discovery_and_booking_website"
+    ],
+    "potential_risk_flags": [
+      "result_confidentiality",
+      "medical_claims"
+    ],
+    "recommended_next_discovery_step": "Confirm services, audiences, booking process, and whether the website handles patient information."
+  }
+}

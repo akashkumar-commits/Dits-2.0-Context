@@ -1,0 +1,114 @@
+
+{
+  "schema_version": "1.0",
+  "need_categories": [
+    {
+      "category": "information_clarity",
+      "principles": [
+        "Use plain language appropriate to the intended audience.",
+        "Explain medical or technical terminology when necessary.",
+        "Separate confirmed facts from estimates and general information.",
+        "Make eligibility, preparation, limitations, and next steps clear."
+      ],
+      "website_implications": [
+        "Clear service descriptions",
+        "Scannable page structure",
+        "Specific calls to action",
+        "Useful FAQs",
+        "Clear contact information"
+      ]
+    },
+    {
+      "category": "trust_and_credibility",
+      "principles": [
+        "Use accurate and current organization information.",
+        "Verify professional credentials and certifications before publishing claims.",
+        "Use evidence for clinical, technical, and performance claims.",
+        "Avoid fabricated testimonials, outcomes, statistics, or endorsements."
+      ],
+      "website_implications": [
+        "Verified provider profiles",
+        "Transparent service information",
+        "Traceable evidence for claims",
+        "Clear ownership and contact details",
+        "Accurate policies and disclaimers"
+      ]
+    },
+    {
+      "category": "privacy_and_confidentiality",
+      "principles": [
+        "Collect only information necessary for the stated purpose.",
+        "Explain why information is requested and how it will be used.",
+        "Use approved secure channels for sensitive information.",
+        "Do not expose patient information in public pages, URLs, analytics, or logs.",
+        "Confirm the applicable jurisdiction and privacy obligations."
+      ],
+      "website_implications": [
+        "Privacy notices",
+        "Purpose-specific forms",
+        "Secure authenticated portals where required",
+        "Clear consent and authorization flows",
+        "Appropriate session and access controls"
+      ]
+    },
+    {
+      "category": "accessibility_and_inclusion",
+      "principles": [
+        "Design for keyboard navigation and assistive technologies.",
+        "Use readable typography, sufficient contrast, and descriptive labels.",
+        "Provide understandable validation and error messages.",
+        "Do not communicate important information through color alone.",
+        "Consider low bandwidth, mobile devices, language needs, and varied digital literacy."
+      ],
+      "website_implications": [
+        "Accessible forms",
+        "Semantic page structure",
+        "Visible focus states",
+        "Readable instructions",
+        "Responsive layouts",
+        "Accessible alternatives to visual-only content"
+      ],
+      "reference_standard": "WCAG 2.2; confirm applicable legal and contractual requirements separately."
+    },
+    {
+      "category": "task_completion",
+      "principles": [
+        "Make the next step obvious.",
+        "Avoid asking for the same information repeatedly when safe and appropriate.",
+        "Show progress for multi-step processes.",
+        "Explain errors and how to recover.",
+        "Provide a fallback contact method when a digital task cannot be completed."
+      ],
+      "website_implications": [
+        "Short, purposeful forms",
+        "Progress indicators",
+        "Clear confirmation screens",
+        "Helpful error recovery",
+        "Contact and support alternatives"
+      ]
+    },
+    {
+      "category": "emotional_safety",
+      "principles": [
+        "Use respectful and non-judgmental language.",
+        "Avoid fear-based messaging and unnecessary urgency.",
+        "Provide sensitive topics with appropriate context.",
+        "Do not promise diagnoses, treatment outcomes, or guaranteed recovery.",
+        "Identify when the website is informational rather than an emergency service."
+      ],
+      "website_implications": [
+        "Calm and supportive content",
+        "Clear service limitations",
+        "Appropriate emergency guidance when approved",
+        "Respectful forms and error messages"
+      ]
+    }
+  ],
+  "validation_rules": [
+    "Treat needs as hypotheses until validated through customer evidence, user research, or reliable sources.",
+    "Do not invent user interview findings.",
+    "Do not assume all patients have the same literacy, disability, language, or access needs.",
+    "Escalate clinical claims and safety-critical instructions for qualified review.",
+    "Escalate privacy and regulatory decisions for appropriate expert review."
+  ]
+}

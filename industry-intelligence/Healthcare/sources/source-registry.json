@@ -1,0 +1,165 @@
+
+{
+  "schema_version": "1.0",
+  "package_version": "0.1.0",
+  "industry": "healthcare",
+  "registry_purpose": "Identify authoritative and standards-oriented sources for healthcare industry intelligence.",
+  "source_review_policy": {
+    "verification_status": "seeded_not_individually_verified_for_this_customer",
+    "required_before_production_use": [
+      "Confirm the URL resolves to the intended publication or official resource.",
+      "Capture the relevant section or passage.",
+      "Record publication, revision, or effective date where available.",
+      "Record access date.",
+      "Identify jurisdiction and scope.",
+      "Evaluate whether the source actually supports the intended claim."
+    ],
+    "authority_rule": "Prefer the responsible regulator or standards body for jurisdiction-specific requirements. Use international organizations for international context and technical organizations for the standards within their scope."
+  },
+  "sources": [
+    {
+      "id": "HC-SRC-001",
+      "title": "Global strategy on digital health 2020–2027",
+      "organization": "World Health Organization",
+      "url": "https://www.who.int/publications/i/item/9789240116870",
+      "source_type": "international_policy",
+      "best_for": ["digital_health_context", "health_system_transformation", "digital_health_strategy"],
+      "geographic_scope": "global",
+      "limitations": ["Strategic guidance does not establish an individual customer's workflows or applicable local law."],
+      "verification_status": "verify_before_use"
+    },
+    {
+      "id": "HC-SRC-002",
+      "title": "Digital health",
+      "organization": "World Health Organization",
+      "url": "https://www.who.int/health-topics/digital-health/digital-health",
+      "source_type": "international_health_topic",
+      "best_for": ["digital_health_definitions", "digital_health_context"],
+      "geographic_scope": "global",
+      "limitations": ["Use the relevant underlying publication for detailed technical or policy claims."],
+      "verification_status": "verify_before_use"
+    },
+    {
+      "id": "HC-SRC-003",
+      "title": "Diagnostics",
+      "organization": "World Health Organization",
+      "url": "https://www.who.int/health-topics/diagnostics/2",
+      "source_type": "international_health_topic",
+      "best_for": ["diagnostics_context", "diagnostic_access", "laboratory_services"],
+      "geographic_scope": "global",
+      "limitations": ["Not a substitute for applicable laboratory regulations, product documentation, or test-specific instructions."],
+      "verification_status": "verify_before_use"
+    },
+    {
+      "id": "HC-SRC-004",
+      "title": "Covered Entities and Business Associates",
+      "organization": "U.S. Department of Health and Human Services",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/covered-entities/index.html",
+      "source_type": "government_regulatory_guidance",
+      "best_for": ["HIPAA_scope_research", "covered_entity_research", "business_associate_research"],
+      "geographic_scope": "United States",
+      "limitations": ["Do not apply HIPAA roles or requirements without evaluating the actual organization, activities, and applicable rules."],
+      "verification_status": "verify_before_use"
+    },
+    {
+      "id": "HC-SRC-005",
+      "title": "Laboratory quality management",
+      "organization": "World Health Organization",
+      "url": "https://www.who.int/activities/laboratory-quality-management",
+      "source_type": "international_technical_guidance",
+      "best_for": ["laboratory_quality", "laboratory_operations", "quality_management"],
+      "geographic_scope": "global",
+      "limitations": ["Customer-specific quality systems, accreditation requirements, and local rules need separate verification."],
+      "verification_status": "verify_before_use"
+    },
+    {
+      "id": "HC-SRC-006",
+      "title": "Medical devices: new regulations",
+      "organization": "European Commission",
+      "url": "https://health.ec.europa.eu/medical-devices-new-regulations_en",
+      "source_type": "regional_regulatory_information",
+      "best_for": ["EU_medical_device_regulation", "medical_device_regulatory_research"],
+      "geographic_scope": "European Union",
+      "limitations": ["Confirm current legal text, applicability, amendments, transition provisions, and product-specific status."],
+      "verification_status": "verify_before_use"
+    },
+    {
+      "id": "HC-SRC-007",
+      "title": "Global Health Observatory",
+      "organization": "World Health Organization",
+      "url": "https://www.who.int/data/gho",
+      "source_type": "health_statistics",
+      "best_for": ["health_indicators", "country_level_health_context", "population_health_research"],
+      "geographic_scope": "global",
+      "limitations": ["Check each indicator's definition, source, reference period, coverage, and comparability."],
+      "verification_status": "verify_before_use"
+    },
+    {
+      "id": "HC-SRC-008",
+      "title": "Health at a Glance",
+      "organization": "Organisation for Economic Co-operation and Development",
+      "url": "https://www.oecd.org/en/publications/health-at-a-glance_19991312.html",
+      "source_type": "comparative_health_statistics",
+      "best_for": ["health_system_comparison", "healthcare_indicators", "health_system_context"],
+      "geographic_scope": "OECD-focused, with scope varying by publication",
+      "limitations": ["Confirm the edition, included countries, definitions, and data reference years."],
+      "verification_status": "verify_before_use"
+    },
+    {
+      "id": "HC-SRC-009",
+      "title": "FHIR specification",
+      "organization": "HL7 International",
+      "url": "https://www.hl7.org/fhir/",
+      "source_type": "technical_standard",
+      "best_for": ["health_data_interoperability", "API_research", "FHIR_resources"],
+      "geographic_scope": "international_standard_with_context_specific_implementation",
+      "limitations": ["A standard's existence does not prove a customer system supports a particular version, profile, resource, or operation."],
+      "verification_status": "verify_before_use"
+    },
+    {
+      "id": "HC-SRC-010",
+      "title": "Web Content Accessibility Guidelines (WCAG) 2.2",
+      "organization": "World Wide Web Consortium",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "source_type": "web_accessibility_standard",
+      "best_for": ["website_accessibility", "interface_validation", "accessibility_acceptance_criteria"],
+      "geographic_scope": "international_technical_standard",
+      "limitations": ["Determine the applicable legal standard and conformance target for the project separately."],
+      "verification_status": "verify_before_use"
+    },
+    {
+      "id": "HC-SRC-011",
+      "title": "Cybersecurity Framework",
+      "organization": "National Institute of Standards and Technology",
+      "url": "https://www.nist.gov/cyberframework",
+      "source_type": "cybersecurity_framework",
+      "best_for": ["cybersecurity_risk_management", "security_governance", "risk_assessment"],
+      "geographic_scope": "internationally_referenced_framework",
+      "limitations": ["A framework is not proof of compliance, certification, or security effectiveness."],
+      "verification_status": "verify_before_use"
+    }
+  ],
+  "source_discovery_rules": [
+    "Search for the responsible regulator when the question concerns a legal or regulatory obligation.",
+    "Prefer official standards bodies for technical standards and specifications.",
+    "Use peer-reviewed research and recognized professional organizations for evidence that requires scientific support.",
+    "Use official vendor documentation to establish a specific product's capabilities or integration requirements.",
+    "Use customer documents and authorized representatives to establish customer-specific workflows.",
+    "Use commercial reports cautiously; record methodology, date, geographic scope, and limitations.",
+    "Do not treat search snippets, AI-generated summaries, or an unreviewed URL as sufficient evidence for a high-impact claim."
+  ],
+  "evidence_record_schema": {
+    "evidence_id": "unique_identifier",
+    "source_id": "registry_source_id_or_external_source_id",
+    "claim_supported": "specific_claim",
+    "quoted_or_summarized_passage": "relevant_evidence",
+    "url": "source_url",
+    "publication_date": null,
+    "accessed_date": null,
+    "jurisdiction": "global_or_named_jurisdiction",
+    "scope": "what_the_evidence_applies_to",
+    "limitations": [],
+    "review_status": "unreviewed",
+    "reviewed_by": null
+  }
+}

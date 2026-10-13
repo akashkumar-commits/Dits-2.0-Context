@@ -1,0 +1,197 @@
+
+{
+  "schema_version": "1.0",
+  "mappings": [
+    {
+      "persona_id": "patient_or_care_seeker",
+      "intent": "Find and understand a healthcare service",
+      "candidate_pages": [
+        "Services",
+        "Specialties",
+        "Locations",
+        "Providers",
+        "FAQs",
+        "Contact"
+      ],
+      "candidate_features": [
+        "Service search",
+        "Provider search",
+        "Location search",
+        "Appointment request or booking"
+      ],
+      "primary_cta_options": [
+        "Book an Appointment",
+        "Find a Provider",
+        "Contact Us"
+      ],
+      "conditions": [
+        "Select only the actions the customer actually supports.",
+        "Do not display live availability unless connected to a reliable source.",
+        "Do not imply a booking is confirmed until the booking system confirms it."
+      ]
+    },
+    {
+      "persona_id": "caregiver_or_authorized_representative",
+      "intent": "Support care coordination",
+      "candidate_pages": [
+        "Caregiver Resources",
+        "Patient Support",
+        "Contact",
+        "Portal Access"
+      ],
+      "candidate_features": [
+        "Care coordination guidance",
+        "Authorized proxy access",
+        "Support contact"
+      ],
+      "primary_cta_options": [
+        "Get Support",
+        "Learn About Caregiver Access",
+        "Contact the Care Team"
+      ],
+      "conditions": [
+        "Do not promise access to patient records without a confirmed authorization process.",
+        "Do not expose patient-specific information on public pages."
+      ]
+    },
+    {
+      "persona_id": "referring_provider",
+      "intent": "Understand referral requirements and submit a referral",
+      "candidate_pages": [
+        "For Referring Providers",
+        "Referral Requirements",
+        "Professional Resources",
+        "Contact"
+      ],
+      "candidate_features": [
+        "Referral instructions",
+        "Downloadable forms",
+        "Secure referral submission"
+      ],
+      "primary_cta_options": [
+        "Refer a Patient",
+        "View Referral Requirements",
+        "Contact the Referral Team"
+      ],
+      "conditions": [
+        "Confirm accepted referral types and channels.",
+        "Use approved secure channels for patient information."
+      ]
+    },
+    {
+      "persona_id": "laboratory_professional",
+      "intent": "Find laboratory procedures, technical resources, or authorized tools",
+      "candidate_pages": [
+        "Test Catalog",
+        "Specimen Requirements",
+        "Technical Resources",
+        "Support",
+        "Portal Access"
+      ],
+      "candidate_features": [
+        "Searchable test catalog",
+        "Technical documentation",
+        "Equipment support",
+        "Secure portal access"
+      ],
+      "primary_cta_options": [
+        "View Test Requirements",
+        "Access Technical Resources",
+        "Contact Support"
+      ],
+      "conditions": [
+        "Verify technical documentation and revision status.",
+        "Do not generate unapproved testing or equipment instructions."
+      ]
+    },
+    {
+      "persona_id": "medical_device_buyer",
+      "intent": "Evaluate a device or request a commercial discussion",
+      "candidate_pages": [
+        "Products",
+        "Product Details",
+        "Specifications",
+        "Documentation",
+        "Support",
+        "Contact Sales"
+      ],
+      "candidate_features": [
+        "Product comparison",
+        "Technical document downloads",
+        "Quote requests",
+        "Support requests"
+      ],
+      "primary_cta_options": [
+        "Request a Quote",
+        "Explore Specifications",
+        "Contact Technical Support"
+      ],
+      "conditions": [
+        "Use only verified product specifications and approved claims.",
+        "Confirm regulatory status and intended use for each relevant market."
+      ]
+    },
+    {
+      "persona_id": "healthcare_professional_job_seeker",
+      "intent": "Find and apply for a professional opportunity",
+      "candidate_pages": [
+        "Browse Opportunities",
+        "Role Details",
+        "Professional Profile",
+        "Application Process",
+        "Help"
+      ],
+      "candidate_features": [
+        "Search and filters",
+        "Profile creation",
+        "Credential submission",
+        "Application tracking"
+      ],
+      "primary_cta_options": [
+        "Browse Opportunities",
+        "Create a Profile",
+        "Apply Now"
+      ],
+      "conditions": [
+        "Confirm the actual application and credential-verification process.",
+        "Explain how submitted personal information will be used."
+      ]
+    },
+    {
+      "persona_id": "healthcare_business_buyer",
+      "intent": "Evaluate a vendor, platform, or partnership",
+      "candidate_pages": [
+        "Solutions",
+        "Capabilities",
+        "Industries",
+        "Case Studies",
+        "Security",
+        "Integrations",
+        "Contact"
+      ],
+      "candidate_features": [
+        "Solution exploration",
+        "Evidence-backed case studies",
+        "Integration documentation",
+        "Consultation request"
+      ],
+      "primary_cta_options": [
+        "Request a Consultation",
+        "Discuss Your Requirements",
+        "Explore Integrations"
+      ],
+      "conditions": [
+        "Do not fabricate customer logos, outcomes, or case studies.",
+        "Publish security and integration claims only when verified."
+      ]
+    }
+  ],
+  "generation_rules": [
+    "Treat page lists as candidates, not mandatory requirements.",
+    "Generate the sitemap from confirmed audiences, business goals, services, and required functionality.",
+    "Avoid creating a separate page for every persona if shared content serves the same need.",
+    "Support multiple journeys when users have different goals.",
+    "Separate public informational journeys from authenticated workflows.",
+    "Record the reason for each recommended page or feature."
+  ]
+}

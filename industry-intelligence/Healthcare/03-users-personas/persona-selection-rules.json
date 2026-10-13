@@ -1,0 +1,103 @@
+
+{
+  "schema_version": "1.0",
+  "selection_rules": [
+    {
+      "rule_id": "PS001",
+      "condition": "The customer operates a hospital or clinic.",
+      "candidate_personas": [
+        "patient_or_care_seeker",
+        "caregiver_or_authorized_representative",
+        "clinician_or_care_provider",
+        "referring_provider",
+        "healthcare_administrator"
+      ],
+      "action": "Select candidates based on the services and website scope confirmed by the customer.",
+      "confidence": "industry_pattern"
+    },
+    {
+      "rule_id": "PS002",
+      "condition": "The customer operates a diagnostic laboratory.",
+      "candidate_personas": [
+        "patient_or_care_seeker",
+        "referring_provider",
+        "laboratory_professional",
+        "healthcare_administrator"
+      ],
+      "action": "Determine whether the laboratory serves consumers directly, accepts provider referrals, or both.",
+      "confidence": "industry_pattern"
+    },
+    {
+      "rule_id": "PS003",
+      "condition": "The customer operates a healthcare marketplace.",
+      "candidate_personas": [
+        "patient_or_care_seeker",
+        "healthcare_professional_job_seeker",
+        "healthcare_business_buyer",
+        "healthcare_administrator"
+      ],
+      "action": "Identify both sides of the marketplace, the administrator role, and any additional participants confirmed by the customer.",
+      "confidence": "industry_pattern"
+    },
+    {
+      "rule_id": "PS004",
+      "condition": "The customer operates an RPM or connected-care service.",
+      "candidate_personas": [
+        "patient_or_care_seeker",
+        "caregiver_or_authorized_representative",
+        "clinician_or_care_provider",
+        "healthcare_administrator"
+      ],
+      "action": "Confirm which users interact with devices, readings, alerts, care teams, and support.",
+      "confidence": "industry_pattern"
+    },
+    {
+      "rule_id": "PS005",
+      "condition": "The customer manufactures or sells medical devices.",
+      "candidate_personas": [
+        "medical_device_buyer",
+        "laboratory_professional",
+        "clinician_or_care_provider",
+        "healthcare_administrator"
+      ],
+      "action": "Confirm product users, purchasing decision-makers, distributors, service teams, and support needs.",
+      "confidence": "industry_pattern"
+    },
+    {
+      "rule_id": "PS006",
+      "condition": "The customer offers telehealth or behavioral health services.",
+      "candidate_personas": [
+        "patient_or_care_seeker",
+        "caregiver_or_authorized_representative",
+        "clinician_or_care_provider",
+        "healthcare_administrator"
+      ],
+      "action": "Confirm the care model, supported communication channels, appointment process, and applicable privacy requirements.",
+      "confidence": "industry_pattern"
+    }
+  ],
+  "selection_process": [
+    "Identify the confirmed healthcare segment.",
+    "Identify the confirmed business model.",
+    "Identify the website's primary business objective.",
+    "Generate candidate personas using the relevant selection rules.",
+    "Ask which audiences the organization actually serves.",
+    "Identify primary, secondary, and out-of-scope audiences.",
+    "Map confirmed audiences to website journeys and required features.",
+    "Label any unconfirmed persona or behavior as a hypothesis."
+  ],
+  "priority_rules": {
+    "primary": "Directly connected to the website's principal business objective.",
+    "secondary": "Important to the service or business but not the primary conversion audience.",
+    "operational": "Uses internal or restricted tools to deliver or administer the service.",
+    "out_of_scope": "Not served by the current website or product scope."
+  },
+  "clarification_triggers": [
+    "The business model supports multiple possible audience types.",
+    "The website may include both public pages and authenticated portals.",
+    "A user may view, submit, or change patient information.",
+    "The proposed journey involves clinical decisions or patient safety.",
+    "The proposed feature requires identity verification or delegated access.",
+    "The customer has not specified the primary conversion goal."
+  ]
+}
