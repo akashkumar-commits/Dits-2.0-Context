@@ -1,0 +1,63 @@
+
+{
+  "schema_version": "1.0.0",
+  "knowledge_id": "UWI-DISCOVERY-TRACEABILITY",
+  "title": "Requirements Traceability",
+  "traceability_chain": [
+    "business_problem",
+    "business_objective",
+    "user_need",
+    "requirement",
+    "proposed_solution",
+    "implementation_item",
+    "acceptance_criteria",
+    "test_case",
+    "validation_result"
+  ],
+  "link_types": [
+    "supports",
+    "derived_from",
+    "depends_on",
+    "conflicts_with",
+    "implemented_by",
+    "validated_by",
+    "approved_by"
+  ],
+  "rules": [
+    "Every high-priority requirement should link to an objective, user need, constraint, or documented obligation.",
+    "Every major proposed solution should explain which requirement it addresses.",
+    "Every implemented requirement should have defined acceptance criteria.",
+    "Acceptance criteria should be linked to appropriate test cases.",
+    "A passing test must have recorded evidence.",
+    "Requirements without supporting objectives or needs must be reviewed for necessity.",
+    "Objectives without associated requirements or an explicit non-website strategy must be flagged.",
+    "Changes to an objective or requirement should trigger an impact review of linked decisions and tests."
+  ],
+  "traceability_record": {
+    "source_id": null,
+    "source_type": null,
+    "target_id": null,
+    "target_type": null,
+    "link_type": null,
+    "rationale": null,
+    "evidence_refs": [],
+    "status": "proposed"
+  },
+  "coverage_checks": [
+    {
+      "id": "TRACE-001",
+      "check": "High-priority requirements have a documented rationale.",
+      "failure_action": "Flag for discovery review."
+    },
+    {
+      "id": "TRACE-002",
+      "check": "Critical functionality has acceptance criteria and test coverage.",
+      "failure_action": "Block readiness for the affected release scope."
+    },
+    {
+      "id": "TRACE-003",
+      "check": "Material scope changes have an impact assessment.",
+      "failure_action": "Require review before affected work proceeds."
+    }
+  ]
+}

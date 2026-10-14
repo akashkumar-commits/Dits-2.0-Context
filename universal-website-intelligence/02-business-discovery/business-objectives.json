@@ -1,0 +1,86 @@
+
+{
+  "schema_version": "1.0.0",
+  "knowledge_id": "UWI-DISCOVERY-OBJECTIVES",
+  "title": "Business Objectives and Outcome Model",
+  "objective_categories": [
+    {
+      "id": "acquisition",
+      "description": "Attract relevant prospective customers or users.",
+      "candidate_outcomes": ["qualified_traffic", "target_audience_reach"],
+      "candidate_metrics": ["qualified_sessions", "target_segment_reach"]
+    },
+    {
+      "id": "lead_generation",
+      "description": "Generate relevant business inquiries.",
+      "candidate_outcomes": ["qualified_leads", "sales_opportunities"],
+      "candidate_metrics": ["qualified_leads", "lead_to_opportunity_rate"]
+    },
+    {
+      "id": "conversion",
+      "description": "Help users complete a desired action.",
+      "candidate_outcomes": ["completed_transactions", "completed_requests"],
+      "candidate_metrics": ["task_completion_rate", "conversion_rate"]
+    },
+    {
+      "id": "customer_experience",
+      "description": "Improve users' ability to find information and complete tasks.",
+      "candidate_outcomes": ["reduced_friction", "improved_task_success"],
+      "candidate_metrics": ["task_success_rate", "user_satisfaction"]
+    },
+    {
+      "id": "operational_efficiency",
+      "description": "Reduce unnecessary manual effort or duplicated work.",
+      "candidate_outcomes": ["reduced_rework", "improved_process_efficiency"],
+      "candidate_metrics": ["processing_time", "manual_handling_rate"]
+    },
+    {
+      "id": "digital_transformation",
+      "description": "Modernize capabilities, systems, or digital workflows.",
+      "candidate_outcomes": ["improved_maintainability", "validated_capability_improvement"],
+      "candidate_metrics": ["change_lead_time", "system_reliability"]
+    },
+    {
+      "id": "retention_and_support",
+      "description": "Support existing customers and encourage continued engagement.",
+      "candidate_outcomes": ["improved_resolution", "increased_retention"],
+      "candidate_metrics": ["resolution_time", "retention_rate"]
+    },
+    {
+      "id": "trust_and_credibility",
+      "description": "Help audiences understand the organization and assess its credibility.",
+      "candidate_outcomes": ["improved_clarity", "increased_confidence"],
+      "candidate_metrics": ["comprehension_feedback", "trust_survey_results"]
+    }
+  ],
+  "objective_record": {
+    "objective_id": null,
+    "statement": null,
+    "business_problem": null,
+    "target_audience": [],
+    "business_value": null,
+    "owner": null,
+    "priority": "unassigned",
+    "baseline": {
+      "value": null,
+      "period": null,
+      "source": null
+    },
+    "target": {
+      "value": null,
+      "period": null,
+      "approval_status": "not_approved"
+    },
+    "measurement_method": null,
+    "assumptions": [],
+    "evidence_refs": []
+  },
+  "rules": [
+    "Candidate metrics are suggestions, not confirmed targets.",
+    "Do not invent baselines, targets, or expected percentage improvements.",
+    "Each metric must have a definition, measurement method, time period, and data source where applicable.",
+    "Distinguish business outcomes from outputs such as number of pages or features delivered.",
+    "Identify outcomes influenced by factors outside the website.",
+    "Avoid promising causation or ROI without supporting evidence."
+  ]
+}

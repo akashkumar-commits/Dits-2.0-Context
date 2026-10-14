@@ -1,0 +1,155 @@
+
+{
+  "schema_version": "1.0.0",
+  "knowledge_id": "UWI-DISCOVERY-QUESTIONS",
+  "title": "Adaptive Business Discovery Question Bank",
+  "question_groups": [
+    {
+      "id": "business_context",
+      "questions": [
+        {
+          "id": "BDQ-001",
+          "question": "What does your business do, and who does it serve?",
+          "priority": "high",
+          "why": "Establishes the business and audience context."
+        },
+        {
+          "id": "BDQ-002",
+          "question": "What are the main products or services the website should represent?",
+          "priority": "high",
+          "why": "Defines the offering that the website must communicate."
+        },
+        {
+          "id": "BDQ-003",
+          "question": "Which markets, regions, or customer segments are in scope?",
+          "priority": "conditional",
+          "why": "May affect content, localization, operations, and applicable requirements."
+        }
+      ]
+    },
+    {
+      "id": "problem_and_objectives",
+      "questions": [
+        {
+          "id": "BDQ-004",
+          "question": "What prompted this website project now?",
+          "priority": "high",
+          "why": "Identifies the underlying trigger and business problem."
+        },
+        {
+          "id": "BDQ-005",
+          "question": "What should improve after the project is completed?",
+          "priority": "high",
+          "why": "Establishes intended outcomes."
+        },
+        {
+          "id": "BDQ-006",
+          "question": "How do you currently measure this outcome, if at all?",
+          "priority": "high",
+          "why": "Identifies baselines and measurement gaps."
+        }
+      ]
+    },
+    {
+      "id": "current_state",
+      "questions": [
+        {
+          "id": "BDQ-007",
+          "question": "Is this a new website, a redesign, a rebuild, or a migration?",
+          "priority": "high",
+          "why": "Determines the initial project path."
+        },
+        {
+          "id": "BDQ-008",
+          "question": "Which current pages, content, features, and workflows must be preserved?",
+          "priority": "conditional",
+          "why": "Prevents accidental loss of existing functionality."
+        },
+        {
+          "id": "BDQ-009",
+          "question": "Which existing platforms and systems does the website depend on?",
+          "priority": "high",
+          "why": "Identifies technical and operational dependencies."
+        }
+      ]
+    },
+    {
+      "id": "users_and_workflows",
+      "questions": [
+        {
+          "id": "BDQ-010",
+          "question": "Who will use the website, and what should each group be able to accomplish?",
+          "priority": "high",
+          "why": "Establishes user groups and intended tasks."
+        },
+        {
+          "id": "BDQ-011",
+          "question": "What are the most important tasks users must complete?",
+          "priority": "high",
+          "why": "Identifies key journeys and functional requirements."
+        },
+        {
+          "id": "BDQ-012",
+          "question": "Which tasks currently require manual staff intervention or another system?",
+          "priority": "conditional",
+          "why": "Identifies workflow and integration boundaries."
+        }
+      ]
+    },
+    {
+      "id": "scope_and_constraints",
+      "questions": [
+        {
+          "id": "BDQ-013",
+          "question": "Are there fixed deadlines, budget limits, or launch dependencies?",
+          "priority": "high",
+          "why": "Establishes delivery constraints."
+        },
+        {
+          "id": "BDQ-014",
+          "question": "Are there technology, vendor, hosting, or platform requirements?",
+          "priority": "high",
+          "why": "Identifies implementation constraints."
+        },
+        {
+          "id": "BDQ-015",
+          "question": "Are there privacy, security, accessibility, or legal requirements that must be reviewed?",
+          "priority": "high",
+          "why": "Identifies risks and required specialist involvement."
+        }
+      ]
+    },
+    {
+      "id": "governance_and_success",
+      "questions": [
+        {
+          "id": "BDQ-016",
+          "question": "Who approves the scope, content, design, integrations, and final launch?",
+          "priority": "high",
+          "why": "Establishes decision authority."
+        },
+        {
+          "id": "BDQ-017",
+          "question": "What would make this project unsuccessful, even if the website looks good?",
+          "priority": "high",
+          "why": "Surfaces failure conditions and hidden expectations."
+        },
+        {
+          "id": "BDQ-018",
+          "question": "Who will own website content, maintenance, and performance after launch?",
+          "priority": "high",
+          "why": "Establishes long-term operational ownership."
+        }
+      ]
+    }
+  ],
+  "adaptive_question_rules": [
+    "Ask one focused question at a time in conversational discovery unless grouping questions is clearly more efficient.",
+    "Do not ask for information already established by reliable evidence.",
+    "Ask conditional questions only when the condition applies.",
+    "Prioritize questions that could change scope, architecture, cost, risk, or approval requirements.",
+    "Explain why a question matters when the reason may not be obvious.",
+    "Allow noncritical answers to remain unknown during early discovery.",
+    "When the customer cannot answer a technical question, identify the relevant person or evidence needed."
+  ]
+}

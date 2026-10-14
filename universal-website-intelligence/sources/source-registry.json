@@ -1,0 +1,29 @@
+
+{
+  "schema_version": "1.0.0",
+  "knowledge_id": "UWI-DISCOVERY-SOURCES",
+  "title": "Business Discovery Source Registry",
+  "sources": [],
+  "source_record_template": {
+    "source_id": null,
+    "title": null,
+    "publisher": null,
+    "source_type": null,
+    "url": null,
+    "publication_date": null,
+    "last_verified_date": null,
+    "supported_claims": [],
+    "applicability": null,
+    "limitations": [],
+    "verification_status": "unverified"
+  },
+  "source_quality_rules": [
+    "Do not fabricate sources, URLs, publication dates, or supporting claims.",
+    "Prefer primary sources for technical specifications and authoritative requirements.",
+    "Record when a source supports a general principle rather than a mandatory requirement.",
+    "Check whether the source is current and applicable to the project context.",
+    "Do not treat customer statements as independently verified external evidence.",
+    "Record conflicting evidence for review instead of silently choosing a source."
+  ],
+  "note": "An empty source registry means no external source has yet been registered for this layer. Populate it as claims requiring external evidence are introduced."
+}

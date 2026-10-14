@@ -1,0 +1,81 @@
+
+{
+  "schema_version": "1.0.0",
+  "knowledge_id": "UWI-DISCOVERY-COMPLETION",
+  "title": "Discovery Readiness and Completion Rules",
+  "readiness_statuses": [
+    "not_started",
+    "in_progress",
+    "ready_for_next_stage",
+    "ready_with_conditions",
+    "blocked"
+  ],
+  "readiness_dimensions": [
+    "business_objectives",
+    "problem_definition",
+    "stakeholders",
+    "user_needs",
+    "scope",
+    "requirements",
+    "constraints",
+    "dependencies",
+    "success_metrics",
+    "risks",
+    "approvals"
+  ],
+  "rules": [
+    {
+      "id": "DISC-READY-001",
+      "condition": "The business objective is unclear.",
+      "action": "Continue discovery before making definitive solution recommendations."
+    },
+    {
+      "id": "DISC-READY-002",
+      "condition": "The primary objective is known but some noncritical details are missing.",
+      "action": "Proceed with explicit assumptions and a list of unresolved questions where safe."
+    },
+    {
+      "id": "DISC-READY-003",
+      "condition": "A required integration is unverified.",
+      "action": "Allow unrelated discovery and conceptual design to proceed, but gate integration commitments and implementation."
+    },
+    {
+      "id": "DISC-READY-004",
+      "condition": "A high-impact requirement has conflicting interpretations.",
+      "action": "Record the conflict and obtain a decision from the authorized stakeholder."
+    },
+    {
+      "id": "DISC-READY-005",
+      "condition": "The customer requires existing functionality to be preserved but the current behavior has not been audited.",
+      "action": "Require an appropriate audit before claiming the preservation requirement is satisfied."
+    },
+    {
+      "id": "DISC-READY-006",
+      "condition": "Required approval for a gated action is missing.",
+      "action": "Block that action until the approval is recorded."
+    },
+    {
+      "id": "DISC-READY-007",
+      "condition": "Success metrics have no confirmed baseline.",
+      "action": "Record the measurement gap; do not invent baseline values or guarantee improvement."
+    }
+  ],
+  "completion_record": {
+    "status": "in_progress",
+    "readiness_by_dimension": {},
+    "critical_unknowns": [],
+    "open_questions": [],
+    "blocking_dependencies": [],
+    "required_approvals": [],
+    "conditions_for_progression": [],
+    "decision_owner": null,
+    "evidence_refs": []
+  },
+  "rules_of_interpretation": [
+    "Readiness is specific to the next activity, not necessarily the entire project.",
+    "Unknown information does not automatically block every activity.",
+    "High-risk and irreversible decisions require stronger evidence than low-risk exploratory work.",
+    "A readiness recommendation is not a substitute for authorized approval.",
+    "Readiness status must be based on recorded evidence rather than model confidence alone."
+  ]
+}

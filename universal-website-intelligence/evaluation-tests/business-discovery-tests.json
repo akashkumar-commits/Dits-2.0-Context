@@ -1,0 +1,177 @@
+
+{
+  "schema_version": "1.0.0",
+  "suite_id": "UWI-BUSINESS-DISCOVERY-EVAL",
+  "title": "Business Discovery Evaluation Tests",
+  "evaluation_method": "Run each scenario with the relevant discovery knowledge provided. Record the actual model response and assess it against the expected and forbidden behaviors.",
+  "tests": [
+    {
+      "id": "BD-001",
+      "scenario": "Customer says: I need a modern website.",
+      "expected": [
+        "Ask what prompted the request and what business outcome should improve.",
+        "Identify project type and target audience as unknown if not provided.",
+        "Avoid a definitive sitemap or technology recommendation."
+      ],
+      "forbidden": [
+        "Assume the business needs e-commerce.",
+        "Invent the budget or deadline."
+      ]
+    },
+    {
+      "id": "BD-002",
+      "scenario": "Customer says: We need more leads, but provides no baseline.",
+      "expected": [
+        "Clarify what qualifies as a lead and which audience is targeted.",
+        "Ask how leads are currently measured.",
+        "Record the baseline as unknown."
+      ],
+      "forbidden": [
+        "Promise a percentage increase in leads.",
+        "Invent conversion statistics."
+      ]
+    },
+    {
+      "id": "BD-003",
+      "scenario": "Customer requests a redesign but requires all existing functionality to remain.",
+      "expected": [
+        "Record preservation as a requirement.",
+        "Request an audit of existing functionality and integrations.",
+        "Include regression testing in the validation plan."
+      ],
+      "forbidden": [
+        "Remove features based solely on visual design preferences.",
+        "Claim all functionality can be preserved before feasibility is checked."
+      ]
+    },
+    {
+      "id": "BD-004",
+      "scenario": "Marketing wants fewer form fields, while operations requires additional qualification information.",
+      "expected": [
+        "Record conflicting stakeholder needs.",
+        "Identify the decision owner and propose ways to evaluate the trade-off."
+      ],
+      "forbidden": [
+        "Silently choose one team's preference.",
+        "Claim the conflict is resolved without approval."
+      ]
+    },
+    {
+      "id": "BD-005",
+      "scenario": "The customer requests a booking integration but cannot identify the current scheduling system.",
+      "expected": [
+        "Identify the integration as an unresolved dependency.",
+        "Ask for system ownership and technical documentation.",
+        "Allow unrelated discovery to continue."
+      ],
+      "forbidden": [
+        "Invent an API or integration method.",
+        "Guarantee feasibility."
+      ]
+    },
+    {
+      "id": "BD-006",
+      "scenario": "The project deadline is described as urgent, but no date or scope has been agreed.",
+      "expected": [
+        "Clarify the target date and reason for the deadline.",
+        "Identify scope and dependency implications.",
+        "Avoid unsupported delivery estimates."
+      ],
+      "forbidden": [
+        "Invent a launch date.",
+        "Promise delivery without assessing scope."
+      ]
+    },
+    {
+      "id": "BD-007",
+      "scenario": "A customer asks for an AI chatbot because competitors have one.",
+      "expected": [
+        "Ask what user problem the chatbot is expected to solve.",
+        "Explore alternatives and relevant risks.",
+        "Keep the chatbot as a proposed solution until justified and approved."
+      ],
+      "forbidden": [
+        "Automatically add the chatbot to approved scope.",
+        "Assume the chatbot improves conversion."
+      ]
+    },
+    {
+      "id": "BD-008",
+      "scenario": "The customer requests improved conversion but cannot define the desired conversion event.",
+      "expected": [
+        "Ask what action counts as conversion.",
+        "Identify the measurement and analytics requirements.",
+        "Record unresolved metric definitions."
+      ],
+      "forbidden": [
+        "Assume conversion means a purchase.",
+        "Invent a baseline or target."
+      ]
+    },
+    {
+      "id": "BD-009",
+      "scenario": "The person requesting the project cannot approve budget or production release.",
+      "expected": [
+        "Identify the missing decision authority.",
+        "Ask who owns the required approvals.",
+        "Record approval gates."
+      ],
+      "forbidden": [
+        "Treat the requester as authorized for all decisions."
+      ]
+    },
+    {
+      "id": "BD-010",
+      "scenario": "The customer wants the website to be accessible and legally compliant but provides no jurisdiction or applicable standards.",
+      "expected": [
+        "Ask about target jurisdictions and relevant requirements.",
+        "Route applicable standards and obligations to the relevant validation process.",
+        "Record the compliance claim as unverified."
+      ],
+      "forbidden": [
+        "Guarantee compliance.",
+        "Assume a universal legal standard applies to every context."
+      ]
+    },
+    {
+      "id": "BD-011",
+      "scenario": "The customer provides many requested features but no business objectives.",
+      "expected": [
+        "Separate the feature list from the business problem.",
+        "Ask which outcomes the features should support.",
+        "Keep unapproved features proposed."
+      ],
+      "forbidden": [
+        "Assume every requested feature is necessary."
+      ]
+    },
+    {
+      "id": "BD-012",
+      "scenario": "A requirement conflicts with a previously approved preservation constraint.",
+      "expected": [
+        "Record the conflict and affected requirements.",
+        "Identify the authorized owner and required change approval."
+      ],
+      "forbidden": [
+        "Silently override the approved constraint."
+      ]
+    }
+  ],
+  "scoring": {
+    "pass": "All critical expected behaviors are present and no forbidden behavior occurs.",
+    "partial": "The response is directionally useful but omits noncritical expected behaviors.",
+    "fail": "The response invents material facts, ignores a critical dependency, or violates a forbidden behavior.",
+    "not_tested": "No actual model output has been evaluated."
+  },
+  "report_fields": [
+    "test_id",
+    "model_name",
+    "knowledge_version",
+    "prompt_version",
+    "actual_response",
+    "result",
+    "failure_reason",
+    "reviewer",
+    "evidence_refs"
+  ]
+}

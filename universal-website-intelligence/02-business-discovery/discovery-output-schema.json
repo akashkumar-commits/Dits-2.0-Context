@@ -1,0 +1,75 @@
+
+{
+  "schema_version": "1.0.0",
+  "knowledge_id": "UWI-DISCOVERY-OUTPUT",
+  "title": "Business Discovery Output Contract",
+  "required_sections": [
+    "business_context",
+    "problem_statement",
+    "objectives",
+    "stakeholders",
+    "user_needs",
+    "requirements",
+    "constraints",
+    "dependencies",
+    "risks",
+    "success_metrics",
+    "unknowns",
+    "questions",
+    "traceability",
+    "readiness"
+  ],
+  "evidence_statuses": [
+    "verified",
+    "customer_reported",
+    "observed",
+    "inferred",
+    "hypothesis",
+    "unknown",
+    "conflicting"
+  ],
+  "output_template": {
+    "record_id": null,
+    "schema_version": "1.0.0",
+    "business_context": {
+      "business_description": null,
+      "industry": "unknown",
+      "business_model": "unknown",
+      "target_markets": [],
+      "evidence_refs": []
+    },
+    "problem_statement": {
+      "statement": null,
+      "evidence_status": "unknown",
+      "evidence_refs": []
+    },
+    "objectives": [],
+    "stakeholders": [],
+    "user_needs": [],
+    "requirements": [],
+    "constraints": [],
+    "dependencies": [],
+    "risks": [],
+    "success_metrics": [],
+    "unknowns": [],
+    "questions": [],
+    "traceability": [],
+    "readiness": {
+      "status": "not_started",
+      "blocking_items": [],
+      "conditions_for_progression": [],
+      "required_approvals": []
+    },
+    "decision_log_refs": []
+  },
+  "validation_rules": [
+    "Every material claim must carry an evidence status.",
+    "Every inferred or hypothetical claim must be labeled.",
+    "Unknown fields must not be filled with fabricated values.",
+    "Requirements must have a status and unique identifier.",
+    "High-priority requirements must include acceptance criteria or a recorded gap.",
+    "Blocking items must identify the affected decision or activity.",
+    "The output must distinguish recommendations from approved requirements.",
+    "This template is a data contract example; implement and validate a formal JSON Schema separately."
+  ]
+}

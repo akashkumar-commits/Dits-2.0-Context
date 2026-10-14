@@ -1,0 +1,84 @@
+
+{
+  "schema_version": "1.0.0",
+  "knowledge_id": "UWI-DISCOVERY-CONSTRAINTS",
+  "title": "Project Constraints and Dependencies",
+  "constraint_categories": [
+    "budget",
+    "timeline",
+    "scope",
+    "technology",
+    "existing_systems",
+    "content_and_assets",
+    "data_and_privacy",
+    "security",
+    "accessibility",
+    "legal_and_contractual",
+    "staffing_and_ownership",
+    "hosting_and_infrastructure",
+    "migration_and_continuity",
+    "vendor_and_platform",
+    "operational"
+  ],
+  "dependency_categories": [
+    "customer_information",
+    "third_party_system",
+    "api_or_integration",
+    "content_approval",
+    "design_approval",
+    "data_access",
+    "credentials_and_permissions",
+    "vendor_confirmation",
+    "legal_or_security_review",
+    "migration_access",
+    "release_authorization"
+  ],
+  "record_template": {
+    "id": null,
+    "description": null,
+    "category": null,
+    "source_type": "unknown",
+    "evidence_refs": [],
+    "impact_if_unresolved": "unknown",
+    "affected_requirements": [],
+    "owner": null,
+    "status": "unresolved",
+    "resolution_needed_by": null,
+    "mitigation": null,
+    "approval_required": false
+  },
+  "decision_rules": [
+    {
+      "id": "CON-001",
+      "condition": "A required external integration has not been verified.",
+      "action": "Do not commit to its implementation feasibility; request technical evidence or conduct a feasibility assessment."
+    },
+    {
+      "id": "CON-002",
+      "condition": "A critical migration dependency is inaccessible.",
+      "action": "Identify affected migration scope and do not claim migration readiness."
+    },
+    {
+      "id": "CON-003",
+      "condition": "Budget or timeline is unknown.",
+      "action": "Record it as unknown; do not fabricate a delivery estimate."
+    },
+    {
+      "id": "CON-004",
+      "condition": "A required approval is missing.",
+      "action": "Prevent the affected gated action from proceeding."
+    },
+    {
+      "id": "CON-005",
+      "condition": "A constraint conflicts with a desired requirement.",
+      "action": "Document the conflict and propose options without silently discarding either side."
+    }
+  ],
+  "rules": [
+    "Distinguish hard constraints from preferences.",
+    "Identify the source and owner of material constraints.",
+    "A dependency is not resolved merely because an agent recommends a solution.",
+    "Record mitigation plans for material risks.",
+    "Escalate time-sensitive blockers to the responsible owner."
+  ]
+}

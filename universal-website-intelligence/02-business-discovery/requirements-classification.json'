@@ -1,0 +1,106 @@
+
+{
+  "schema_version": "1.0.0",
+  "knowledge_id": "UWI-DISCOVERY-REQUIREMENTS",
+  "title": "Requirements Classification and Prioritization",
+  "requirement_types": [
+    "business_requirement",
+    "user_requirement",
+    "functional_requirement",
+    "nonfunctional_requirement",
+    "content_requirement",
+    "technical_requirement",
+    "integration_requirement",
+    "data_requirement",
+    "accessibility_requirement",
+    "security_requirement",
+    "preservation_requirement",
+    "operational_requirement"
+  ],
+  "requirement_statuses": [
+    "proposed",
+    "customer_confirmed",
+    "approved",
+    "implemented",
+    "tested",
+    "rejected",
+    "deferred",
+    "blocked"
+  ],
+  "priority_levels": [
+    "must_have",
+    "should_have",
+    "could_have",
+    "not_in_scope",
+    "unassigned"
+  ],
+  "classification_rules": [
+    {
+      "id": "REQ-001",
+      "rule": "A statement describing a desired business outcome is not automatically a functional requirement.",
+      "action": "Identify the outcome first, then derive and validate candidate requirements."
+    },
+    {
+      "id": "REQ-002",
+      "rule": "A suggested feature is not automatically approved scope.",
+      "action": "Mark it proposed until the authorized stakeholder approves it."
+    },
+    {
+      "id": "REQ-003",
+      "rule": "A requirement must be specific enough to verify.",
+      "action": "Add acceptance criteria or record the verification gap."
+    },
+    {
+      "id": "REQ-004",
+      "rule": "Existing functionality explicitly marked for preservation must be inventoried and validated.",
+      "action": "Create a preservation requirement linked to observed behavior and regression tests."
+    },
+    {
+      "id": "REQ-005",
+      "rule": "Nonfunctional requirements require context-specific targets.",
+      "action": "Discover relevant performance, availability, accessibility, security, and maintainability expectations without inventing targets."
+    },
+    {
+      "id": "REQ-006",
+      "rule": "Conflicting requirements must be recorded as conflicts.",
+      "action": "Identify affected stakeholders, impact, and required decision authority."
+    }
+  ],
+  "requirement_record": {
+    "requirement_id": null,
+    "statement": null,
+    "type": null,
+    "status": "proposed",
+    "priority": "unassigned",
+    "rationale": null,
+    "originating_objective_ids": [],
+    "stakeholder_ids": [],
+    "evidence_refs": [],
+    "acceptance_criteria": [],
+    "dependencies": [],
+    "constraints": [],
+    "conflicts": [],
+    "approval": {
+      "required": true,
+      "status": "not_requested",
+      "approver_role": null
+    }
+  },
+  "prioritization_guidance": {
+    "consider": [
+      "business_value",
+      "user_value",
+      "risk_reduction",
+      "time_criticality",
+      "dependency_criticality",
+      "implementation_effort",
+      "reversibility"
+    ],
+    "rules": [
+      "Do not assign numerical scores without a defined scoring method.",
+      "Legal, safety, security, and contractual constraints cannot be overridden by a simple value-versus-effort score.",
+      "Document the rationale for major priority decisions.",
+      "Keep unresolved priority decisions visible."
+    ]
+  }
+}

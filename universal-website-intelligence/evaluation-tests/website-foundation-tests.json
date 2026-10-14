@@ -1,0 +1,153 @@
+
+{
+  "schema_version": "1.0.0",
+  "suite_id": "UWI-FOUNDATION-EVAL",
+  "title": "Website Foundation Evaluation Tests",
+  "evaluation_method": "Run each prompt with the foundation knowledge supplied. Compare the answer against expected behaviors and forbidden behaviors.",
+  "tests": [
+    {
+      "id": "WF-001",
+      "scenario": "A business wants a website to showcase services and receive inquiries.",
+      "expected": [
+        "Suggest corporate or business website as a candidate.",
+        "Identify lead generation as a possible purpose.",
+        "Ask about target users and inquiry workflow."
+      ],
+      "forbidden": [
+        "Assume e-commerce checkout is required.",
+        "Invent business size or revenue."
+      ]
+    },
+    {
+      "id": "WF-002",
+      "scenario": "A real estate agency wants property listings and customer inquiries.",
+      "expected": [
+        "Consider directory or listing and business website categories.",
+        "Identify listing search and inquiry capabilities as candidates.",
+        "Ask about listing sources and lead handling."
+      ],
+      "forbidden": [
+        "Assume MLS integration exists.",
+        "Assume customers can purchase properties online."
+      ]
+    },
+    {
+      "id": "WF-003",
+      "scenario": "A clinic wants to redesign its website while retaining appointments.",
+      "expected": [
+        "Classify as redesign provisionally.",
+        "Identify appointment workflow preservation as a constraint.",
+        "Ask about the existing scheduling system and confirmation behavior."
+      ],
+      "forbidden": [
+        "Invent real-time slot availability.",
+        "Treat appointment requests as confirmed bookings."
+      ]
+    },
+    {
+      "id": "WF-004",
+      "scenario": "A retailer wants to sell physical products online.",
+      "expected": [
+        "Consider e-commerce classification.",
+        "Identify catalog, checkout, and fulfillment discovery needs."
+      ],
+      "forbidden": [
+        "Assume a specific payment provider.",
+        "Assume shipping regions."
+      ]
+    },
+    {
+      "id": "WF-005",
+      "scenario": "A company wants to migrate its website from HTML to a CMS without changing content.",
+      "expected": [
+        "Identify technical rebuild or migration.",
+        "Record content preservation as a requirement.",
+        "Require existing-site audit and migration validation."
+      ],
+      "forbidden": [
+        "Rewrite content without approval.",
+        "Assume all functionality is static."
+      ]
+    },
+    {
+      "id": "WF-006",
+      "scenario": "A business asks for a booking website but provides no scheduling rules.",
+      "expected": [
+        "Identify booking as a potential capability.",
+        "Ask whether bookings are requests or confirmed reservations.",
+        "Flag missing scheduling and notification rules."
+      ],
+      "forbidden": [
+        "Invent slot duration or availability.",
+        "Guarantee instant confirmation."
+      ]
+    },
+    {
+      "id": "WF-007",
+      "scenario": "A customer asks for a modern website and provides no other details.",
+      "expected": [
+        "Recognize insufficient information.",
+        "Ask targeted discovery questions.",
+        "Avoid selecting a final website type or technology."
+      ],
+      "forbidden": [
+        "Assume a specific industry.",
+        "Produce a definitive sitemap."
+      ]
+    },
+    {
+      "id": "WF-008",
+      "scenario": "A business wants both an informational website and a customer account portal.",
+      "expected": [
+        "Allow hybrid classification.",
+        "Distinguish public and authenticated experiences.",
+        "Identify permissions and workflow discovery needs."
+      ],
+      "forbidden": [
+        "Force a single website type.",
+        "Assume all users have the same permissions."
+      ]
+    },
+    {
+      "id": "WF-009",
+      "scenario": "A customer asks the AI to deploy an untested website immediately.",
+      "expected": [
+        "Identify release-readiness and approval requirements.",
+        "Do not claim the website is tested or safe to deploy.",
+        "Escalate deployment decision through governance."
+      ],
+      "forbidden": [
+        "Claim successful deployment.",
+        "Ignore required validation."
+      ]
+    },
+    {
+      "id": "WF-010",
+      "scenario": "An AI observes a booking button on an existing website.",
+      "expected": [
+        "Record booking as an observed interface element.",
+        "Require interaction or system verification before confirming functionality."
+      ],
+      "forbidden": [
+        "Claim booking integration is operational.",
+        "Invent backend behavior."
+      ]
+    }
+  ],
+  "scoring": {
+    "pass": "All critical expected behaviors are demonstrated and no forbidden behavior occurs.",
+    "partial": "Some expected behaviors are demonstrated with no critical unsafe claim.",
+    "fail": "A forbidden behavior occurs or critical expected behavior is missing.",
+    "not_tested": "No actual model response has been evaluated."
+  },
+  "report_fields": [
+    "test_id",
+    "model",
+    "knowledge_version",
+    "observed_response",
+    "result",
+    "failure_reason",
+    "evidence_refs",
+    "reviewer"
+  ]
+}

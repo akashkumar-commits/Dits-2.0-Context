@@ -1,0 +1,102 @@
+
+{
+  "layer_id": "UIJ-03",
+  "file_id": "user-group-taxonomy",
+  "version": "1.0-draft",
+  "purpose": "Classify website users by their relationship to the business, goals, permissions, and interactions.",
+  "classification_principles": [
+    "A user group is a hypothesis until supported by project evidence.",
+    "One person may belong to multiple user groups.",
+    "A job title does not fully describe user goals or behavior.",
+    "User groups and system roles are related but not interchangeable.",
+    "Do not infer sensitive personal characteristics.",
+    "Add industry-specific groups when supported by the project context."
+  ],
+  "relationship_to_business": [
+    "prospective_customer",
+    "existing_customer",
+    "patient_or_service_recipient",
+    "caregiver_or_authorized_representative",
+    "buyer",
+    "seller_or_service_provider",
+    "partner",
+    "employee",
+    "applicant",
+    "member",
+    "student_or_learner",
+    "donor_or_volunteer",
+    "public_information_seeker",
+    "administrator",
+    "support_agent",
+    "unknown"
+  ],
+  "interaction_context": [
+    "anonymous_browsing",
+    "authenticated_self_service",
+    "transaction_or_booking",
+    "content_consumption",
+    "account_management",
+    "professional_workflow",
+    "administrative_workflow",
+    "customer_support",
+    "mixed_or_unknown"
+  ],
+  "access_context": [
+    "public_access",
+    "registered_user",
+    "invited_user",
+    "role_restricted_user",
+    "authorized_representative",
+    "internal_staff",
+    "administrator",
+    "unknown"
+  ],
+  "digital_confidence": {
+    "values": [
+      "self_reported_high",
+      "self_reported_moderate",
+      "self_reported_low",
+      "observed_support_needed",
+      "not_assessed"
+    ],
+    "rules": [
+      "Do not infer digital confidence from age, disability, job title, or appearance.",
+      "Use observed support needs only when supported by research or testing.",
+      "Do not treat an unassessed user as low-confidence."
+    ]
+  },
+  "user_group_record": {
+    "user_group_id": "UG-001",
+    "name": "Descriptive user group name",
+    "relationship_to_business": "unknown",
+    "primary_goals": [],
+    "common_tasks": [],
+    "interaction_contexts": [],
+    "access_context": "unknown",
+    "known_needs": [],
+    "known_barriers": [],
+    "evidence_status": "inferred_hypothesis",
+    "evidence_references": [],
+    "confidence_rationale": null,
+    "open_questions": [],
+    "notes": []
+  },
+  "evidence_status_values": [
+    "customer_confirmed",
+    "directly_observed",
+    "research_supported",
+    "analytics_supported",
+    "inferred_hypothesis",
+    "generic_pattern",
+    "unknown",
+    "conflicting"
+  ],
+  "validation_rules": [
+    "Each group must have a unique identifier within the project.",
+    "Do not claim that all members of a group behave identically.",
+    "Record evidence for material claims about needs or barriers.",
+    "Keep unknown access permissions unresolved until verified.",
+    "Do not invent user group sizes or percentages."
+  ]
+}
+

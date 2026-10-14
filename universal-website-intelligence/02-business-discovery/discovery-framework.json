@@ -1,0 +1,87 @@
+
+{
+  "schema_version": "1.0.0",
+  "knowledge_id": "UWI-DISCOVERY-FRAMEWORK",
+  "title": "Business Discovery Framework",
+  "stages": [
+    {
+      "id": "D01",
+      "name": "Understand the request",
+      "objective": "Understand what the customer is asking for and why.",
+      "inputs": ["initial_request", "available_project_context"],
+      "outputs": ["request_summary", "initial_unknowns"],
+      "exit_rule": "The requested outcome can be restated without inventing facts."
+    },
+    {
+      "id": "D02",
+      "name": "Understand the business",
+      "objective": "Understand the business model, audience, offering, and operating context.",
+      "inputs": ["request_summary", "customer_information"],
+      "outputs": ["business_context", "business_model_hypotheses"],
+      "exit_rule": "Material business context is recorded with its evidence status."
+    },
+    {
+      "id": "D03",
+      "name": "Define the problem",
+      "objective": "Distinguish the underlying problem from the proposed solution.",
+      "inputs": ["business_context", "stakeholder_input"],
+      "outputs": ["problem_statement", "current_pain_points", "desired_future_state"],
+      "exit_rule": "The problem statement is supported by customer input or explicitly provisional."
+    },
+    {
+      "id": "D04",
+      "name": "Define objectives",
+      "objective": "Establish intended business outcomes and their measures.",
+      "inputs": ["problem_statement", "business_priorities"],
+      "outputs": ["objectives", "candidate_metrics", "baseline_gaps"],
+      "exit_rule": "Each major objective has an owner or an identified ownership gap."
+    },
+    {
+      "id": "D05",
+      "name": "Discover stakeholders and users",
+      "objective": "Identify decision-makers, affected teams, users, and relevant needs.",
+      "inputs": ["business_context", "objectives"],
+      "outputs": ["stakeholders", "user_groups", "conflicting_needs"],
+      "exit_rule": "Critical stakeholder groups and decision authorities are identified or flagged."
+    },
+    {
+      "id": "D06",
+      "name": "Discover requirements",
+      "objective": "Translate needs into testable requirements.",
+      "inputs": ["objectives", "user_needs", "existing_system_findings"],
+      "outputs": ["functional_requirements", "nonfunctional_requirements", "preservation_requirements"],
+      "exit_rule": "High-priority requirements have acceptance criteria or explicit gaps."
+    },
+    {
+      "id": "D07",
+      "name": "Discover constraints and dependencies",
+      "objective": "Identify factors that constrain or block implementation.",
+      "inputs": ["requirements", "technical_context", "business_constraints"],
+      "outputs": ["constraints", "dependencies", "risks"],
+      "exit_rule": "Critical dependencies and implementation blockers are recorded."
+    },
+    {
+      "id": "D08",
+      "name": "Prioritize scope",
+      "objective": "Establish priorities, trade-offs, and release boundaries.",
+      "inputs": ["requirements", "objectives", "constraints"],
+      "outputs": ["prioritized_scope", "deferred_scope", "tradeoffs"],
+      "exit_rule": "Priority decisions have an identified decision owner and rationale."
+    },
+    {
+      "id": "D09",
+      "name": "Validate the discovery record",
+      "objective": "Check accuracy, contradictions, missing evidence, and approvals.",
+      "inputs": ["all_discovery_outputs"],
+      "outputs": ["validated_record", "open_questions", "approval_gates"],
+      "exit_rule": "The next-stage readiness decision is documented."
+    }
+  ],
+  "operating_rules": [
+    "Stages may iterate when new information appears.",
+    "Discovery depth must be proportional to project complexity and risk.",
+    "Do not treat a proposed solution as proof of the underlying problem.",
+    "Do not convert an AI recommendation into an approved customer requirement.",
+    "Critical unknowns may block specific decisions without blocking all discovery work."
+  ]
+}

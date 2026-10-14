@@ -1,0 +1,78 @@
+
+{
+  "schema_version": "1.0.0",
+  "knowledge_id": "UWI-DISCOVERY-STAKEHOLDERS",
+  "title": "Stakeholder and Decision-Maker Discovery",
+  "stakeholder_categories": [
+    {
+      "id": "business_sponsor",
+      "responsibilities": ["business_outcomes", "strategic_alignment", "major_scope_decisions"]
+    },
+    {
+      "id": "product_or_project_owner",
+      "responsibilities": ["requirements", "prioritization", "delivery_coordination"]
+    },
+    {
+      "id": "marketing_and_content",
+      "responsibilities": ["messaging", "content_approval", "campaign_requirements"]
+    },
+    {
+      "id": "sales_and_customer_service",
+      "responsibilities": ["lead_handling", "customer_communication", "operational_feedback"]
+    },
+    {
+      "id": "end_users",
+      "responsibilities": ["task_needs", "usability_feedback", "user_acceptance"]
+    },
+    {
+      "id": "technical_owner",
+      "responsibilities": ["architecture", "integration_feasibility", "technical_constraints"]
+    },
+    {
+      "id": "security_and_privacy",
+      "responsibilities": ["data_handling_review", "security_requirements", "privacy_review"]
+    },
+    {
+      "id": "legal_or_compliance",
+      "responsibilities": ["applicable_obligations", "regulated_claims_review", "contractual_constraints"]
+    },
+    {
+      "id": "operations_owner",
+      "responsibilities": ["maintenance", "support", "release_readiness", "ongoing_ownership"]
+    }
+  ],
+  "discovery_questions": [
+    {
+      "id": "STK-001",
+      "question": "Who owns the business outcome this website is expected to improve?",
+      "purpose": "Identify accountability for objectives and measurement."
+    },
+    {
+      "id": "STK-002",
+      "question": "Who can approve scope, budget, content, and production release?",
+      "purpose": "Identify decision authority and approval paths."
+    },
+    {
+      "id": "STK-003",
+      "question": "Which teams operate or maintain the current website and connected systems?",
+      "purpose": "Identify operational and technical dependencies."
+    },
+    {
+      "id": "STK-004",
+      "question": "Which users or teams will be materially affected by the change?",
+      "purpose": "Identify affected audiences and workflow owners."
+    },
+    {
+      "id": "STK-005",
+      "question": "Are any requirements disputed between stakeholders?",
+      "purpose": "Surface conflicts instead of silently choosing a preferred interpretation."
+    }
+  ],
+  "rules": [
+    "Do not assume that the person requesting a website change has authority to approve every decision.",
+    "Distinguish stakeholders, users, approvers, and operational owners.",
+    "Record absent decision-makers when their approval is required.",
+    "Route disagreements through an explicit decision process.",
+    "Do not infer stakeholder priorities from job titles alone."
+  ]
+}
