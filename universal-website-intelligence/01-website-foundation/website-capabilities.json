@@ -1,0 +1,68 @@
+
+{
+  "schema_version": "1.0.0",
+  "knowledge_id": "UWI-FOUNDATION-CAPABILITIES",
+  "title": "Universal Website Capability Catalog",
+  "capability_groups": [
+    {
+      "id": "content_presentation",
+      "capabilities": ["pages", "media", "articles", "content_search", "multilingual_content"]
+    },
+    {
+      "id": "discovery_navigation",
+      "capabilities": ["navigation", "site_search", "filters", "sorting", "breadcrumbs", "directories"]
+    },
+    {
+      "id": "lead_engagement",
+      "capabilities": ["contact_forms", "inquiry_forms", "quote_requests", "demo_requests", "newsletter_signup"]
+    },
+    {
+      "id": "commerce",
+      "capabilities": ["catalog", "cart", "checkout", "payment_integration", "order_tracking"]
+    },
+    {
+      "id": "scheduling",
+      "capabilities": ["appointment_requests", "availability_display", "confirmed_booking", "rescheduling", "cancellation"]
+    },
+    {
+      "id": "identity_accounts",
+      "capabilities": ["registration", "authentication", "account_recovery", "user_profiles", "role_permissions"]
+    },
+    {
+      "id": "user_workflows",
+      "capabilities": ["application_submission", "document_upload", "status_tracking", "approvals", "notifications"]
+    },
+    {
+      "id": "content_management",
+      "capabilities": ["cms_editing", "drafts", "publishing", "versioning", "content_approvals"]
+    },
+    {
+      "id": "integrations",
+      "capabilities": ["crm", "scheduling_system", "payment_provider", "analytics", "third_party_api"]
+    },
+    {
+      "id": "platform_operations",
+      "capabilities": ["monitoring", "backups", "logging", "error_handling", "deployment_management"]
+    }
+  ],
+  "capability_statuses": [
+    "verified_existing",
+    "reported_existing",
+    "requested",
+    "recommended",
+    "proposed",
+    "approved",
+    "implemented",
+    "tested",
+    "rejected",
+    "unknown"
+  ],
+  "rules": [
+    "Capability presence does not establish implementation quality.",
+    "Do not assume a third-party integration is available without verification.",
+    "Appointment request and confirmed booking are distinct capabilities.",
+    "Authentication and authorization are separate concerns.",
+    "A recommended capability is not automatically an approved requirement.",
+    "Each capability must have a source, status, and validation method before implementation decisions."
+  ]
+}

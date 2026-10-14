@@ -1,0 +1,58 @@
+
+{
+  "schema_version": "1.0.0",
+  "knowledge_id": "UWI-FOUNDATION-CONTEXT-SCHEMA",
+  "title": "Website Foundation Context",
+  "field_definitions": {
+    "project_id": "Unique project identifier",
+    "business_name": "Customer business name or null",
+    "industry": "Industry identifier or unknown",
+    "project_type": "One or more project-type taxonomy values",
+    "website_types": "One or more website-type taxonomy values",
+    "primary_purpose": "Confirmed purpose or null",
+    "secondary_purposes": "Additional confirmed or proposed purposes",
+    "audiences": "Known and hypothesized audience groups",
+    "existing_website": "URL, inventory status, and audit evidence",
+    "capabilities": "Capability records with status and evidence",
+    "constraints": "Budget, timeline, technology, content, legal, and operational constraints",
+    "unknowns": "Unresolved information",
+    "questions": "Clarification questions with priority",
+    "risks": "Identified risks and mitigation status",
+    "decisions": "Decision references and approval status"
+  },
+  "record_template": {
+    "project_id": null,
+    "business_name": null,
+    "industry": "unknown",
+    "project_type": ["unknown"],
+    "website_types": [],
+    "primary_purpose": null,
+    "secondary_purposes": [],
+    "audiences": [],
+    "existing_website": {
+      "url": null,
+      "audit_status": "not_started",
+      "evidence_refs": []
+    },
+    "capabilities": [],
+    "constraints": [],
+    "unknowns": [],
+    "questions": [],
+    "risks": [],
+    "decisions": []
+  },
+  "capability_record_template": {
+    "capability_id": null,
+    "status": "unknown",
+    "source_type": "unknown",
+    "evidence_refs": [],
+    "validation_status": "not_validated"
+  },
+  "rules": [
+    "Unknown values must remain unknown rather than being filled with guesses.",
+    "Every customer-specific claim must have a provenance reference.",
+    "Observed, requested, recommended, approved, and tested states must remain distinguishable.",
+    "The record_template is an illustrative contract, not a formal JSON Schema validator.",
+    "Schema validation and cross-file identifier validation should be implemented separately."
+  ]
+}

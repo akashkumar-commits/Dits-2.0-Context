@@ -1,0 +1,70 @@
+
+{
+  "schema_version": "1.0.0",
+  "knowledge_id": "UWI-FOUNDATION-PURPOSE",
+  "title": "Website Purpose Model",
+  "purposes": [
+    {
+      "id": "establish_credibility",
+      "description": "Communicate identity, trust, expertise, and legitimacy.",
+      "potential_indicators": ["about_pages", "credentials", "case_studies"],
+      "candidate_metrics": ["qualified_inquiries", "trust_feedback"]
+    },
+    {
+      "id": "generate_leads",
+      "description": "Convert relevant visitors into qualified business inquiries.",
+      "potential_indicators": ["contact_forms", "quote_requests", "demo_requests"],
+      "candidate_metrics": ["qualified_leads", "lead_conversion_rate"]
+    },
+    {
+      "id": "sell_products",
+      "description": "Support product discovery and purchasing.",
+      "potential_indicators": ["catalog", "cart", "checkout"],
+      "candidate_metrics": ["completed_orders", "checkout_completion_rate"]
+    },
+    {
+      "id": "deliver_services",
+      "description": "Enable customers to discover, request, schedule, or access services.",
+      "potential_indicators": ["service_catalog", "request_forms", "scheduling"],
+      "candidate_metrics": ["completed_service_requests", "task_completion_rate"]
+    },
+    {
+      "id": "publish_information",
+      "description": "Provide relevant information or educational content.",
+      "potential_indicators": ["articles", "guides", "resources"],
+      "candidate_metrics": ["content_task_success", "engaged_readership"]
+    },
+    {
+      "id": "enable_self_service",
+      "description": "Allow users to complete tasks without direct staff assistance.",
+      "potential_indicators": ["account_portal", "self_service_forms", "status_tracking"],
+      "candidate_metrics": ["successful_self_service_tasks", "support_deflection"]
+    },
+    {
+      "id": "build_community",
+      "description": "Enable participation and ongoing engagement.",
+      "potential_indicators": ["member_profiles", "discussions", "events"],
+      "candidate_metrics": ["active_participants", "meaningful_interactions"]
+    },
+    {
+      "id": "support_customers",
+      "description": "Help users solve problems and obtain assistance.",
+      "potential_indicators": ["help_center", "support_forms", "documentation"],
+      "candidate_metrics": ["issue_resolution_rate", "support_task_success"]
+    },
+    {
+      "id": "recruit_talent",
+      "description": "Attract candidates and support applications.",
+      "potential_indicators": ["career_pages", "job_listings", "application_forms"],
+      "candidate_metrics": ["qualified_applications", "application_completion_rate"]
+    }
+  ],
+  "decision_rules": [
+    "A website can support multiple purposes.",
+    "Primary purpose must be confirmed through customer discovery.",
+    "Observed website elements provide clues, not proof of business priorities.",
+    "Metrics are candidates until stakeholders approve definitions and measurement methods.",
+    "Do not assume revenue generation is the primary objective of every website.",
+    "Prioritize user needs alongside business objectives and technical constraints."
+  ]
+}

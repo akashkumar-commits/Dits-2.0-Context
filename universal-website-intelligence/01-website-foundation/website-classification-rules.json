@@ -1,0 +1,71 @@
+
+{
+  "schema_version": "1.0.0",
+  "knowledge_id": "UWI-FOUNDATION-CLASSIFICATION",
+  "title": "Website Classification Rules",
+  "rules": [
+    {
+      "id": "WEB-CLASS-001",
+      "condition": "Customer wants an informational business presence.",
+      "action": "Consider corporate or business website classification.",
+      "must_confirm": ["primary_audience", "business_objectives", "required_user_actions"]
+    },
+    {
+      "id": "WEB-CLASS-002",
+      "condition": "Customer intends to sell products online.",
+      "action": "Consider e-commerce classification.",
+      "must_confirm": ["sales_model", "catalog_scope", "checkout_requirements", "fulfillment_model"]
+    },
+    {
+      "id": "WEB-CLASS-003",
+      "condition": "Customer connects two or more participant groups.",
+      "action": "Consider marketplace classification.",
+      "must_confirm": ["participant_roles", "interaction_model", "transaction_model"]
+    },
+    {
+      "id": "WEB-CLASS-004",
+      "condition": "Customer requires users to request or schedule services.",
+      "action": "Consider booking or service website classification.",
+      "must_confirm": ["request_vs_confirmation", "scheduling_rules", "system_dependencies"]
+    },
+    {
+      "id": "WEB-CLASS-005",
+      "condition": "Customer requires authenticated users to perform ongoing tasks.",
+      "action": "Consider web application or portal classification.",
+      "must_confirm": ["roles", "permissions", "data_workflows", "security_requirements"]
+    },
+    {
+      "id": "WEB-CLASS-006",
+      "condition": "Customer wants to change the appearance but preserve functionality.",
+      "action": "Classify as visual redesign provisionally and audit existing functionality.",
+      "must_confirm": ["preservation_scope", "existing_functionality", "design_constraints"]
+    },
+    {
+      "id": "WEB-CLASS-007",
+      "condition": "Customer wants to change the implementation technology.",
+      "action": "Consider technical rebuild or platform migration.",
+      "must_confirm": ["current_stack", "target_constraints", "data_dependencies", "migration_risks"]
+    },
+    {
+      "id": "WEB-CLASS-008",
+      "condition": "Customer requests multiple website purposes.",
+      "action": "Apply multiple classification labels and identify primary and secondary purposes.",
+      "must_confirm": ["purpose_priorities", "user_groups", "success_criteria"]
+    }
+  ],
+  "output_requirements": [
+    "candidate_website_types",
+    "classification_evidence",
+    "project_type",
+    "primary_purpose",
+    "secondary_purposes",
+    "unknowns",
+    "clarification_questions"
+  ],
+  "prohibitions": [
+    "Do not invent the number of locations, customers, users, or products.",
+    "Do not infer live functionality from visual appearance alone.",
+    "Do not classify a website as compliant based on its category.",
+    "Do not finalize technology decisions from website type alone."
+  ]
+}

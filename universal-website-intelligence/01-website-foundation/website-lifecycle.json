@@ -1,0 +1,70 @@
+
+{
+  "schema_version": "1.0.0",
+  "knowledge_id": "UWI-FOUNDATION-LIFECYCLE",
+  "title": "Universal Website Lifecycle",
+  "stages": [
+    {
+      "id": "discovery",
+      "objective": "Understand the business, users, website objectives, and constraints.",
+      "typical_outputs": ["discovery_summary", "requirements", "unknowns", "risks"],
+      "exit_condition": "Sufficient validated context exists to propose a plan."
+    },
+    {
+      "id": "audit",
+      "objective": "Assess existing digital assets and systems when applicable.",
+      "typical_outputs": ["site_inventory", "content_inventory", "functional_inventory", "technical_findings"],
+      "exit_condition": "Existing assets and critical dependencies are documented or explicitly unresolved."
+    },
+    {
+      "id": "strategy_planning",
+      "objective": "Define scope, priorities, success measures, and execution approach.",
+      "typical_outputs": ["project_scope", "roadmap", "decision_log", "approval_plan"],
+      "exit_condition": "The proposed scope and required decisions are approved."
+    },
+    {
+      "id": "architecture",
+      "objective": "Define information, functional, and technical structures.",
+      "typical_outputs": ["sitemap", "workflow_specifications", "integration_plan", "architecture_decisions"],
+      "exit_condition": "Critical dependencies and architecture risks are resolved or gated."
+    },
+    {
+      "id": "content_design",
+      "objective": "Prepare content, interaction design, and visual design.",
+      "typical_outputs": ["content_models", "page_designs", "design_system", "interaction_specs"],
+      "exit_condition": "Relevant content and design approvals are obtained."
+    },
+    {
+      "id": "implementation",
+      "objective": "Build or configure the approved website.",
+      "typical_outputs": ["implemented_pages", "configured_integrations", "technical_documentation"],
+      "exit_condition": "Implementation is ready for validation."
+    },
+    {
+      "id": "validation",
+      "objective": "Verify requirements, functionality, accessibility, performance, security, and integrations.",
+      "typical_outputs": ["test_results", "defect_log", "risk_assessment"],
+      "exit_condition": "Release-blocking defects are resolved and required approvals exist."
+    },
+    {
+      "id": "deployment",
+      "objective": "Release the approved website safely.",
+      "typical_outputs": ["release_record", "deployment_checks", "rollback_plan"],
+      "exit_condition": "Deployment is verified and ownership is transferred."
+    },
+    {
+      "id": "operations_optimization",
+      "objective": "Monitor, maintain, measure, and improve the website.",
+      "typical_outputs": ["monitoring_reports", "maintenance_log", "optimization_backlog"],
+      "exit_condition": "Ongoing; individual improvement cycles have defined completion criteria."
+    }
+  ],
+  "rules": [
+    "Lifecycle stages may overlap or iterate.",
+    "Not every project requires every stage at the same depth.",
+    "Existing-site projects require an appropriate baseline audit.",
+    "High-risk actions require applicable approval gates.",
+    "Deployment is not equivalent to project completion.",
+    "Post-launch monitoring and maintenance ownership must be defined."
+  ]
+}

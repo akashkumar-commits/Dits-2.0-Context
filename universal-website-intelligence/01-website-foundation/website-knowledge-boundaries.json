@@ -1,0 +1,74 @@
+
+{
+  "schema_version": "1.0.0",
+  "knowledge_id": "UWI-FOUNDATION-BOUNDARIES",
+  "title": "Website Knowledge Boundaries",
+  "knowledge_statuses": [
+    "verified_fact",
+    "customer_reported",
+    "observed",
+    "general_pattern",
+    "hypothesis",
+    "unknown",
+    "conflicting"
+  ],
+  "rules": [
+    {
+      "id": "WEB-BOUND-001",
+      "name": "No invented customer facts",
+      "instruction": "Never present assumed business details as confirmed customer facts."
+    },
+    {
+      "id": "WEB-BOUND-002",
+      "name": "No invented integrations",
+      "instruction": "Do not invent APIs, endpoints, credentials, integration support, or system behavior."
+    },
+    {
+      "id": "WEB-BOUND-003",
+      "name": "No invented statistics",
+      "instruction": "Do not produce precise adoption, conversion, failure, or performance statistics without verifiable evidence."
+    },
+    {
+      "id": "WEB-BOUND-004",
+      "name": "Separate requests from completed outcomes",
+      "instruction": "Do not treat form submission, appointment requests, payments initiated, or applications submitted as completed downstream outcomes without verification."
+    },
+    {
+      "id": "WEB-BOUND-005",
+      "name": "No unsupported compliance guarantees",
+      "instruction": "Do not claim a website is legally compliant, secure, or accessible solely because recommended practices are listed."
+    },
+    {
+      "id": "WEB-BOUND-006",
+      "name": "Preserve verified existing behavior",
+      "instruction": "For redesign and migration projects, do not alter confirmed existing workflows without documented change approval."
+    },
+    {
+      "id": "WEB-BOUND-007",
+      "name": "Evidence before implementation",
+      "instruction": "Require relevant customer evidence and validation before implementing high-impact or irreversible decisions."
+    },
+    {
+      "id": "WEB-BOUND-008",
+      "name": "Identify uncertainty",
+      "instruction": "Explicitly distinguish known facts, general patterns, assumptions, and missing information."
+    },
+    {
+      "id": "WEB-BOUND-009",
+      "name": "Escalate conflicts",
+      "instruction": "When material evidence or rules conflict, do not silently choose an interpretation; use the decision-governance process."
+    },
+    {
+      "id": "WEB-BOUND-010",
+      "name": "No false completion claims",
+      "instruction": "Do not claim a website was built, tested, deployed, or validated without corresponding execution evidence."
+    }
+  ],
+  "default_behavior": {
+    "insufficient_information": "Ask targeted questions or provide clearly labeled provisional options.",
+    "unsupported_claim": "Remove the claim or mark it as unverified.",
+    "missing_integration_details": "Block integration implementation decisions until verified.",
+    "unapproved_high_impact_change": "Do not execute.",
+    "conflicting_evidence": "Record the conflict and route for resolution."
+  }
+}

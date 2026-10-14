@@ -1,0 +1,141 @@
+
+{
+  "schema_version": "1.0.0",
+  "knowledge_id": "UWI-FOUNDATION-TAXONOMY",
+  "title": "Universal Website Taxonomy",
+  "classification_dimensions": {
+    "website_type": {
+      "description": "The primary functional and experiential category of a website.",
+      "multi_label": true,
+      "categories": [
+        {
+          "id": "corporate",
+          "name": "Corporate or Business Website",
+          "typical_purposes": ["credibility", "business_information", "lead_generation"],
+          "possible_capabilities": ["service_pages", "contact_forms", "case_studies", "company_information"]
+        },
+        {
+          "id": "marketing",
+          "name": "Marketing or Campaign Website",
+          "typical_purposes": ["campaign_conversion", "promotion", "lead_generation"],
+          "possible_capabilities": ["landing_pages", "campaign_forms", "conversion_tracking"]
+        },
+        {
+          "id": "ecommerce",
+          "name": "E-commerce Website",
+          "typical_purposes": ["product_discovery", "online_sales"],
+          "possible_capabilities": ["product_catalog", "cart", "checkout", "order_tracking"]
+        },
+        {
+          "id": "marketplace",
+          "name": "Marketplace Website",
+          "typical_purposes": ["connect_participants", "facilitate_transactions"],
+          "possible_capabilities": ["multi_role_accounts", "search_filters", "listings", "booking_or_checkout"]
+        },
+        {
+          "id": "booking_service",
+          "name": "Booking or Service Website",
+          "typical_purposes": ["service_discovery", "appointment_or_reservation_requests"],
+          "possible_capabilities": ["availability_display", "request_forms", "booking", "notifications"]
+        },
+        {
+          "id": "content_publishing",
+          "name": "Content or Publishing Website",
+          "typical_purposes": ["information_distribution", "audience_engagement"],
+          "possible_capabilities": ["articles", "categories", "search", "subscriptions"]
+        },
+        {
+          "id": "portfolio",
+          "name": "Portfolio Website",
+          "typical_purposes": ["showcase_work", "professional_credibility"],
+          "possible_capabilities": ["project_gallery", "case_studies", "contact"]
+        },
+        {
+          "id": "community",
+          "name": "Community Website",
+          "typical_purposes": ["member_interaction", "knowledge_sharing"],
+          "possible_capabilities": ["member_accounts", "discussions", "moderation"]
+        },
+        {
+          "id": "directory",
+          "name": "Directory or Listing Website",
+          "typical_purposes": ["entity_discovery", "comparison", "inquiries"],
+          "possible_capabilities": ["listings", "filters", "profiles", "inquiry_forms"]
+        },
+        {
+          "id": "educational",
+          "name": "Educational Website",
+          "typical_purposes": ["learning", "course_discovery", "knowledge_delivery"],
+          "possible_capabilities": ["course_catalog", "learning_content", "enrollment"]
+        },
+        {
+          "id": "nonprofit",
+          "name": "Nonprofit or Cause Website",
+          "typical_purposes": ["awareness", "community_engagement", "fundraising"],
+          "possible_capabilities": ["program_pages", "donations", "volunteer_forms"]
+        },
+        {
+          "id": "government_public_service",
+          "name": "Government or Public Service Website",
+          "typical_purposes": ["public_information", "service_access"],
+          "possible_capabilities": ["service_directories", "forms", "publications", "status_information"]
+        },
+        {
+          "id": "web_application",
+          "name": "Web Application or Portal",
+          "typical_purposes": ["task_completion", "account_based_services", "workflow_execution"],
+          "possible_capabilities": ["authentication", "dashboards", "data_management", "role_permissions"]
+        },
+        {
+          "id": "support_knowledge_base",
+          "name": "Support or Knowledge Base Website",
+          "typical_purposes": ["self_service_support", "documentation"],
+          "possible_capabilities": ["search", "documentation", "support_requests"]
+        }
+      ]
+    },
+    "audience": [
+      "b2b",
+      "b2c",
+      "b2b2c",
+      "internal",
+      "public",
+      "members_only",
+      "mixed",
+      "unknown"
+    ],
+    "interaction_model": [
+      "informational",
+      "lead_capture",
+      "transactional",
+      "account_based",
+      "collaborative",
+      "workflow_driven",
+      "mixed",
+      "unknown"
+    ],
+    "project_type": [
+      "new_website",
+      "visual_redesign",
+      "ux_restructure",
+      "content_refresh",
+      "functional_enhancement",
+      "technical_rebuild",
+      "platform_migration",
+      "content_migration",
+      "domain_migration",
+      "optimization",
+      "maintenance",
+      "mixed",
+      "unknown"
+    ]
+  },
+  "rules": [
+    "Website categories are not mutually exclusive.",
+    "Do not infer a business model solely from website appearance.",
+    "Do not infer implemented functionality solely from visible interface elements.",
+    "Distinguish an intended capability from a verified existing capability.",
+    "Classify industry separately from website type.",
+    "Record uncertain classifications as hypotheses."
+  ]
+}

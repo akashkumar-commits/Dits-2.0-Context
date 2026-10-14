@@ -1,0 +1,63 @@
+
+{
+  "schema_version": "1.0.0",
+  "knowledge_id": "UWI-FOUNDATION-GLOSSARY",
+  "terms": [
+    {
+      "term": "Website",
+      "definition": "A collection of related web-accessible resources presented through a common digital presence."
+    },
+    {
+      "term": "Web Application",
+      "definition": "A web-delivered software experience primarily enabling interactive tasks, data processing, or workflows."
+    },
+    {
+      "term": "Website Redesign",
+      "definition": "A change to the website's visual presentation, interaction experience, or structure; its precise scope must be defined."
+    },
+    {
+      "term": "Website Rebuild",
+      "definition": "Reimplementation of some or all website functionality or architecture."
+    },
+    {
+      "term": "Website Migration",
+      "definition": "Movement of website assets, content, data, platform, domain, or infrastructure from one environment or structure to another."
+    },
+    {
+      "term": "CMS",
+      "definition": "Content Management System used to create, manage, and publish digital content."
+    },
+    {
+      "term": "Information Architecture",
+      "definition": "The organization, labeling, and relationships of information to support understanding and navigation."
+    },
+    {
+      "term": "User Journey",
+      "definition": "A representation of user interactions and decisions across steps toward an intended goal."
+    },
+    {
+      "term": "Conversion",
+      "definition": "A defined user action considered valuable for a specific website objective."
+    },
+    {
+      "term": "Integration",
+      "definition": "A defined exchange of data or functionality between systems."
+    },
+    {
+      "term": "Responsive Design",
+      "definition": "An approach to adapting interfaces across varying viewport sizes and device conditions."
+    },
+    {
+      "term": "Accessibility",
+      "definition": "The quality of enabling people with diverse abilities and assistive technologies to perceive, operate, and understand an experience."
+    },
+    {
+      "term": "Rollback",
+      "definition": "A controlled method of restoring an earlier working state after a change or release."
+    },
+    {
+      "term": "Human Approval Gate",
+      "definition": "A required authorization checkpoint before a specified decision or action proceeds."
+    }
+  ]
+}
