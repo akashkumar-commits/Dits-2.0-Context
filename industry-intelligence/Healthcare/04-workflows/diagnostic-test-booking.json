@@ -1,0 +1,57 @@
+
+{
+  "workflow_id": "HC-WF-002",
+  "workflow_name": "Diagnostic Test Booking",
+  "knowledge_status": "reference_pattern",
+  "trigger": "A patient or authorized provider initiates a diagnostic testing request.",
+  "actors": [
+    "patient",
+    "referring_provider",
+    "laboratory",
+    "collection_staff"
+  ],
+  "steps": [
+    "Identify the requested test or test package.",
+    "Determine whether an order or referral is required.",
+    "Confirm applicable eligibility and specimen requirements.",
+    "Determine collection location or supported home collection.",
+    "Select a verified available slot or submit a request.",
+    "Collect necessary booking information.",
+    "Process the booking or request.",
+    "Provide confirmed status and approved preparation instructions."
+  ],
+  "decisions": [
+    "Is a provider order required?",
+    "Is the test available at the chosen location?",
+    "Does the test require preparation?",
+    "Is home collection supported?",
+    "Is payment required?"
+  ],
+  "exceptions": [
+    "Test unavailable",
+    "Required order missing",
+    "Collection option unavailable",
+    "Preparation requirements not met",
+    "Booking cannot be confirmed"
+  ],
+  "website_features": [
+    "Test catalog",
+    "Test search",
+    "Location selection",
+    "Appointment request or booking",
+    "Preparation information"
+  ],
+  "safety_rules": [
+    "Do not invent test preparation instructions.",
+    "Do not invent diagnostic indications or clinical eligibility.",
+    "Use approved test information.",
+    "Do not imply results are available unless a connected system confirms them."
+  ],
+  "validation_questions": [
+    "Which tests are offered?",
+    "Which tests require an order?",
+    "Which locations provide each test?",
+    "Are appointments required?",
+    "What preparation information is approved for publication?"
+  ]
+}

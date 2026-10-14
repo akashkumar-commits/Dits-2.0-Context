@@ -1,0 +1,59 @@
+
+{
+  "workflow_id": "HC-WF-003",
+  "workflow_name": "Telehealth Consultation",
+  "knowledge_status": "reference_pattern",
+  "trigger": "A patient seeks a remote consultation.",
+  "actors": [
+    "patient",
+    "clinician",
+    "scheduling_team",
+    "telehealth_platform"
+  ],
+  "steps": [
+    "Patient explores the offered consultation service.",
+    "Organization determines applicable eligibility and location restrictions.",
+    "Patient requests or schedules an appointment.",
+    "Required intake and consent processes are completed.",
+    "System provides confirmed session instructions.",
+    "Authorized participants join through the approved channel.",
+    "Clinician conducts the consultation.",
+    "Approved follow-up instructions and next steps are communicated."
+  ],
+  "decisions": [
+    "Is the service appropriate for remote delivery?",
+    "Is the patient in a supported jurisdiction?",
+    "Are consent and identity verification required?",
+    "Is the appointment confirmed?",
+    "What happens if the connection fails?"
+  ],
+  "exceptions": [
+    "Patient is outside the supported service area",
+    "Service is not appropriate for telehealth",
+    "Consent is incomplete",
+    "Patient or clinician does not attend",
+    "Technical connection fails",
+    "Consultation requires an alternative care pathway"
+  ],
+  "website_features": [
+    "Telehealth service pages",
+    "Eligibility information",
+    "Appointment booking or request",
+    "Approved intake and consent flow",
+    "Secure session entry",
+    "Technical support information"
+  ],
+  "safety_rules": [
+    "Do not independently decide clinical suitability.",
+    "Do not invent emergency triage protocols.",
+    "Do not promise prescriptions or specific treatment outcomes.",
+    "Confirm professional licensing and jurisdiction requirements."
+  ],
+  "validation_questions": [
+    "Which services are delivered remotely?",
+    "Where may patients access them?",
+    "Which telehealth platform is used?",
+    "What intake and consent steps are required?",
+    "What happens when a consultation cannot proceed?"
+  ]
+}

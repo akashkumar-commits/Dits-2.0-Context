@@ -1,0 +1,88 @@
+
+{
+  "schema_version": "1.0",
+  "privacy_principles": [
+    {
+      "id": "purpose_limitation",
+      "rule": "Define why each category of personal data is collected and used."
+    },
+    {
+      "id": "data_minimization",
+      "rule": "Collect only the data reasonably necessary for the confirmed purpose."
+    },
+    {
+      "id": "transparency",
+      "rule": "Explain relevant data practices in clear, accessible language."
+    },
+    {
+      "id": "accuracy",
+      "rule": "Provide mechanisms to correct inaccurate information where required."
+    },
+    {
+      "id": "retention",
+      "rule": "Define retention and deletion requirements based on applicable obligations and business needs."
+    },
+    {
+      "id": "access_control",
+      "rule": "Limit data access to authorized people and systems."
+    },
+    {
+      "id": "individual_rights",
+      "rule": "Identify applicable rights and implement the processes needed to support them."
+    },
+    {
+      "id": "accountability",
+      "rule": "Maintain evidence of decisions, safeguards, and required approvals."
+    }
+  ],
+  "data_categories": [
+    {
+      "id": "public_business_information",
+      "examples": ["Published services", "Public office address"],
+      "handling": "Verify accuracy and publishing authorization."
+    },
+    {
+      "id": "personal_contact_information",
+      "examples": ["Name", "Email", "Telephone number"],
+      "handling": "Define purpose, access, retention, and sharing."
+    },
+    {
+      "id": "health_information",
+      "examples": ["Symptoms", "Diagnoses", "Test results"],
+      "handling": "Apply relevant heightened safeguards and jurisdiction-specific requirements."
+    },
+    {
+      "id": "identity_and_authentication",
+      "examples": ["Account identifiers", "Authentication tokens"],
+      "handling": "Protect credentials and restrict access."
+    },
+    {
+      "id": "usage_and_analytics",
+      "examples": ["Page visits", "Device identifiers", "Interaction events"],
+      "handling": "Assess identifiability, collection purpose, vendor sharing, and applicable consent requirements."
+    }
+  ],
+  "required_data_inventory_fields": [
+    "data_category",
+    "specific_fields",
+    "purpose",
+    "collection_method",
+    "system_of_record",
+    "recipients",
+    "storage_location",
+    "retention_rule",
+    "access_roles",
+    "legal_basis_or_authorization",
+    "safeguards",
+    "owner",
+    "review_status"
+  ],
+  "rules": [
+    "Do not collect sensitive health details in a generic contact form by default.",
+    "Do not place personal or health data in URLs, page titles, or analytics event names.",
+    "Do not use real patient records as prompts or test fixtures without approved safeguards.",
+    "Do not send sensitive data to AI services unless the service and data processing are explicitly approved.",
+    "Do not assume de-identification is effective without evaluating re-identification risk.",
+    "Escalate unclear legal bases, retention obligations, and data-sharing arrangements."
+  ]
+}

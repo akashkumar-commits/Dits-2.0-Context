@@ -1,0 +1,76 @@
+
+{
+  "schema_version": "1.0",
+  "discovery_sequence": [
+    {
+      "stage": "identify",
+      "questions": [
+        "What service or process should the website support?",
+        "Who initiates the process?",
+        "What is the intended outcome?"
+      ]
+    },
+    {
+      "stage": "map",
+      "questions": [
+        "What happens first?",
+        "Who performs each action?",
+        "Which decisions change the path?",
+        "Which steps are manual or automated?"
+      ]
+    },
+    {
+      "stage": "rules",
+      "questions": [
+        "What must be true before the process can proceed?",
+        "Which policies or approvals apply?",
+        "Which data must be collected?"
+      ]
+    },
+    {
+      "stage": "exceptions",
+      "questions": [
+        "What happens when information is missing?",
+        "What happens when a request is rejected?",
+        "What happens when a system is unavailable?",
+        "How does the user recover?"
+      ]
+    },
+    {
+      "stage": "systems",
+      "questions": [
+        "Which systems already support this process?",
+        "Is integration required?",
+        "Which system is the source of truth?",
+        "What happens when systems disagree?"
+      ]
+    },
+    {
+      "stage": "validation",
+      "questions": [
+        "Who owns the workflow?",
+        "Who can approve its rules?",
+        "Which steps involve sensitive information?",
+        "Which parts require clinical, privacy, or security review?"
+      ]
+    }
+  ],
+  "question_prioritization": [
+    "Ask questions that change the architecture or primary user journey first.",
+    "Avoid asking for information already confirmed by the customer.",
+    "Group closely related questions.",
+    "Do not block low-risk planning on unrelated unknowns.",
+    "Block implementation of safety-critical or access-sensitive rules until validated."
+  ],
+  "required_agent_output": {
+    "workflow_id": "",
+    "confirmed_steps": [],
+    "proposed_steps": [],
+    "unknowns": [],
+    "decisions_required": [],
+    "exceptions": [],
+    "integrations": [],
+    "approvals": [],
+    "next_action": ""
+  }
+}

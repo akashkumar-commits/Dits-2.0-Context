@@ -1,0 +1,56 @@
+
+{
+  "workflow_id": "HC-WF-007",
+  "workflow_name": "Laboratory Quality Control",
+  "knowledge_status": "reference_pattern",
+  "trigger": "A laboratory worker performs an authorized quality control activity.",
+  "actors": [
+    "laboratory_worker",
+    "supervisor",
+    "quality_management_system",
+    "administrator"
+  ],
+  "steps": [
+    "Identify the assigned device, test, or control activity.",
+    "Retrieve the current approved procedure.",
+    "Verify prerequisites and material requirements.",
+    "Perform the activity according to approved instructions.",
+    "Record required results and observations.",
+    "Evaluate results against approved criteria.",
+    "Record the authorized disposition or initiate review.",
+    "Escalate exceptions according to the laboratory's approved procedure."
+  ],
+  "decisions": [
+    "Are prerequisites satisfied?",
+    "Are materials and equipment valid for use?",
+    "Are results within approved criteria?",
+    "Is supervisor review required?",
+    "Is equipment release or restriction permitted?"
+  ],
+  "exceptions": [
+    "Missing material",
+    "Expired control",
+    "Equipment issue",
+    "Out-of-range result",
+    "Incomplete documentation",
+    "Unauthorized disposition"
+  ],
+  "website_features": [
+    "Professional resources",
+    "Secure laboratory portal entry",
+    "Technical support information"
+  ],
+  "safety_rules": [
+    "Do not invent control limits or test procedures.",
+    "Do not independently determine device suitability for patient testing.",
+    "Do not replace approved laboratory quality management procedures.",
+    "Require qualified review for operational or clinical disposition rules."
+  ],
+  "validation_questions": [
+    "Which equipment and controls are involved?",
+    "What approved procedures govern the activity?",
+    "Who may record, review, and approve results?",
+    "What happens when results fail?",
+    "Is this workflow actually within the website scope?"
+  ]
+}

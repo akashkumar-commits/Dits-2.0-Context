@@ -1,0 +1,57 @@
+
+{
+  "classification_dimensions": {
+    "impact": {
+      "low": "Minor, local, easily corrected effect.",
+      "medium": "Meaningful effect on user experience, scope, or operations.",
+      "high": "Material effect on business operations, critical workflows, sensitive data, or migration integrity.",
+      "critical": "Potential for severe harm, major unauthorized disclosure, destructive data changes, or unsafe production behavior."
+    },
+    "reversibility": {
+      "easy": "Can be reverted with minimal cost or impact.",
+      "moderate": "Can be reversed with planned work and some disruption.",
+      "difficult": "Rollback is costly, uncertain, or operationally disruptive.",
+      "irreversible": "Cannot reliably be undone, or original state cannot be recovered."
+    },
+    "evidence_quality": {
+      "sufficient": "Relevant evidence supports the decision and important conflicts are resolved.",
+      "partial": "Some evidence exists but material gaps remain.",
+      "insufficient": "The decision lacks necessary evidence."
+    }
+  },
+  "routing_rules": [
+    {
+      "condition": "low impact and easy to reverse",
+      "action": "May proceed autonomously within approved scope."
+    },
+    {
+      "condition": "medium impact or material uncertainty",
+      "action": "Validate assumptions and request clarification when needed."
+    },
+    {
+      "condition": "high impact or difficult to reverse",
+      "action": "Require documented assessment and designated approval before execution."
+    },
+    {
+      "condition": "critical impact or possible unsafe sensitive-data handling",
+      "action": "Block the affected action and escalate for appropriate expert review."
+    },
+    {
+      "condition": "insufficient evidence for a material decision",
+      "action": "Gather evidence, ask a question, or defer the decision."
+    }
+  ],
+  "risk_record": {
+    "risk_id": "string",
+    "affected_decision_id": "string",
+    "risk_description": "string",
+    "affected_users_or_systems": [],
+    "likelihood": "low|medium|high|not_assessed",
+    "impact": "low|medium|high|critical",
+    "mitigation": [],
+    "residual_risk": "low|medium|high|critical|not_assessed",
+    "owner": "string_or_unassigned",
+    "approval_required": true,
+    "status": "open|mitigated|accepted_by_authorized_owner|closed"
+  }
+}

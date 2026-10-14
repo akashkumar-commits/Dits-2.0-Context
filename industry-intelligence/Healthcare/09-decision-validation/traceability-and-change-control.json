@@ -1,0 +1,52 @@
+
+{
+  "traceability_policy": {
+    "record_for_material_decisions": [
+      "Original request or trigger",
+      "Decision and alternatives considered",
+      "Supporting evidence and source references",
+      "Known assumptions and unresolved questions",
+      "Risk classification",
+      "Recommendation and rationale",
+      "Required and obtained approvals",
+      "Implementation reference",
+      "Validation outcome"
+    ],
+    "link_related_records": [
+      "Customer requirement",
+      "Industry knowledge item",
+      "Workflow definition",
+      "Design artifact",
+      "Technical specification",
+      "Test case",
+      "Approval record",
+      "Release record"
+    ]
+  },
+  "change_triggers": [
+    "Customer changes an approved requirement",
+    "A source becomes outdated or is corrected",
+    "An integration contract or API changes",
+    "A workflow or data flow changes",
+    "A security or compliance assessment changes",
+    "A test reveals that the original decision was incorrect",
+    "A production incident invalidates an assumption"
+  ],
+  "change_process": [
+    "Identify affected decisions and artifacts.",
+    "Record the change and its source.",
+    "Reassess evidence, assumptions, risks, and dependencies.",
+    "Determine whether clarification or new approval is required.",
+    "Update affected plans and tests.",
+    "Revalidate before release where applicable.",
+    "Mark superseded records without deleting the audit trail."
+  ],
+  "audit_rules": [
+    "Do not overwrite an approved decision without preserving its history.",
+    "Record who or which authorized system made each change.",
+    "Store only the minimum necessary information in decision logs.",
+    "Do not place unnecessary patient information, credentials, or secrets in audit records.",
+    "Apply access controls and retention rules to decision history.",
+    "Keep approval evidence associated with the exact decision version."
+  ]
+}

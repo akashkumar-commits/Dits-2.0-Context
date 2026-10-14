@@ -1,0 +1,57 @@
+
+{
+  "workflow_id": "HC-WF-008",
+  "workflow_name": "Medical Device Inquiry",
+  "knowledge_status": "reference_pattern",
+  "trigger": "A potential buyer requests information about a medical device.",
+  "actors": [
+    "buyer",
+    "sales_team",
+    "technical_team",
+    "support_team"
+  ],
+  "steps": [
+    "Buyer explores the product catalog.",
+    "Buyer reviews verified specifications and intended use.",
+    "Buyer requests pricing, a demonstration, or technical information.",
+    "The organization captures necessary inquiry details.",
+    "The inquiry is routed to the responsible team.",
+    "The team reviews requirements and responds.",
+    "Approved commercial or technical follow-up occurs."
+  ],
+  "decisions": [
+    "Is the product available in the buyer's market?",
+    "Does the inquiry require technical review?",
+    "Is a distributor involved?",
+    "Can pricing be shown publicly?",
+    "Are additional qualifications required?"
+  ],
+  "exceptions": [
+    "Product unavailable in region",
+    "Insufficient inquiry information",
+    "Unsupported product requirement",
+    "No authorized distributor",
+    "Inquiry routing failure"
+  ],
+  "website_features": [
+    "Product catalog",
+    "Product detail pages",
+    "Technical documentation",
+    "Request a quote",
+    "Request a demonstration",
+    "Contact technical support"
+  ],
+  "safety_rules": [
+    "Do not invent product specifications.",
+    "Do not invent certifications or regulatory approvals.",
+    "Do not make unsupported claims about clinical performance.",
+    "Require approval for intended-use and safety-related content."
+  ],
+  "validation_questions": [
+    "Which products are sold in each market?",
+    "Who is the intended buyer?",
+    "Which product documents are approved?",
+    "How are inquiries assigned?",
+    "Are sales handled directly or through distributors?"
+  ]
+}

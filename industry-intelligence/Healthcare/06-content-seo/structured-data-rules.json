@@ -1,0 +1,76 @@
+
+{
+  "schema_version": "1.0",
+  "vocabulary": "https://schema.org",
+  "candidate_mappings": [
+    {
+      "page_type": "healthcare_organization",
+      "candidate_types": [
+        "MedicalOrganization",
+        "Hospital",
+        "MedicalClinic"
+      ],
+      "required_checks": [
+        "Actual organization type",
+        "Verified name",
+        "Verified contact information"
+      ]
+    },
+    {
+      "page_type": "provider_profile",
+      "candidate_types": ["Physician", "Person"],
+      "required_checks": [
+        "Correct professional classification",
+        "Verified identity",
+        "Verified credentials"
+      ]
+    },
+    {
+      "page_type": "diagnostic_test",
+      "candidate_types": ["MedicalTest"],
+      "required_checks": [
+        "Correct test classification",
+        "Approved test description"
+      ]
+    },
+    {
+      "page_type": "medical_device_product",
+      "candidate_types": [
+        "MedicalDevice",
+        "Product"
+      ],
+      "required_checks": [
+        "Actual product type",
+        "Verified specifications",
+        "Approved product claims"
+      ]
+    },
+    {
+      "page_type": "educational_article",
+      "candidate_types": [
+        "Article",
+        "BlogPosting"
+      ],
+      "required_checks": [
+        "Accurate author information",
+        "Accurate publication dates",
+        "Accurate article content"
+      ]
+    }
+  ],
+  "implementation_rules": [
+    "Use the most appropriate valid type.",
+    "Validate properties against current Schema.org definitions.",
+    "Check search-engine-specific eligibility separately.",
+    "Ensure markup matches visible page content.",
+    "Do not fabricate reviews, ratings, credentials, or business information.",
+    "Validate generated JSON-LD before publication."
+  ],
+  "output": {
+    "page_url": "",
+    "proposed_type": "",
+    "verified_properties": {},
+    "missing_properties": [],
+    "validation_status": "pending"
+  }
+}

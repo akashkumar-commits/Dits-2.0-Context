@@ -1,0 +1,116 @@
+
+{
+  "workflow_id": "HC-WF-001",
+  "workflow_name": "Patient Appointment Booking",
+  "knowledge_status": "reference_pattern",
+  "business_objective": "Enable patients to request or schedule an appropriate healthcare appointment.",
+  "trigger": "A patient chooses to arrange an appointment.",
+  "actors": [
+    "patient",
+    "scheduling_system",
+    "provider",
+    "scheduling_staff"
+  ],
+  "preconditions": [
+    "The organization supports appointments.",
+    "The service and booking channel are available.",
+    "Applicable eligibility and referral rules are known."
+  ],
+  "steps": [
+    {
+      "id": "S01",
+      "actor": "patient",
+      "action": "Select service, specialty, or provider",
+      "decision": "Is provider selection required?"
+    },
+    {
+      "id": "S02",
+      "actor": "system_or_staff",
+      "action": "Determine applicable appointment requirements",
+      "decision": "Are eligibility, referral, or preparation requirements satisfied?"
+    },
+    {
+      "id": "S03",
+      "actor": "scheduling_system",
+      "action": "Provide verified available slots or a request mechanism",
+      "decision": "Is real-time availability supported?"
+    },
+    {
+      "id": "S04",
+      "actor": "patient",
+      "action": "Select a slot or submit preferred scheduling details"
+    },
+    {
+      "id": "S05",
+      "actor": "patient",
+      "action": "Provide necessary contact and scheduling information"
+    },
+    {
+      "id": "S06",
+      "actor": "system_or_staff",
+      "action": "Process the booking request",
+      "decision": "Was the appointment confirmed?"
+    },
+    {
+      "id": "S07",
+      "actor": "system",
+      "action": "Display the actual booking status and next steps"
+    }
+  ],
+  "business_rules_to_confirm": [
+    "Service-first versus provider-first booking",
+    "New versus returning patient process",
+    "Referral requirements",
+    "Eligibility rules",
+    "Real-time booking versus appointment request",
+    "Payment or deposit requirements",
+    "Cancellation and rescheduling policies",
+    "Reminder and notification rules"
+  ],
+  "exception_paths": [
+    "No slots available",
+    "Patient is ineligible for online booking",
+    "Required referral is missing",
+    "Slot becomes unavailable",
+    "Submission or payment fails",
+    "Booking remains pending",
+    "Patient requests cancellation or rescheduling"
+  ],
+  "website_implications": {
+    "pages": [
+      "Service Details",
+      "Provider Details",
+      "Appointment",
+      "Booking Status"
+    ],
+    "features": [
+      "Appointment selection or request",
+      "Input validation",
+      "Status confirmation",
+      "Error recovery"
+    ],
+    "interface_states": [
+      "loading",
+      "available",
+      "unavailable",
+      "pending",
+      "confirmed",
+      "failed",
+      "cancelled"
+    ]
+  },
+  "human_approvals": [
+    "Final booking business rules",
+    "Sensitive data collection",
+    "Payment requirements",
+    "Patient-facing confirmation language"
+  ],
+  "customer_validation_questions": [
+    "Do patients select a service, provider, or both?",
+    "Is availability live or manually managed?",
+    "Can patients book instantly or only request an appointment?",
+    "Are referrals or eligibility checks required?",
+    "Is payment required before confirmation?",
+    "How do cancellations and rescheduling work?"
+  ]
+}

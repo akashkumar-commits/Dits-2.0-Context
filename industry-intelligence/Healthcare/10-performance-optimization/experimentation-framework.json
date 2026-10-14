@@ -1,0 +1,44 @@
+
+{
+  "experiment_record": {
+    "experiment_id": "string",
+    "hypothesis": "string",
+    "customer_goal": "string",
+    "affected_pages": [],
+    "proposed_change": "string",
+    "primary_metric": "string",
+    "guardrail_metrics": [],
+    "baseline_period": "string",
+    "experiment_period": "string_or_not_set",
+    "eligible_audience": "approved_non_sensitive_definition",
+    "success_criteria": "customer_approved_rule",
+    "sample_size_method": "documented_method_or_not_assessed",
+    "known_limitations": [],
+    "approval_status": "draft|awaiting_approval|approved|rejected",
+    "result": "not_started|running|inconclusive|positive|negative|stopped",
+    "decision": "adopt|iterate|revert|collect_more_data|not_decided"
+  },
+  "experiment_rules": [
+    "Define the hypothesis and success criteria before the test.",
+    "Use an appropriate sample-size and analysis method.",
+    "Avoid declaring a winner based on insufficient data.",
+    "Record concurrent changes that may affect the results.",
+    "Check accessibility, performance, privacy, and functional guardrails.",
+    "Do not use sensitive health attributes for targeting unless specifically reviewed and authorized.",
+    "Do not run experiments that could compromise clinical safety or access to essential information.",
+    "Require approval for material changes to critical healthcare workflows.",
+    "Do not assume an observed change was caused by the experiment without appropriate analysis."
+  ],
+  "permitted_example_experiments": [
+    "Compare two non-misleading CTA labels for a general business inquiry.",
+    "Test whether clearer navigation improves access to verified service information.",
+    "Compare two accessible page layouts while preserving essential functionality.",
+    "Evaluate form instructions using aggregated completion and error metrics."
+  ],
+  "prohibited_shortcuts": [
+    "Removing important safety information to improve conversion",
+    "Making clinical claims more persuasive without evidence",
+    "Creating false urgency about healthcare services",
+    "Using patient-level sensitive information without appropriate authorization and review"
+  ]
+}

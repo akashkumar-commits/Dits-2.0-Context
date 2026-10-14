@@ -1,0 +1,76 @@
+
+{
+  "schema_version": "1.0",
+  "migration_stages": [
+    {
+      "stage": "pre_migration_audit",
+      "tasks": [
+        "Inventory existing URLs.",
+        "Capture page titles and metadata.",
+        "Record canonical URLs.",
+        "Identify indexable pages.",
+        "Identify internal links.",
+        "Collect available search performance data.",
+        "Identify important content and backlinks."
+      ]
+    },
+    {
+      "stage": "content_mapping",
+      "tasks": [
+        "Map each old URL to its intended destination.",
+        "Classify content as preserve, improve, merge, or remove.",
+        "Identify pages requiring rewriting.",
+        "Review changes to medical or regulated content."
+      ]
+    },
+    {
+      "stage": "implementation",
+      "tasks": [
+        "Implement appropriate redirects for changed URLs.",
+        "Preserve relevant metadata.",
+        "Update internal links.",
+        "Generate accurate XML sitemaps.",
+        "Check canonical tags.",
+        "Check robots and noindex directives.",
+        "Validate structured data."
+      ]
+    },
+    {
+      "stage": "pre_launch_validation",
+      "tasks": [
+        "Crawl the staging website.",
+        "Test redirects.",
+        "Check broken links.",
+        "Verify important pages are accessible.",
+        "Check indexability configuration.",
+        "Compare critical content with approved versions."
+      ]
+    },
+    {
+      "stage": "post_launch_monitoring",
+      "tasks": [
+        "Monitor crawl and indexing issues.",
+        "Monitor search performance.",
+        "Review redirect errors.",
+        "Check analytics continuity.",
+        "Investigate significant unexpected changes."
+      ]
+    }
+  ],
+  "url_mapping_schema": {
+    "old_url": "",
+    "new_url": "",
+    "action": "preserve",
+    "redirect_required": false,
+    "content_change": "none",
+    "approval_status": "pending"
+  },
+  "critical_rules": [
+    "Do not remove high-value pages without analysis and approval.",
+    "Do not redirect unrelated pages to the homepage by default.",
+    "Do not publish staging noindex settings to production accidentally.",
+    "Do not assume identical URLs guarantee identical search performance.",
+    "Do not promise zero ranking fluctuations.",
+    "Preserve approved medical content and important qualifications."
+  ]
+}

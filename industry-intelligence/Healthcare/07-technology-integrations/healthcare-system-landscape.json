@@ -1,0 +1,177 @@
+
+{
+  "schema_version": "1.0",
+  "systems": [
+    {
+      "id": "ehr_emr",
+      "name": "Electronic Health Record / Electronic Medical Record",
+      "purpose": "Manage clinical and patient records.",
+      "common_contexts": [
+        "hospitals-clinics",
+        "telehealth",
+        "behavioral-health"
+      ],
+      "possible_website_relationships": [
+        "Patient portal entry",
+        "Appointment scheduling",
+        "Patient registration",
+        "Authorized information exchange"
+      ],
+      "integration_dependencies": [
+        "Vendor capabilities",
+        "Approved APIs",
+        "Identity and authorization",
+        "Data access permissions"
+      ],
+      "do_not_assume": [
+        "Direct database access",
+        "Public patient-record APIs",
+        "Universal FHIR support",
+        "Permission to copy clinical records"
+      ]
+    },
+    {
+      "id": "lis_lims",
+      "name": "Laboratory Information System / Laboratory Information Management System",
+      "purpose": "Support laboratory workflows, specimens, testing, and results.",
+      "common_contexts": ["diagnostic-labs"],
+      "possible_website_relationships": [
+        "Test catalog",
+        "Test ordering",
+        "Collection scheduling",
+        "Authorized results access"
+      ],
+      "do_not_assume": [
+        "All tests can be ordered online",
+        "Results can be displayed publicly",
+        "The system provides a modern API"
+      ]
+    },
+    {
+      "id": "pacs_ris",
+      "name": "Picture Archiving and Communication System / Radiology Information System",
+      "purpose": "Support medical imaging storage, access, and radiology operations.",
+      "common_contexts": [
+        "hospitals-clinics",
+        "diagnostic-labs"
+      ],
+      "possible_website_relationships": [
+        "Imaging service information",
+        "Appointment workflows",
+        "Authorized imaging portal entry"
+      ],
+      "do_not_assume": [
+        "Public imaging access",
+        "Direct website access to diagnostic images"
+      ]
+    },
+    {
+      "id": "scheduling",
+      "name": "Appointment Scheduling System",
+      "purpose": "Manage appointment requests, availability, bookings, and cancellations.",
+      "common_contexts": [
+        "hospitals-clinics",
+        "diagnostic-labs",
+        "telehealth"
+      ],
+      "possible_website_relationships": [
+        "Availability display",
+        "Appointment booking",
+        "Appointment request",
+        "Rescheduling"
+      ],
+      "do_not_assume": [
+        "Real-time availability",
+        "Instant confirmation",
+        "Two-way integration"
+      ]
+    },
+    {
+      "id": "patient_portal",
+      "name": "Patient Portal",
+      "purpose": "Provide authorized access to patient-facing digital services.",
+      "common_contexts": [
+        "hospitals-clinics",
+        "diagnostic-labs",
+        "telehealth",
+        "rpm"
+      ],
+      "possible_website_relationships": [
+        "Secure login entry",
+        "Account support",
+        "Service navigation"
+      ],
+      "do_not_assume": [
+        "Portal functionality is part of the public website",
+        "All patients have portal accounts"
+      ]
+    },
+    {
+      "id": "rpm_platform",
+      "name": "Remote Patient Monitoring Platform",
+      "purpose": "Receive and manage connected monitoring data and related workflows.",
+      "common_contexts": ["rpm"],
+      "possible_website_relationships": [
+        "Program enrollment",
+        "Device support",
+        "Authorized portal access"
+      ],
+      "do_not_assume": [
+        "Every device exposes an API",
+        "The website processes live patient readings",
+        "Automatic alerts follow universal clinical rules"
+      ]
+    },
+    {
+      "id": "crm",
+      "name": "Customer Relationship Management System",
+      "purpose": "Manage inquiries, sales, relationships, and communication.",
+      "common_contexts": [
+        "medical-devices",
+        "telehealth",
+        "healthcare-marketplaces"
+      ],
+      "possible_website_relationships": [
+        "Lead forms",
+        "Consultation requests",
+        "Product inquiries"
+      ],
+      "do_not_assume": [
+        "The CRM is approved for protected health information",
+        "Every form should send data to the CRM"
+      ]
+    },
+    {
+      "id": "cms",
+      "name": "Content Management System",
+      "purpose": "Manage website pages, media, content, and publishing workflows.",
+      "common_contexts": ["all"],
+      "possible_website_relationships": [
+        "Page management",
+        "Content publishing",
+        "Localization",
+        "SEO metadata"
+      ],
+      "do_not_assume": [
+        "The CMS should store clinical records",
+        "Every user should have publishing access"
+      ]
+    },
+    {
+      "id": "identity_provider",
+      "name": "Identity and Access Management System",
+      "purpose": "Authenticate users and support authorized access.",
+      "common_contexts": ["all"],
+      "possible_website_relationships": [
+        "Staff login",
+        "Patient portal access",
+        "Professional accounts",
+        "Administrative access"
+      ],
+      "do_not_assume": [
+        "One login works across all systems",
+        "Authentication alone grants access to patient data"
+      ]
+    }
+  ]
+}

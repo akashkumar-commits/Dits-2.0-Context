@@ -1,0 +1,66 @@
+
+{
+  "schema_version": "1.0",
+  "navigation_principles": [
+    "Prioritize primary user tasks.",
+    "Use understandable labels.",
+    "Keep important contact or service actions discoverable.",
+    "Support search when the content inventory justifies it.",
+    "Maintain consistent navigation across related pages.",
+    "Provide mobile navigation with equivalent functionality.",
+    "Avoid relying on hover-only interactions.",
+    "Separate portal login from public content navigation."
+  ],
+  "candidate_models": [
+    {
+      "id": "service_led",
+      "suitable_when": "Visitors primarily seek healthcare services.",
+      "candidate_groups": [
+        "Services",
+        "Providers",
+        "Locations",
+        "Patient Information",
+        "About"
+      ]
+    },
+    {
+      "id": "audience_led",
+      "suitable_when": "Distinct audiences have substantially different journeys.",
+      "candidate_groups": [
+        "For Patients",
+        "For Professionals",
+        "Services",
+        "Resources",
+        "About"
+      ]
+    },
+    {
+      "id": "product_led",
+      "suitable_when": "Visitors primarily evaluate products or technical solutions.",
+      "candidate_groups": [
+        "Products",
+        "Applications",
+        "Resources",
+        "Support",
+        "About"
+      ]
+    },
+    {
+      "id": "marketplace_led",
+      "suitable_when": "Visitors search, compare, or connect with service providers.",
+      "candidate_groups": [
+        "Browse",
+        "How It Works",
+        "For Professionals",
+        "Help"
+      ]
+    }
+  ],
+  "validation_questions": [
+    "What are the three most important visitor tasks?",
+    "Which audiences need separate navigation paths?",
+    "Is content search necessary?",
+    "Which CTA represents the primary business objective?",
+    "Does the existing website have navigation patterns users depend on?"
+  ]
+}

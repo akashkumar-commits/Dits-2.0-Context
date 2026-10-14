@@ -1,0 +1,78 @@
+
+{
+  "schema_version": "1.0",
+  "strategy_process": [
+    {
+      "stage": "business_understanding",
+      "activities": [
+        "Identify the website's business objectives.",
+        "Identify products, services, and audiences.",
+        "Confirm geographic markets and languages.",
+        "Identify conversion actions."
+      ]
+    },
+    {
+      "stage": "content_audit",
+      "activities": [
+        "Inventory existing URLs and content.",
+        "Classify pages by purpose and audience.",
+        "Identify duplication and outdated material.",
+        "Record performance evidence when available.",
+        "Identify content requiring expert review."
+      ]
+    },
+    {
+      "stage": "content_planning",
+      "activities": [
+        "Map user questions to content needs.",
+        "Map content to relevant user journeys.",
+        "Identify necessary service and product pages.",
+        "Define content hierarchy and internal links.",
+        "Prioritize content gaps."
+      ]
+    },
+    {
+      "stage": "production",
+      "activities": [
+        "Create evidence-grounded content briefs.",
+        "Draft content using approved information.",
+        "Apply brand voice and readability rules.",
+        "Prepare metadata and relevant structured data."
+      ]
+    },
+    {
+      "stage": "validation",
+      "activities": [
+        "Check factual claims against sources.",
+        "Validate service and product details.",
+        "Review clinical and regulatory statements.",
+        "Check accessibility and SEO fundamentals.",
+        "Obtain required approvals."
+      ]
+    },
+    {
+      "stage": "measurement",
+      "activities": [
+        "Monitor relevant search visibility.",
+        "Review engagement and conversion outcomes.",
+        "Identify content that needs updating.",
+        "Recommend improvements based on evidence."
+      ]
+    }
+  ],
+  "prioritization_factors": [
+    "Business importance",
+    "User need",
+    "Workflow importance",
+    "Content accuracy risk",
+    "Existing search performance",
+    "Content maintenance cost",
+    "Evidence availability"
+  ],
+  "rules": [
+    "Do not generate pages solely to target keyword variations.",
+    "Do not duplicate near-identical content across locations.",
+    "Do not treat traffic as the only measure of content value.",
+    "Prioritize accuracy and user usefulness over keyword density."
+  ]
+}

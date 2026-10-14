@@ -1,0 +1,67 @@
+
+{
+  "reference_standard": {
+    "name": "WCAG",
+    "version": "2.2",
+    "target_level": "Determine the applicable target and legal requirements for the project.",
+    "note": "This is a testing reference. Do not claim full conformance from automated scans alone."
+  },
+  "monitoring_areas": [
+    {
+      "area": "keyboard",
+      "checks": [
+        "All interactive controls are keyboard operable.",
+        "Focus is visible and moves in a logical order.",
+        "Dialogs and menus manage focus correctly."
+      ]
+    },
+    {
+      "area": "forms",
+      "checks": [
+        "Fields have programmatically associated labels.",
+        "Instructions and validation errors are understandable.",
+        "Errors are communicated without relying only on color."
+      ]
+    },
+    {
+      "area": "visual",
+      "checks": [
+        "Text contrast is tested.",
+        "Content remains usable at supported zoom levels.",
+        "Meaning is not conveyed through color alone."
+      ]
+    },
+    {
+      "area": "assistive_technology",
+      "checks": [
+        "Semantic structure and headings are meaningful.",
+        "Images have appropriate text alternatives.",
+        "Status messages and dynamic changes are announced where required."
+      ]
+    },
+    {
+      "area": "healthcare_workflows",
+      "checks": [
+        "Booking and inquiry forms are accessible.",
+        "Critical instructions are readable and understandable.",
+        "Authentication and error recovery are tested.",
+        "Time limits and session expiration are handled appropriately."
+      ]
+    }
+  ],
+  "validation_methods": [
+    "Automated scanning",
+    "Keyboard-only testing",
+    "Screen-reader testing",
+    "Manual expert review",
+    "Representative user testing where appropriate"
+  ],
+  "rules": [
+    "Automated scans detect only some accessibility issues.",
+    "Retest affected components after changes.",
+    "Prioritize blockers affecting essential user tasks.",
+    "Do not mark a page fully accessible based only on a passing scan.",
+    "Record unresolved findings and their owners.",
+    "Use synthetic test accounts and non-sensitive data."
+  ]
+}

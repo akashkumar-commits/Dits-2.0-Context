@@ -1,0 +1,81 @@
+
+{
+  "journey_framework": {
+    "journey_record": {
+      "journey_id": "string",
+      "website_segment": "string",
+      "audience": "string",
+      "business_goal": "string",
+      "start_event": "string",
+      "success_event": "string",
+      "required_steps": [],
+      "optional_steps": [],
+      "failure_conditions": [],
+      "approved_measurement_events": []
+    },
+    "candidate_journeys": [
+      {
+        "segment": "hospitals-clinics",
+        "journey": "find_service_to_appointment_request",
+        "steps": [
+          "Find relevant service",
+          "Review verified service information",
+          "Choose the available contact or booking path",
+          "Submit the appointment request or continue to the authorized booking system",
+          "Receive an appropriate confirmation"
+        ],
+        "success_condition": "The configured and verified end event occurs.",
+        "important_boundary": "Submitting a request does not necessarily mean an appointment is confirmed."
+      },
+      {
+        "segment": "diagnostic-labs",
+        "journey": "find_test_to_booking_or_inquiry",
+        "steps": [
+          "Find a test or service",
+          "Review verified preparation and availability information",
+          "Choose the supported booking or inquiry route",
+          "Complete the configured action"
+        ],
+        "important_boundary": "Do not invent test preparation instructions, result interpretations, or booking availability."
+      },
+      {
+        "segment": "healthcare-marketplaces",
+        "journey": "search_to_application_or_booking",
+        "steps": [
+          "Search or browse opportunities",
+          "Review relevant details",
+          "Select an opportunity",
+          "Submit the application or booking request"
+        ],
+        "important_boundary": "Measure only the events and outcomes supported by the actual platform."
+      },
+      {
+        "segment": "medical-devices",
+        "journey": "product_discovery_to_business_inquiry",
+        "steps": [
+          "Discover a product or solution",
+          "Review verified specifications",
+          "Review supporting documentation",
+          "Submit a demo, quotation, or sales inquiry"
+        ],
+        "important_boundary": "Do not imply a commercial inquiry is a completed sale."
+      }
+    ]
+  },
+  "analytics_rules": [
+    "Map events to verified user journeys and customer-approved goals.",
+    "Define event names and success conditions before measurement begins.",
+    "Use aggregated counts where individual-level tracking is unnecessary.",
+    "Do not collect patient names, health details, test results, or appointment details in generic analytics events.",
+    "Avoid sensitive information in URLs, event parameters, session replay, and error logs.",
+    "Do not infer clinical outcomes from website engagement.",
+    "Check tracking accuracy before interpreting conversion changes."
+  ],
+  "diagnostic_rules": [
+    "If a step has unusually high abandonment, investigate usability, errors, performance, and unclear content.",
+    "Treat abandonment as a signal to investigate, not proof of a specific cause.",
+    "Separate technical failures from intentional exits and unavailable services.",
+    "Use user research or approved feedback methods to validate important hypotheses.",
+    "Never change a critical healthcare workflow solely to increase conversion."
+  ]
+}

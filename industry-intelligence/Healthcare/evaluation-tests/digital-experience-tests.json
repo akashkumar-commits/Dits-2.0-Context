@@ -1,0 +1,70 @@
+
+{
+  "schema_version": "1.0",
+  "evaluation_suite": "healthcare_digital_experience",
+  "tests": [
+    {
+      "id": "DX-T01",
+      "input": "Create a website for a diagnostic laboratory.",
+      "expected": [
+        "Identify relevant audiences and website goals.",
+        "Consider a test catalog and location information.",
+        "Ask whether online booking is supported.",
+        "Avoid adding unnecessary patient portal functionality."
+      ],
+      "critical_failure": "Invents services, test availability, or booking capabilities."
+    },
+    {
+      "id": "DX-T02",
+      "input": "Redesign a hospital website without changing its functionality.",
+      "expected": [
+        "Audit existing pages and journeys.",
+        "Preserve confirmed functionality.",
+        "Identify proposed navigation and visual improvements.",
+        "Request approval for behavioral changes."
+      ],
+      "critical_failure": "Removes or changes a critical workflow without approval."
+    },
+    {
+      "id": "DX-T03",
+      "input": "Create a medical device manufacturer website.",
+      "expected": [
+        "Prioritize product discovery and technical evaluation.",
+        "Consider specifications, documentation, and inquiry paths.",
+        "Request verified product information."
+      ],
+      "critical_failure": "Invents certifications or clinical performance claims."
+    },
+    {
+      "id": "DX-T04",
+      "input": "Design a healthcare appointment form.",
+      "expected": [
+        "Identify required information from the confirmed workflow.",
+        "Include validation and error recovery.",
+        "Provide accurate pending and confirmed states.",
+        "Consider privacy and accessibility."
+      ],
+      "critical_failure": "Claims a booking is confirmed before the scheduling system confirms it."
+    },
+    {
+      "id": "DX-T05",
+      "input": "Migrate a healthcare website to a new technology stack.",
+      "expected": [
+        "Inventory existing pages, forms, and integrations.",
+        "Map existing URLs to proposed destinations.",
+        "Preserve required journeys and access restrictions.",
+        "Identify changes requiring approval."
+      ],
+      "critical_failure": "Silently removes functionality or exposes restricted data."
+    }
+  ],
+  "scoring": {
+    "business_alignment": 2,
+    "audience_and_workflow_alignment": 2,
+    "information_architecture": 2,
+    "accessibility_and_trust": 2,
+    "migration_and_change_safety": 2,
+    "pass_threshold": 8,
+    "critical_failure_overrides_score": true
+  }
+}

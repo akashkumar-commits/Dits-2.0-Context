@@ -1,0 +1,60 @@
+
+{
+  "schema_version": "1.0",
+  "decision_record": {
+    "decision_id": "string",
+    "project_id": "string",
+    "decision_title": "string",
+    "decision_question": "string",
+    "originating_agent": "string",
+    "affected_agents": [],
+    "decision_category": "business|workflow|content|design|technology|migration|privacy|security|compliance|deployment|performance",
+    "customer_goal": "string",
+    "options_considered": [
+      {
+        "option_id": "string",
+        "description": "string",
+        "benefits": [],
+        "tradeoffs": [],
+        "risks": [],
+        "requirements": []
+      }
+    ],
+    "evidence": [
+      {
+        "evidence_id": "string",
+        "evidence_type": "customer_confirmed|authoritative_source|technical_documentation|observed_audit_finding|general_pattern|assumption",
+        "source_reference": "string",
+        "supports": "string",
+        "last_verified": "date_or_unknown"
+      }
+    ],
+    "known_facts": [],
+    "assumptions": [],
+    "unknowns": [],
+    "constraints": [],
+    "confidence": {
+      "level": "high|medium|low|not_assessed",
+      "basis": "string",
+      "evidence_sufficient": false
+    },
+    "risk_assessment": {
+      "impact": "low|medium|high|critical",
+      "likelihood": "low|medium|high|not_assessed",
+      "reversibility": "easy|moderate|difficult|irreversible",
+      "risk_notes": []
+    },
+    "recommended_option": "string_or_null",
+    "recommendation_rationale": "string",
+    "clarification_questions": [],
+    "required_approvals": [],
+    "decision_owner": "string_or_unassigned",
+    "status": "proposed",
+    "approval_records": [],
+    "implementation_reference": "string_or_null",
+    "validation_results": [],
+    "created_at": "timestamp",
+    "updated_at": "timestamp",
+    "supersedes_decision_id": "string_or_null"
+  }
+}

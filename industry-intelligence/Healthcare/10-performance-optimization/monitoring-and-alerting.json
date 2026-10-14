@@ -1,0 +1,74 @@
+
+{
+  "monitoring_categories": [
+    {
+      "category": "availability",
+      "signals": [
+        "Website unreachable",
+        "Repeated server errors",
+        "TLS certificate problems"
+      ],
+      "default_action": "Alert the responsible operator and gather diagnostic evidence."
+    },
+    {
+      "category": "critical_user_journey",
+      "signals": [
+        "Booking path fails",
+        "Contact form submission fails",
+        "Authentication flow fails",
+        "Critical page returns an error"
+      ],
+      "default_action": "Prioritize the incident according to business impact and notify the owner."
+    },
+    {
+      "category": "integration",
+      "signals": [
+        "API failures increase",
+        "External service becomes unavailable",
+        "Authentication or authorization errors increase"
+      ],
+      "default_action": "Check documented dependencies and use approved fallback behavior."
+    },
+    {
+      "category": "performance",
+      "signals": [
+        "Core Web Vitals deteriorate",
+        "Response times increase",
+        "Error rates rise"
+      ],
+      "default_action": "Compare against the established baseline and investigate likely causes."
+    },
+    {
+      "category": "migration",
+      "signals": [
+        "Important URLs return errors",
+        "Redirects fail",
+        "Unexpected indexability changes occur"
+      ],
+      "default_action": "Open a migration integrity issue and route it to the relevant owner."
+    }
+  ],
+  "alert_record": {
+    "alert_id": "string",
+    "detected_at": "timestamp",
+    "affected_service": "string",
+    "signal": "string",
+    "observed_value": "number_or_description",
+    "expected_range": "configured_baseline_or_unknown",
+    "severity": "low|medium|high|critical",
+    "evidence": [],
+    "suspected_causes": [],
+    "confidence_in_cause": "low|medium|high|not_assessed",
+    "recommended_action": "string",
+    "owner": "string_or_unassigned",
+    "status": "open|investigating|mitigated|resolved|false_positive"
+  },
+  "automation_boundaries": [
+    "Read-only diagnostics may run automatically when authorized.",
+    "Approved reversible fixes may run within explicit limits.",
+    "Production configuration changes require the applicable authorization.",
+    "Destructive operations and sensitive-data changes must not be triggered solely by an unverified alert.",
+    "Escalate when evidence is insufficient or impact may be critical.",
+    "Do not place credentials or patient information in alerts."
+  ]
+}

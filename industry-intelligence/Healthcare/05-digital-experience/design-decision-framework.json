@@ -1,0 +1,65 @@
+
+{
+  "schema_version": "1.0",
+  "decision_process": [
+    "Understand the business objective.",
+    "Identify the primary audience and task.",
+    "Retrieve relevant industry and workflow knowledge.",
+    "Review existing website evidence if available.",
+    "Generate suitable experience options.",
+    "Evaluate options against user needs and constraints.",
+    "Identify risks and unverified assumptions.",
+    "Recommend an option with reasoning.",
+    "Request approval where necessary."
+  ],
+  "evaluation_dimensions": [
+    {
+      "id": "task_support",
+      "question": "Does the design help users complete the intended task?"
+    },
+    {
+      "id": "business_alignment",
+      "question": "Does the design support the confirmed business objective?"
+    },
+    {
+      "id": "information_clarity",
+      "question": "Can users understand the content and next steps?"
+    },
+    {
+      "id": "trust",
+      "question": "Does the design communicate verified information without misleading claims?"
+    },
+    {
+      "id": "accessibility",
+      "question": "Does the design support applicable accessibility requirements?"
+    },
+    {
+      "id": "technical_feasibility",
+      "question": "Can the proposed experience work with the approved systems?"
+    },
+    {
+      "id": "migration_impact",
+      "question": "Does the design preserve or intentionally change existing behavior?"
+    }
+  ],
+  "output_contract": {
+    "recommendation": "",
+    "business_goal": "",
+    "target_audience": [],
+    "supported_user_tasks": [],
+    "knowledge_references": [],
+    "customer_confirmed_facts": [],
+    "assumptions": [],
+    "alternatives_considered": [],
+    "risks": [],
+    "approval_requirements": [],
+    "next_action": ""
+  },
+  "decision_rules": [
+    "Do not present aesthetic preference as evidence of usability.",
+    "Do not invent research findings.",
+    "Do not fabricate conversion improvements.",
+    "Separate proposed design hypotheses from validated outcomes.",
+    "Prioritize safety and accessibility over decorative choices."
+  ]
+}

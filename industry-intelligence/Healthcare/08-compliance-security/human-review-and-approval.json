@@ -1,0 +1,58 @@
+
+{
+  "schema_version": "1.0",
+  "approval_categories": [
+    {
+      "id": "legal_applicability",
+      "trigger": "Uncertain interpretation of legal or regulatory obligations.",
+      "reviewer": "Qualified legal or compliance reviewer",
+      "execution_policy": "Pause affected compliance-sensitive work."
+    },
+    {
+      "id": "clinical_content",
+      "trigger": "New or materially changed clinical guidance or claims.",
+      "reviewer": "Qualified clinical reviewer",
+      "execution_policy": "Do not publish until required review is complete."
+    },
+    {
+      "id": "sensitive_data_flow",
+      "trigger": "New sharing, storage, AI processing, or transfer of sensitive data.",
+      "reviewer": "Authorized privacy and security owners",
+      "execution_policy": "Do not activate the unapproved data flow."
+    },
+    {
+      "id": "authentication_changes",
+      "trigger": "Changes to login, authorization, identity, or patient access.",
+      "reviewer": "Customer security and technical owners",
+      "execution_policy": "Require explicit approval and access-control testing."
+    },
+    {
+      "id": "production_release",
+      "trigger": "Deployment of material changes to a production healthcare website or portal.",
+      "reviewer": "Authorized release owner",
+      "execution_policy": "Require release validation and recorded approval."
+    },
+    {
+      "id": "incident_response",
+      "trigger": "Potential sensitive data breach or material security incident.",
+      "reviewer": "Designated incident response team",
+      "execution_policy": "Escalate immediately under the approved incident plan."
+    }
+  ],
+  "approval_record": {
+    "decision_id": "",
+    "change_description": "",
+    "risk_summary": "",
+    "evidence": [],
+    "reviewer_role": "",
+    "decision": "pending",
+    "decision_timestamp": "",
+    "conditions": []
+  },
+  "rules": [
+    "A model-generated approval is not human approval.",
+    "Record who approved a consequential action and under what conditions.",
+    "Do not bypass a mandatory approval because a workflow is automated.",
+    "Reopen approval when material scope or risk changes."
+  ]
+}

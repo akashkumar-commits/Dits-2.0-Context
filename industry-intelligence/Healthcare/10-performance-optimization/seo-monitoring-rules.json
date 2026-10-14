@@ -1,0 +1,54 @@
+
+{
+  "monitoring_areas": {
+    "indexability": [
+      "Important pages can be crawled where intended.",
+      "Canonical URLs are correct.",
+      "Robots directives and sitemap entries are consistent.",
+      "No unintended noindex rules exist."
+    ],
+    "migration_integrity": [
+      "Important legacy URLs map to relevant destinations.",
+      "Redirects resolve correctly.",
+      "Important content and metadata are preserved or intentionally updated.",
+      "Broken internal links and redirect chains are detected.",
+      "Canonical and sitemap references reflect the intended URL structure."
+    ],
+    "search_performance": [
+      "Organic clicks and impressions",
+      "Landing-page performance",
+      "Search queries where reporting is available",
+      "Indexing anomalies",
+      "Unexpected changes after releases"
+    ],
+    "content_quality": [
+      "Pages answer their intended audience's needs.",
+      "Claims remain supported by evidence.",
+      "Important content is not duplicated without a reason.",
+      "Metadata accurately represents visible page content."
+    ]
+  },
+  "change_detection": {
+    "compare": [
+      "Pre-release baseline",
+      "Post-release measurements",
+      "Comparable previous periods where appropriate"
+    ],
+    "investigate": [
+      "Unexpected loss of indexable pages",
+      "Increase in crawl or redirect errors",
+      "Important URL changes without expected redirects",
+      "Unusual organic traffic changes",
+      "Missing titles or descriptions on important pages"
+    ]
+  },
+  "rules": [
+    "Use verified analytics and search platform data when available.",
+    "Account for seasonality, reporting delays, algorithm changes, and other external factors.",
+    "Do not promise rankings or traffic growth.",
+    "Do not automatically rewrite important content solely because a metric changes.",
+    "Require review before material changes to high-value pages.",
+    "Keep SEO monitoring separate from clinical or business performance claims.",
+    "Treat unavailable search data as unknown."
+  ]
+}

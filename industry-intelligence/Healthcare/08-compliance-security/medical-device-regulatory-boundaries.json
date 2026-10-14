@@ -1,0 +1,49 @@
+
+{
+  "schema_version": "1.0",
+  "assessment_dimensions": [
+    "Product classification",
+    "Intended use",
+    "Target markets",
+    "Manufacturer and distributor roles",
+    "Approved product labeling",
+    "Software functionality",
+    "Clinical claims",
+    "Post-market support obligations"
+  ],
+  "website_content_controls": [
+    {
+      "id": "claims",
+      "rule": "Use approved and substantiated product claims."
+    },
+    {
+      "id": "intended_use",
+      "rule": "Ensure published intended-use statements match authorized product documentation."
+    },
+    {
+      "id": "certifications",
+      "rule": "Verify certification, clearance, or approval claims for the relevant product and market."
+    },
+    {
+      "id": "technical_documentation",
+      "rule": "Publish only authorized, current documentation."
+    },
+    {
+      "id": "software_scope",
+      "rule": "Escalate software functionality that may influence diagnosis, treatment, or clinical decisions for regulatory assessment."
+    }
+  ],
+  "review_requirements": [
+    "Product owner",
+    "Regulatory affairs specialist where applicable",
+    "Clinical or technical subject matter expert where applicable",
+    "Legal reviewer for material regulatory claims"
+  ],
+  "rules": [
+    "Do not infer product approval from the manufacturer's identity.",
+    "Do not invent certifications or indications.",
+    "Do not assume regulatory status is identical across countries.",
+    "Do not make unsupported safety or effectiveness claims.",
+    "Reassess when intended use or product functionality changes."
+  ]
+}

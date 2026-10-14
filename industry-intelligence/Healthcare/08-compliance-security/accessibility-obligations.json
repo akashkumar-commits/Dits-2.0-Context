@@ -1,0 +1,60 @@
+
+{
+  "schema_version": "1.0",
+  "reference_standard": "WCAG 2.2",
+  "assessment_fields": [
+    "jurisdiction",
+    "organization_type",
+    "service_type",
+    "public_or_private_service",
+    "applicable_laws",
+    "contractual_requirements",
+    "target_conformance_level"
+  ],
+  "control_areas": [
+    {
+      "id": "perceivable",
+      "checks": [
+        "Text alternatives for meaningful images",
+        "Adequate contrast",
+        "Captions or alternatives for relevant media",
+        "Content reflow and text resizing"
+      ]
+    },
+    {
+      "id": "operable",
+      "checks": [
+        "Keyboard accessibility",
+        "Visible focus",
+        "Accessible form controls",
+        "Appropriate target sizes",
+        "No keyboard traps"
+      ]
+    },
+    {
+      "id": "understandable",
+      "checks": [
+        "Clear labels and instructions",
+        "Understandable validation messages",
+        "Consistent navigation",
+        "Predictable interactions"
+      ]
+    },
+    {
+      "id": "robust",
+      "checks": [
+        "Semantic markup",
+        "Accessible names and roles",
+        "Status announcements",
+        "Assistive technology compatibility"
+      ]
+    }
+  ],
+  "rules": [
+    "Use WCAG as a technical reference, not as a substitute for legal applicability assessment.",
+    "Do not claim conformance without adequate evaluation.",
+    "Combine automated checks with manual testing.",
+    "Prioritize critical user journeys and forms.",
+    "Document known issues and remediation plans."
+  ]
+}

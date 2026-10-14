@@ -1,0 +1,79 @@
+
+{
+  "decision_gates": [
+    {
+      "gate": "low_risk_reversible",
+      "examples": [
+        "Suggesting a page hierarchy",
+        "Generating draft wireframes",
+        "Proposing internal content groupings",
+        "Creating draft metadata"
+      ],
+      "autonomous_action": "Allowed within approved requirements and design constraints.",
+      "required_conditions": [
+        "No material scope change",
+        "No unsupported factual claims",
+        "No sensitive data exposure",
+        "Change can be reviewed or reversed"
+      ],
+      "approval": "Not normally required before drafting"
+    },
+    {
+      "gate": "customer_direction",
+      "examples": [
+        "Selecting the final brand direction",
+        "Changing the target audience",
+        "Adding or removing significant pages",
+        "Changing approved content scope"
+      ],
+      "autonomous_action": "Prepare options and recommend a direction.",
+      "approval": "Customer approval before finalizing material changes"
+    },
+    {
+      "gate": "technical_or_migration",
+      "examples": [
+        "Replacing a scheduling system",
+        "Changing authentication",
+        "Migrating a CMS",
+        "Changing an API integration",
+        "Deleting legacy functionality"
+      ],
+      "autonomous_action": "Assess options, map dependencies, and prepare a migration plan.",
+      "approval": "Technical owner and customer approval according to project policy"
+    },
+    {
+      "gate": "sensitive_data_or_security",
+      "examples": [
+        "Sending patient data to a third-party service",
+        "Changing access permissions",
+        "Processing sensitive data with an AI provider",
+        "Changing retention or deletion behavior"
+      ],
+      "autonomous_action": "Identify the data flow, risks, alternatives, and evidence required.",
+      "approval": "Required privacy, security, or other designated review before execution"
+    },
+    {
+      "gate": "regulated_or_expert",
+      "examples": [
+        "Determining legal applicability",
+        "Approving clinical instructions",
+        "Making medical-device regulatory claims",
+        "Confirming security or regulatory compliance"
+      ],
+      "autonomous_action": "Prepare an evidence-backed review package.",
+      "approval": "Qualified human review; no autonomous final determination"
+    },
+    {
+      "gate": "production_release",
+      "examples": [
+        "Publishing the website",
+        "Switching production DNS",
+        "Activating integrations",
+        "Applying irreversible data changes"
+      ],
+      "autonomous_action": "Run authorized checks and prepare release evidence.",
+      "approval": "Explicit release authorization under the project's release policy"
+    }
+  ],
+  "global_rule": "The most restrictive applicable gate takes precedence. One approval does not automatically authorize unrelated changes."
+}

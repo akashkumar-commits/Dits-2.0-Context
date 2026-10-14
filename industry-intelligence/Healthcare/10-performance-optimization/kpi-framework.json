@@ -1,0 +1,76 @@
+
+{
+  "framework_version": "1.0",
+  "kpi_categories": {
+    "business": [
+      "qualified_inquiries",
+      "demo_requests",
+      "appointment_requests",
+      "referral_submissions",
+      "job_applications",
+      "support_requests_completed"
+    ],
+    "user_experience": [
+      "task_completion_rate",
+      "form_completion_rate",
+      "navigation_success",
+      "search_success",
+      "mobile_usability_issues"
+    ],
+    "technical": [
+      "core_web_vitals",
+      "page_load_errors",
+      "javascript_errors",
+      "server_error_rate",
+      "availability",
+      "api_failure_rate"
+    ],
+    "seo": [
+      "indexable_url_count",
+      "crawl_errors",
+      "organic_clicks",
+      "organic_impressions",
+      "search_landing_page_engagement"
+    ],
+    "accessibility": [
+      "automated_accessibility_findings",
+      "manual_test_findings",
+      "keyboard_navigation_failures",
+      "critical_accessibility_defects"
+    ],
+    "agent_quality": [
+      "task_success_rate",
+      "validation_pass_rate",
+      "unsupported_claim_rate",
+      "regression_rate",
+      "human_escalation_rate"
+    ]
+  },
+  "kpi_definition": {
+    "kpi_id": "string",
+    "name": "string",
+    "category": "string",
+    "business_goal": "string",
+    "definition": "string",
+    "calculation": "string",
+    "data_source": "string",
+    "measurement_window": "string",
+    "baseline": "number_or_unknown",
+    "target": "number_or_customer_defined",
+    "owner": "string",
+    "segmentation": [],
+    "privacy_classification": "public|internal|personal_data|sensitive",
+    "minimum_data_requirements": "string",
+    "limitations": [],
+    "status": "not_configured|baseline_pending|collecting_data|insufficient_data|measured"
+  },
+  "rules": [
+    "Select KPIs based on the customer's confirmed objectives and website type.",
+    "Document how every KPI is calculated.",
+    "Do not compare measurements with incompatible definitions or collection methods.",
+    "Distinguish leading indicators from final business outcomes.",
+    "Record missing data and tracking changes.",
+    "Do not set targets without customer input or a clearly labelled proposed benchmark.",
+    "Do not treat correlation as proof that a website change caused an outcome."
+  ]
+}

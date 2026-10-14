@@ -1,0 +1,130 @@
+
+{
+  "schema_version": "1.0",
+  "page_patterns": [
+    {
+      "id": "homepage",
+      "purpose": "Help visitors understand the organization and find the most relevant next step.",
+      "candidate_sections": [
+        "Value proposition",
+        "Primary service pathways",
+        "Audience entry points",
+        "Trust information",
+        "Key differentiators",
+        "Primary call to action"
+      ],
+      "rules": [
+        "Communicate what the organization does.",
+        "Prioritize high-value user tasks.",
+        "Use only verified trust claims.",
+        "Avoid unnecessary content overload."
+      ]
+    },
+    {
+      "id": "service_detail",
+      "purpose": "Explain a healthcare service and help users decide what to do next.",
+      "candidate_sections": [
+        "Service overview",
+        "Who the service is for",
+        "What the service involves",
+        "Eligibility and limitations",
+        "Preparation information",
+        "Locations or availability",
+        "FAQs",
+        "Next step"
+      ],
+      "rules": [
+        "Use approved service information.",
+        "Do not invent clinical eligibility criteria.",
+        "Distinguish educational content from medical advice."
+      ]
+    },
+    {
+      "id": "provider_profile",
+      "purpose": "Help users evaluate and locate a healthcare professional.",
+      "candidate_sections": [
+        "Name and professional title",
+        "Verified credentials",
+        "Specialties",
+        "Locations",
+        "Languages where verified",
+        "Services",
+        "Appointment options"
+      ],
+      "rules": [
+        "Verify credentials and affiliations.",
+        "Do not fabricate experience or ratings.",
+        "Display booking only when supported."
+      ]
+    },
+    {
+      "id": "diagnostic_test_detail",
+      "purpose": "Explain a diagnostic test and its operational requirements.",
+      "candidate_sections": [
+        "Test name",
+        "Approved description",
+        "Specimen information",
+        "Preparation requirements",
+        "Collection options",
+        "Locations",
+        "Booking or inquiry"
+      ],
+      "rules": [
+        "Use approved test information.",
+        "Do not invent preparation instructions.",
+        "Do not invent result turnaround times."
+      ]
+    },
+    {
+      "id": "medical_device_product",
+      "purpose": "Support product evaluation and commercial inquiry.",
+      "candidate_sections": [
+        "Product overview",
+        "Intended use",
+        "Verified specifications",
+        "Applications",
+        "Technical documents",
+        "Support information",
+        "Inquiry CTA"
+      ],
+      "rules": [
+        "Verify specifications and regulatory claims.",
+        "Use current approved product documentation.",
+        "Do not invent clinical performance claims."
+      ]
+    },
+    {
+      "id": "location",
+      "purpose": "Help users identify and reach a service location.",
+      "candidate_sections": [
+        "Location name",
+        "Address",
+        "Verified operating hours",
+        "Available services",
+        "Directions",
+        "Accessibility information",
+        "Contact options"
+      ],
+      "rules": [
+        "Verify location-specific services and hours.",
+        "Do not assume all services are available at every location."
+      ]
+    },
+    {
+      "id": "contact_or_inquiry",
+      "purpose": "Allow users to contact the appropriate team.",
+      "candidate_sections": [
+        "Contact options",
+        "Inquiry purpose",
+        "Minimal required fields",
+        "Privacy information",
+        "Submission status"
+      ],
+      "rules": [
+        "Collect only necessary information.",
+        "Avoid requesting sensitive health details through unapproved channels.",
+        "Do not promise response times without evidence."
+      ]
+    }
+  ]
+}

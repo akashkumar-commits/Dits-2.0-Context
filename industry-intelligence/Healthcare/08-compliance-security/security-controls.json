@@ -1,0 +1,77 @@
+
+{
+  "schema_version": "1.0",
+  "control_categories": [
+    {
+      "id": "identity",
+      "controls": [
+        "Use approved authentication mechanisms.",
+        "Enforce authorization on the server.",
+        "Apply least privilege.",
+        "Protect account recovery and administrative access.",
+        "Use stronger authentication where risk or policy requires it."
+      ]
+    },
+    {
+      "id": "data_protection",
+      "controls": [
+        "Use protected transport.",
+        "Apply appropriate encryption at rest.",
+        "Keep secrets out of source code and client bundles.",
+        "Minimize sensitive data in logs.",
+        "Restrict and monitor exports."
+      ]
+    },
+    {
+      "id": "application_security",
+      "controls": [
+        "Validate untrusted inputs.",
+        "Protect against injection and cross-site scripting.",
+        "Implement appropriate CSRF protections.",
+        "Use secure session handling.",
+        "Restrict upload types and validate uploaded files.",
+        "Apply appropriate rate limits and abuse protections."
+      ]
+    },
+    {
+      "id": "integration_security",
+      "controls": [
+        "Use approved service credentials.",
+        "Validate API authorization and scopes.",
+        "Protect webhook authenticity.",
+        "Define timeout and retry behavior.",
+        "Prevent duplicate operations where necessary.",
+        "Avoid exposing privileged APIs directly to browsers."
+      ]
+    },
+    {
+      "id": "operations",
+      "controls": [
+        "Manage dependencies and security updates.",
+        "Maintain appropriate backups.",
+        "Monitor security-relevant events.",
+        "Define incident escalation.",
+        "Review production access.",
+        "Test recovery procedures according to risk."
+      ]
+    }
+  ],
+  "verification_evidence": [
+    "Architecture review",
+    "Threat model",
+    "Configuration review",
+    "Automated security tests",
+    "Dependency scanning",
+    "Access-control tests",
+    "Penetration testing where appropriate",
+    "Remediation record",
+    "Release approval"
+  ],
+  "rules": [
+    "Controls must be selected based on actual risks and obligations.",
+    "A successful automated scan does not prove an application is secure.",
+    "Do not claim security certification without appropriate evidence.",
+    "Critical unresolved vulnerabilities must follow an approved release-blocking policy.",
+    "Production deployment requires appropriate technical authorization."
+  ]
+}

@@ -1,0 +1,102 @@
+
+{
+  "schema_version": "1.0",
+  "migration_modes": [
+    {
+      "id": "visual_refresh",
+      "description": "Improve visual presentation while preserving approved content, workflows, and functionality.",
+      "default_preserve": [
+        "Content meaning",
+        "Business rules",
+        "Existing integrations",
+        "Functional behavior",
+        "Critical user journeys"
+      ],
+      "requires_approval": [
+        "Content rewriting",
+        "Workflow changes",
+        "Feature removal",
+        "Navigation changes affecting important journeys"
+      ]
+    },
+    {
+      "id": "ux_redesign",
+      "description": "Improve navigation, structure, and interactions while retaining approved business capabilities.",
+      "default_preserve": [
+        "Business objectives",
+        "Required functionality",
+        "Validated data relationships",
+        "Required user permissions"
+      ],
+      "requires_approval": [
+        "Major sitemap changes",
+        "Changed task sequences",
+        "Feature consolidation",
+        "Removed or altered interactions"
+      ]
+    },
+    {
+      "id": "technology_migration",
+      "description": "Move the website to a new technical architecture while preserving or explicitly updating its experience.",
+      "default_preserve": [
+        "Critical workflows",
+        "Content inventory",
+        "SEO-relevant URLs",
+        "Required integrations",
+        "Access restrictions",
+        "Data integrity"
+      ],
+      "requires_approval": [
+        "Data model changes",
+        "Integration replacements",
+        "Workflow modifications",
+        "Content removal",
+        "Redirect strategy"
+      ]
+    },
+    {
+      "id": "full_transformation",
+      "description": "Rework the website experience, content, and technology according to an approved transformation scope.",
+      "default_preserve": [
+        "Regulatory and contractual obligations",
+        "Necessary business capabilities",
+        "Critical customer data",
+        "Approved constraints"
+      ],
+      "requires_approval": [
+        "New information architecture",
+        "New functionality",
+        "Content strategy changes",
+        "Data and integration changes",
+        "Launch readiness"
+      ]
+    }
+  ],
+  "required_existing_site_audit": [
+    "Page inventory",
+    "Navigation structure",
+    "Content relationships",
+    "Forms and interactions",
+    "User journeys",
+    "Integrations",
+    "Analytics dependencies",
+    "SEO-relevant URLs",
+    "Accessibility issues",
+    "Known performance issues"
+  ],
+  "change_classification": [
+    "preserve",
+    "improve",
+    "replace",
+    "remove",
+    "unknown"
+  ],
+  "migration_rules": [
+    "Do not treat visual redesign as permission to change business logic.",
+    "Record differences between old and proposed experiences.",
+    "Maintain traceability from existing pages to new pages.",
+    "Identify workflow and integration dependencies before removing features.",
+    "Obtain approval for high-impact changes.",
+    "Test critical journeys before launch."
+  ]
+}

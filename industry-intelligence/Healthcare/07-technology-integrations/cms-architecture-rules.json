@@ -1,0 +1,81 @@
+
+{
+  "schema_version": "1.0",
+  "cms_capabilities": [
+    "Page creation and editing",
+    "Reusable content components",
+    "Media management",
+    "Navigation management",
+    "SEO metadata",
+    "Draft and publishing workflows",
+    "Content versioning",
+    "Role-based permissions",
+    "Localization where required",
+    "Content scheduling where supported"
+  ],
+  "candidate_content_models": [
+    {
+      "id": "service",
+      "fields": [
+        "title",
+        "slug",
+        "description",
+        "audience",
+        "related_locations",
+        "related_providers",
+        "approved_content_status"
+      ]
+    },
+    {
+      "id": "provider",
+      "fields": [
+        "name",
+        "professional_title",
+        "verified_credentials",
+        "specialties",
+        "locations",
+        "profile_status"
+      ]
+    },
+    {
+      "id": "location",
+      "fields": [
+        "name",
+        "address",
+        "contact",
+        "hours",
+        "services",
+        "accessibility_information"
+      ]
+    },
+    {
+      "id": "product",
+      "fields": [
+        "name",
+        "category",
+        "approved_description",
+        "specifications",
+        "documentation",
+        "market_availability"
+      ]
+    }
+  ],
+  "content_governance": [
+    "Draft",
+    "Editorial review",
+    "Clinical or regulatory review when applicable",
+    "Customer approval",
+    "Publish",
+    "Periodic review",
+    "Archive"
+  ],
+  "architecture_rules": [
+    "Do not use the CMS as a clinical system of record by default.",
+    "Separate content editing from operational data management.",
+    "Support approval controls for sensitive content.",
+    "Preserve version history for important content.",
+    "Restrict publishing permissions.",
+    "Ensure structured content can be reused across pages.",
+    "Confirm integration requirements before selecting a CMS."
+  ]
+}

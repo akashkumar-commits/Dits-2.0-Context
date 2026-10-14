@@ -1,0 +1,116 @@
+
+{
+  "schema_version": "1.0",
+  "patterns": [
+    {
+      "id": "external_portal_link",
+      "description": "The public website directs users to an existing authorized portal.",
+      "use_cases": [
+        "Patient portal login",
+        "Laboratory results portal"
+      ],
+      "advantages": [
+        "Avoids unnecessary duplication",
+        "Preserves existing portal workflows"
+      ],
+      "risks": [
+        "Inconsistent user experience",
+        "Broken links",
+        "Unclear transition between systems"
+      ]
+    },
+    {
+      "id": "hosted_integration",
+      "description": "A vendor provides an approved hosted interface or embedded component.",
+      "use_cases": [
+        "Appointment scheduling",
+        "Approved payment flows"
+      ],
+      "advantages": [
+        "Uses vendor-supported functionality"
+      ],
+      "risks": [
+        "Limited customization",
+        "Accessibility limitations",
+        "Third-party dependencies",
+        "Data-sharing concerns"
+      ]
+    },
+    {
+      "id": "api_integration",
+      "description": "The website backend communicates with an authorized system through supported APIs.",
+      "use_cases": [
+        "Availability lookup",
+        "Product catalog synchronization",
+        "Approved referral workflows"
+      ],
+      "advantages": [
+        "Supports controlled data exchange",
+        "Can provide tailored user experiences"
+      ],
+      "risks": [
+        "Authentication complexity",
+        "Vendor limitations",
+        "Failure handling",
+        "Sensitive data exposure"
+      ]
+    },
+    {
+      "id": "event_driven",
+      "description": "Systems exchange events or notifications through approved mechanisms.",
+      "use_cases": [
+        "Request status updates",
+        "Approved operational notifications"
+      ],
+      "advantages": [
+        "Supports asynchronous workflows"
+      ],
+      "risks": [
+        "Duplicate events",
+        "Delayed delivery",
+        "Ordering issues",
+        "Retry and idempotency requirements"
+      ]
+    },
+    {
+      "id": "batch_exchange",
+      "description": "Systems exchange approved data files or batches on a defined schedule.",
+      "use_cases": [
+        "Legacy system synchronization",
+        "Catalog updates"
+      ],
+      "advantages": [
+        "Can support systems without real-time APIs"
+      ],
+      "risks": [
+        "Stale information",
+        "Import failures",
+        "Data reconciliation requirements"
+      ]
+    }
+  ],
+  "standards_awareness": [
+    {
+      "standard": "HL7 FHIR",
+      "purpose": "Healthcare data exchange framework.",
+      "rule": "Verify actual implementation, supported resources, profiles, versions, and authorization."
+    },
+    {
+      "standard": "HL7 v2",
+      "purpose": "Messaging commonly used in healthcare integrations.",
+      "rule": "Confirm message types, interfaces, and vendor specifications."
+    },
+    {
+      "standard": "DICOM",
+      "purpose": "Medical imaging information exchange.",
+      "rule": "Use approved imaging infrastructure and access controls."
+    }
+  ],
+  "selection_rules": [
+    "Prefer supported and documented integration methods.",
+    "Select patterns based on actual workflow requirements.",
+    "Consider security, reliability, latency, and maintainability.",
+    "Do not recommend direct production database access by default.",
+    "Require technical review before final integration selection."
+  ]
+}

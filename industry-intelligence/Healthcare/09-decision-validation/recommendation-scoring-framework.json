@@ -1,0 +1,74 @@
+
+{
+  "framework_name": "healthcare_solution_suitability",
+  "version": "1.0",
+  "scoring_scale": {
+    "1": "Poor fit",
+    "2": "Weak fit",
+    "3": "Acceptable fit",
+    "4": "Strong fit",
+    "5": "Very strong fit",
+    "not_assessed": "Insufficient evidence"
+  },
+  "default_criteria": [
+    {
+      "criterion": "business_goal_fit",
+      "weight": 20,
+      "description": "How well the option supports confirmed business objectives."
+    },
+    {
+      "criterion": "workflow_fit",
+      "weight": 15,
+      "description": "How well required user journeys and operational workflows are supported."
+    },
+    {
+      "criterion": "integration_fit",
+      "weight": 15,
+      "description": "Compatibility with verified existing systems and documented interfaces."
+    },
+    {
+      "criterion": "security_and_privacy",
+      "weight": 15,
+      "description": "Suitability of data handling, access controls, and security architecture."
+    },
+    {
+      "criterion": "migration_risk",
+      "weight": 10,
+      "description": "Risk of losing content, functionality, data, or search visibility."
+    },
+    {
+      "criterion": "maintainability",
+      "weight": 10,
+      "description": "Ability to operate, support, and update the solution."
+    },
+    {
+      "criterion": "accessibility_and_usability",
+      "weight": 10,
+      "description": "Support for accessible and usable customer experiences."
+    },
+    {
+      "criterion": "cost_and_delivery_fit",
+      "weight": 5,
+      "description": "Fit with confirmed budget, timeline, and available resources."
+    }
+  ],
+  "rules": [
+    "Weights are illustrative defaults and must be reviewed against the customer's priorities.",
+    "Rate only criteria supported by sufficient evidence.",
+    "Mark unsupported criteria not_assessed; do not silently score them as average.",
+    "Normalize scores using assessed weights and disclose the assessed coverage.",
+    "Show major trade-offs and evidence gaps alongside any total score.",
+    "Never allow a high total score to override a mandatory safety, security, legal, or approval gate.",
+    "Do not describe a weighted score as an objective probability of success."
+  ],
+  "output": {
+    "options_compared": [],
+    "criteria_scores": [],
+    "assessed_weight_coverage": "percentage_or_not_calculated",
+    "hard_constraints_passed": [],
+    "hard_constraints_failed": [],
+    "unresolved_risks": [],
+    "recommended_option": "option_id_or_no_recommendation",
+    "rationale": "string"
+  }
+}

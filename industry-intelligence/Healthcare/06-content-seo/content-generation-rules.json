@@ -1,0 +1,94 @@
+
+{
+  "schema_version": "1.0",
+  "content_modes": [
+    {
+      "id": "preserve",
+      "description": "Improve formatting without changing approved meaning.",
+      "requires": ["existing_content"]
+    },
+    {
+      "id": "rewrite",
+      "description": "Improve clarity, readability, and tone while retaining verified facts.",
+      "requires": ["approved_source_content"]
+    },
+    {
+      "id": "expand",
+      "description": "Add useful sections using additional verified evidence.",
+      "requires": [
+        "approved_source_content",
+        "additional_evidence"
+      ]
+    },
+    {
+      "id": "create_new",
+      "description": "Draft new content from confirmed requirements and traceable evidence.",
+      "requires": [
+        "content_brief",
+        "customer_facts",
+        "supporting_sources"
+      ]
+    }
+  ],
+  "claim_categories": [
+    {
+      "type": "clinical",
+      "examples": [
+        "Treatment effectiveness",
+        "Diagnostic accuracy",
+        "Patient safety claims"
+      ],
+      "review": "qualified_clinical_reviewer"
+    },
+    {
+      "type": "regulatory",
+      "examples": [
+        "Regulatory approval",
+        "Medical device certification",
+        "Privacy compliance"
+      ],
+      "review": "authorized_regulatory_or_compliance_reviewer"
+    },
+    {
+      "type": "commercial",
+      "examples": [
+        "Cost savings",
+        "Performance improvements",
+        "Customer outcomes"
+      ],
+      "review": "customer_business_owner"
+    },
+    {
+      "type": "operational",
+      "examples": [
+        "Opening hours",
+        "Service availability",
+        "Appointment policies"
+      ],
+      "review": "customer_operations_owner"
+    }
+  ],
+  "generation_output": {
+    "page_id": "",
+    "audience": [],
+    "purpose": "",
+    "draft_content": "",
+    "claims": [
+      {
+        "statement": "",
+        "source_ids": [],
+        "status": "unverified",
+        "approval_required": true
+      }
+    ],
+    "missing_information": [],
+    "approval_status": "draft"
+  },
+  "rules": [
+    "Never convert an unsupported claim into a factual statement.",
+    "Do not fabricate citations or reviewers.",
+    "Do not publish drafts requiring review.",
+    "Do not infer regulatory approval from a product category.",
+    "Preserve important qualifications and limitations when simplifying language."
+  ]
+}

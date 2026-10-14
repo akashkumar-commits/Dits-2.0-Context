@@ -1,0 +1,94 @@
+
+{
+  "improvement_loop": [
+    {
+      "step": 1,
+      "name": "Observe",
+      "actions": [
+        "Collect approved website and agent measurements.",
+        "Check data quality and collection coverage.",
+        "Compare results with confirmed objectives and baselines."
+      ]
+    },
+    {
+      "step": 2,
+      "name": "Detect",
+      "actions": [
+        "Identify regressions, anomalies, and recurring failures.",
+        "Separate real incidents from measurement errors.",
+        "Prioritize by user impact, business importance, and risk."
+      ]
+    },
+    {
+      "step": 3,
+      "name": "Diagnose",
+      "actions": [
+        "Gather relevant logs and test results.",
+        "Generate competing explanations where appropriate.",
+        "Label suspected causes as hypotheses until validated."
+      ]
+    },
+    {
+      "step": 4,
+      "name": "Recommend",
+      "actions": [
+        "Propose improvements with expected benefits and tradeoffs.",
+        "Identify affected workflows, pages, integrations, and risks.",
+        "Determine whether clarification or approval is required."
+      ]
+    },
+    {
+      "step": 5,
+      "name": "Authorize",
+      "actions": [
+        "Check the decision and approval gates.",
+        "Confirm the scope and rollback strategy.",
+        "Block actions that lack required authorization."
+      ]
+    },
+    {
+      "step": 6,
+      "name": "Implement and test",
+      "actions": [
+        "Apply the approved change.",
+        "Run relevant functional, accessibility, security, and regression tests.",
+        "Validate critical journeys before release."
+      ]
+    },
+    {
+      "step": 7,
+      "name": "Measure",
+      "actions": [
+        "Compare results with a compatible baseline.",
+        "Record whether the expected outcome was achieved.",
+        "Identify side effects and regressions."
+      ]
+    },
+    {
+      "step": 8,
+      "name": "Learn",
+      "actions": [
+        "Record the outcome and evidence.",
+        "Update project-specific knowledge when authorized.",
+        "Add recurring failures to evaluation tests.",
+        "Revisit assumptions and decisions affected by the findings."
+      ]
+    }
+  ],
+  "feedback_routing": {
+    "business_or_audience_mismatch": "Route findings to discovery and business understanding.",
+    "workflow_failure": "Route findings to workflow intelligence and validation.",
+    "content_or_search_issue": "Route findings to content and SEO intelligence.",
+    "technical_or_integration_issue": "Route findings to technology and integration intelligence.",
+    "privacy_or_security_issue": "Route findings to compliance, security, and human approval processes.",
+    "repeated_agent_failure": "Route findings to agent evaluation, prompts, tools, and knowledge retrieval."
+  },
+  "learning_boundaries": [
+    "Do not automatically turn a single incident into a universal industry rule.",
+    "Separate reusable industry knowledge from customer-specific project knowledge.",
+    "Preserve source provenance and version history.",
+    "Require review before promoting unverified observations into authoritative knowledge.",
+    "Do not use performance optimization to bypass Layer 9 decision gates."
+  ]
+}
+    

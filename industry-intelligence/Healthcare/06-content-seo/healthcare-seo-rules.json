@@ -1,0 +1,63 @@
+
+{
+  "schema_version": "1.0",
+  "seo_principles": [
+    {
+      "id": "SEO001",
+      "name": "People-first content",
+      "rule": "Create accurate, useful content that answers real user needs rather than content primarily designed to manipulate rankings."
+    },
+    {
+      "id": "SEO002",
+      "name": "Evidence and credibility",
+      "rule": "Support important health claims with appropriate sources, qualified review, and transparent attribution."
+    },
+    {
+      "id": "SEO003",
+      "name": "Search intent alignment",
+      "rule": "Match page content and structure to the purpose of the search."
+    },
+    {
+      "id": "SEO004",
+      "name": "Unique page value",
+      "rule": "Avoid generating many substantially similar pages without meaningful differences."
+    },
+    {
+      "id": "SEO005",
+      "name": "Metadata",
+      "rule": "Create descriptive, relevant page titles and meta descriptions without keyword stuffing."
+    },
+    {
+      "id": "SEO006",
+      "name": "Internal linking",
+      "rule": "Connect related services, providers, locations, products, and resources where helpful."
+    },
+    {
+      "id": "SEO007",
+      "name": "Technical discoverability",
+      "rule": "Check crawlability, indexability, canonical URLs, redirects, and relevant sitemap entries."
+    },
+    {
+      "id": "SEO008",
+      "name": "Mobile and performance",
+      "rule": "Provide usable mobile experiences and monitor performance with appropriate metrics."
+    }
+  ],
+  "content_quality_signals": [
+    "Clear content purpose",
+    "Accurate factual statements",
+    "Transparent organization identity",
+    "Relevant author or reviewer information",
+    "Appropriate supporting references",
+    "Useful and current information",
+    "Accessible presentation",
+    "No deceptive claims"
+  ],
+  "restrictions": [
+    "Do not guarantee rankings.",
+    "Do not invent keyword search volume.",
+    "Do not assume structured data guarantees rich results.",
+    "Do not treat an AI-generated article as expert-reviewed.",
+    "Do not claim a page meets search quality standards solely because it follows a template."
+  ]
+}

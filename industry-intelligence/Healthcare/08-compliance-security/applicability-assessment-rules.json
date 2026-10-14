@@ -1,0 +1,57 @@
+
+{
+  "schema_version": "1.0",
+  "assessment_sequence": [
+    "Identify the organization and its business activities.",
+    "Identify the countries and regions involved.",
+    "Identify the people whose data is processed.",
+    "Inventory the data collected, inferred, accessed, or shared.",
+    "Identify each processing purpose.",
+    "Identify the roles of the organization and vendors.",
+    "Map data flows and storage locations.",
+    "Identify potentially applicable legal frameworks.",
+    "Verify requirements against current authoritative sources.",
+    "Route uncertain or consequential interpretations for review."
+  ],
+  "decision_dimensions": [
+    {
+      "id": "jurisdiction",
+      "question": "Which jurisdictions may regulate the activity?"
+    },
+    {
+      "id": "entity_status",
+      "question": "Does the organization meet the relevant legal definition or threshold?"
+    },
+    {
+      "id": "data_type",
+      "question": "Does the activity involve personal, health, sensitive, or regulated data?"
+    },
+    {
+      "id": "processing",
+      "question": "What collection, use, disclosure, storage, and transfer activities occur?"
+    },
+    {
+      "id": "third_parties",
+      "question": "Which vendors receive or access the data?"
+    },
+    {
+      "id": "purpose_and_basis",
+      "question": "What permitted purpose and legal basis or authorization apply?"
+    }
+  ],
+  "assessment_statuses": [
+    "not_assessed",
+    "potentially_applicable",
+    "evidence_required",
+    "expert_review_required",
+    "confirmed_applicable",
+    "confirmed_not_applicable"
+  ],
+  "rules": [
+    "Do not mark a framework not applicable merely because the website is public.",
+    "Do not equate collecting no form data with collecting no personal data; analytics and logs may still matter.",
+    "Do not mark a framework applicable solely because the customer uses healthcare terminology.",
+    "Record the reasoning and evidence behind each conclusion.",
+    "Reassess when jurisdictions, features, vendors, or data flows change."
+  ]
+}

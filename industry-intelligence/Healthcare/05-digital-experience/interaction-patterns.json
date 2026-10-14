@@ -1,0 +1,133 @@
+
+{
+  "schema_version": "1.0",
+  "patterns": [
+    {
+      "id": "search_and_filter",
+      "use_cases": [
+        "Provider directory",
+        "Test catalog",
+        "Product catalog",
+        "Professional marketplace"
+      ],
+      "requirements": [
+        "Clear search labels",
+        "Relevant filters",
+        "Result count where appropriate",
+        "No-results state",
+        "Clear-filter action",
+        "Keyboard accessibility"
+      ],
+      "constraints": [
+        "Do not invent search results.",
+        "Do not invent provider or product attributes."
+      ]
+    },
+    {
+      "id": "multi_step_form",
+      "use_cases": [
+        "Appointment request",
+        "Program enrollment",
+        "Professional registration"
+      ],
+      "requirements": [
+        "Logical step sequence",
+        "Clear field labels",
+        "Progress indication",
+        "Input validation",
+        "Error recovery",
+        "Submission status"
+      ],
+      "constraints": [
+        "Collect only required information.",
+        "Do not invent eligibility decisions."
+      ]
+    },
+    {
+      "id": "appointment_selection",
+      "use_cases": [
+        "Clinic booking",
+        "Telehealth booking",
+        "Diagnostic test booking"
+      ],
+      "requirements": [
+        "Service or provider context",
+        "Verified availability",
+        "Date and time clarity",
+        "Unavailable state",
+        "Booking status",
+        "Confirmation details"
+      ],
+      "constraints": [
+        "Do not display invented slots.",
+        "Do not claim success before system confirmation."
+      ]
+    },
+    {
+      "id": "file_upload",
+      "use_cases": [
+        "Referral submission",
+        "Credential submission",
+        "Approved document collection"
+      ],
+      "requirements": [
+        "Supported file types",
+        "File size limits",
+        "Upload status",
+        "Failure recovery",
+        "Privacy explanation"
+      ],
+      "constraints": [
+        "Require approved handling for sensitive documents.",
+        "Validate access and retention requirements."
+      ]
+    },
+    {
+      "id": "status_tracking",
+      "use_cases": [
+        "Appointment request",
+        "Professional application",
+        "Referral review",
+        "Service inquiry"
+      ],
+      "requirements": [
+        "Accurate status",
+        "Last-updated information where supported",
+        "Clear next step",
+        "Support contact"
+      ],
+      "constraints": [
+        "Status must come from the authoritative system.",
+        "Do not invent completion estimates."
+      ]
+    },
+    {
+      "id": "authentication_entry",
+      "use_cases": [
+        "Patient portal",
+        "Professional portal",
+        "Administrator portal"
+      ],
+      "requirements": [
+        "Clear account context",
+        "Accessible authentication",
+        "Appropriate recovery flow",
+        "Secure session behavior"
+      ],
+      "constraints": [
+        "Do not infer permissions from persona alone.",
+        "Use the approved authentication architecture."
+      ]
+    }
+  ],
+  "universal_interface_states": [
+    "initial",
+    "loading",
+    "empty",
+    "success",
+    "error",
+    "unavailable",
+    "pending",
+    "unauthorized"
+  ]
+}

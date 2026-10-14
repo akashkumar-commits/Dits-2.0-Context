@@ -1,0 +1,61 @@
+
+{
+  "workflow_id": "HC-WF-005",
+  "workflow_name": "Remote Patient Monitoring",
+  "knowledge_status": "reference_pattern",
+  "trigger": "An enrolled patient begins or continues an approved monitoring program.",
+  "actors": [
+    "patient",
+    "monitoring_device",
+    "monitoring_platform",
+    "authorized_care_team",
+    "support_team"
+  ],
+  "steps": [
+    "Patient is enrolled under the organization's program rules.",
+    "Device assignment and setup are completed.",
+    "Device captures or receives a measurement.",
+    "Measurement is transmitted through the configured integration.",
+    "Platform validates receipt and records processing status.",
+    "Configured review or alert rules are applied.",
+    "Authorized personnel review information when required.",
+    "Approved follow-up or support actions occur."
+  ],
+  "decisions": [
+    "Is the device connected?",
+    "Was the reading received?",
+    "Is the reading valid under configured technical rules?",
+    "Does the organization's approved workflow require review?",
+    "Does the situation require an authorized escalation?"
+  ],
+  "exceptions": [
+    "Device offline",
+    "Reading missing",
+    "Transmission failure",
+    "Duplicate or invalid reading",
+    "Patient needs device support",
+    "Escalation cannot be completed"
+  ],
+  "website_features": [
+    "Program information",
+    "Enrollment inquiry",
+    "Device setup resources",
+    "Patient support",
+    "Authorized portal entry"
+  ],
+  "safety_rules": [
+    "Do not invent clinical thresholds.",
+    "Do not invent escalation protocols.",
+    "Do not claim that monitoring is continuous unless verified.",
+    "Do not promise emergency response unless explicitly supported.",
+    "Require clinical approval for patient-facing monitoring instructions."
+  ],
+  "validation_questions": [
+    "Which devices are supported?",
+    "Who enrolls patients?",
+    "What data is collected?",
+    "Which systems receive readings?",
+    "Who reviews alerts?",
+    "Which clinical protocols have been approved?"
+  ]
+}

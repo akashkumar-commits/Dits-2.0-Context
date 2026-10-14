@@ -1,0 +1,38 @@
+
+{
+  "schema_version": "1.0",
+  "applicable_segments": [
+    "hospitals-clinics",
+    "diagnostic-labs",
+    "behavioral-health"
+  ],
+  "location_data_requirements": [
+    "Verified location name",
+    "Verified address",
+    "Verified phone number",
+    "Accurate operating hours",
+    "Actual services offered at the location",
+    "Approved directions or map information",
+    "Relevant accessibility information"
+  ],
+  "recommended_practices": [
+    "Maintain consistent business information.",
+    "Create useful location pages where justified.",
+    "Connect relevant services to actual locations.",
+    "Keep business profiles accurate.",
+    "Use appropriate structured data.",
+    "Provide clear contact and directions information."
+  ],
+  "anti_patterns": [
+    "Inventing locations",
+    "Creating location pages for places not served",
+    "Publishing identical doorway pages for many cities",
+    "Inventing reviews or ratings",
+    "Assuming every service is available at every branch"
+  ],
+  "rules": [
+    "Confirm location details with the customer.",
+    "Do not create or modify external business profiles without authorization.",
+    "Do not guarantee local search rankings."
+  ]
+}

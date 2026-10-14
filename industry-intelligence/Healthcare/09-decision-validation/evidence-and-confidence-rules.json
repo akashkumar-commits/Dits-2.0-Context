@@ -1,0 +1,56 @@
+
+{
+  "knowledge_labels": {
+    "customer_confirmed": {
+      "meaning": "The customer explicitly confirmed the requirement or fact.",
+      "allowed_use": "Use as a project requirement within its stated scope.",
+      "limitation": "Does not override safety, law, or verified technical constraints."
+    },
+    "source_supported": {
+      "meaning": "Supported by an identifiable, relevant source.",
+      "allowed_use": "Use with provenance and applicability checks.",
+      "limitation": "Verify freshness, jurisdiction, scope, and source authority."
+    },
+    "general_pattern": {
+      "meaning": "A common industry or design pattern.",
+      "allowed_use": "Use to generate options and discovery questions.",
+      "limitation": "Do not present as a universal rule or customer requirement."
+    },
+    "assumption": {
+      "meaning": "A provisional inference not yet confirmed.",
+      "allowed_use": "Use for explicitly labelled, low-risk exploration.",
+      "limitation": "Do not silently convert into a confirmed fact."
+    },
+    "unknown": {
+      "meaning": "Required information is unavailable.",
+      "allowed_use": "Ask a question, gather evidence, or constrain the recommendation.",
+      "limitation": "Do not fabricate a value."
+    },
+    "jurisdiction_dependent": {
+      "meaning": "Applicability may differ by location or governing rules.",
+      "allowed_use": "Identify relevant jurisdictions and request verification.",
+      "limitation": "Do not issue a definitive legal conclusion without adequate review."
+    },
+    "expert_review_required": {
+      "meaning": "A qualified human must assess the issue.",
+      "allowed_use": "Prepare evidence and a review request.",
+      "limitation": "Do not self-approve or bypass the review."
+    }
+  },
+  "confidence_policy": {
+    "high": "Relevant, sufficient, consistent evidence supports the decision.",
+    "medium": "Evidence supports a provisional recommendation, but material gaps remain.",
+    "low": "Evidence is sparse, indirect, ambiguous, or conflicting.",
+    "not_assessed": "The evidence has not been evaluated."
+  },
+  "mandatory_rules": [
+    "Confidence is not a substitute for evidence.",
+    "Attach source references to material factual claims where available.",
+    "Record contradictory evidence rather than hiding it.",
+    "Distinguish an observed current-state finding from an inferred cause.",
+    "Recheck time-sensitive and jurisdiction-specific information.",
+    "Do not invent sources, API capabilities, certifications, customer requirements, or test results.",
+    "Low confidence combined with high impact requires clarification or escalation.",
+    "A high confidence label cannot bypass mandatory approval gates."
+  ]
+}

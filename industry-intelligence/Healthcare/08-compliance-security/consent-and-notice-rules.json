@@ -1,0 +1,50 @@
+
+{
+  "schema_version": "1.0",
+  "notice_types": [
+    {
+      "id": "privacy_notice",
+      "purpose": "Explain relevant personal data processing and applicable individual rights."
+    },
+    {
+      "id": "cookie_notice",
+      "purpose": "Explain relevant cookie and tracking practices."
+    },
+    {
+      "id": "service_consent",
+      "purpose": "Capture consent when the applicable process or law requires it."
+    },
+    {
+      "id": "telehealth_consent",
+      "purpose": "Support required disclosures and consent for remote care."
+    },
+    {
+      "id": "marketing_preferences",
+      "purpose": "Record applicable communication preferences and permissions."
+    }
+  ],
+  "review_questions": [
+    "What data is collected?",
+    "Why is each data category collected?",
+    "Which vendors receive information?",
+    "What lawful basis or authorization applies?",
+    "Is consent required for this particular processing?",
+    "How can users withdraw consent where applicable?",
+    "Are records of consent or preferences required?",
+    "Are additional notices required for minors or representatives?"
+  ],
+  "interface_requirements": [
+    "Present important information clearly.",
+    "Avoid misleading or coercive consent choices.",
+    "Do not bundle unrelated permissions without appropriate justification.",
+    "Make required controls accessible.",
+    "Honor recorded preferences and withdrawals where applicable."
+  ],
+  "rules": [
+    "Do not assume a checkbox makes processing lawful.",
+    "Do not assume one consent mechanism covers every purpose.",
+    "Do not activate non-essential tracking before the required permission where applicable.",
+    "Do not fabricate consent records.",
+    "Have the applicable notices and consent model reviewed before launch."
+  ]
+}

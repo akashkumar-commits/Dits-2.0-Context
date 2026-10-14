@@ -1,0 +1,110 @@
+
+{
+  "approval_routes": [
+    {
+      "route_id": "customer_scope_and_experience",
+      "trigger": [
+        "Material change to pages, content scope, brand direction, or user journeys",
+        "Change to confirmed business objectives"
+      ],
+      "reviewer_role": "customer_authorized_representative",
+      "required_evidence": [
+        "Decision summary",
+        "Options and tradeoffs",
+        "Affected pages and workflows",
+        "Scope or timeline impact"
+      ],
+      "required_action": "Approve, reject, or request changes"
+    },
+    {
+      "route_id": "technical_architecture",
+      "trigger": [
+        "Material architecture change",
+        "Unverified integration",
+        "Authentication or system-of-record change",
+        "Migration with significant dependency risk"
+      ],
+      "reviewer_role": "technical_owner",
+      "required_evidence": [
+        "Architecture proposal",
+        "Documented integration capabilities",
+        "Dependency analysis",
+        "Failure and rollback plan",
+        "Testing evidence"
+      ],
+      "required_action": "Approve technical plan or return for revision"
+    },
+    {
+      "route_id": "privacy_security",
+      "trigger": [
+        "Sensitive data flow",
+        "New third-party processor",
+        "AI processing of sensitive information",
+        "Material security or permission change"
+      ],
+      "reviewer_role": "designated_privacy_or_security_reviewer",
+      "required_evidence": [
+        "Data flow and inventory",
+        "Purpose and access requirements",
+        "Vendor and processing details",
+        "Risk assessment",
+        "Proposed safeguards"
+      ],
+      "required_action": "Review and document disposition"
+    },
+    {
+      "route_id": "clinical_legal_regulatory",
+      "trigger": [
+        "Clinical instructions or claims requiring validation",
+        "Legal applicability determination",
+        "Medical-device regulatory claim",
+        "High-impact interpretation of a healthcare obligation"
+      ],
+      "reviewer_role": "appropriately_qualified_human_expert",
+      "required_evidence": [
+        "Exact claim or question",
+        "Relevant sources and dates",
+        "Applicable product, service, and jurisdiction context",
+        "Uncertainties and proposed wording"
+      ],
+      "required_action": "Provide documented expert decision"
+    },
+    {
+      "route_id": "production_release",
+      "trigger": [
+        "Production deployment",
+        "DNS or routing switch",
+        "Data migration with production impact",
+        "Activation of a material integration"
+      ],
+      "reviewer_role": "authorized_release_owner",
+      "required_evidence": [
+        "Release checklist",
+        "Critical workflow test results",
+        "Security and accessibility validation as applicable",
+        "Migration reconciliation",
+        "Backup and rollback readiness",
+        "Outstanding issues and known limitations"
+      ],
+      "required_action": "Authorize release or block release"
+    }
+  ],
+  "approval_record": {
+    "approval_id": "string",
+    "decision_id": "string",
+    "reviewer_identity": "verified_identity_reference",
+    "reviewer_role": "string",
+    "decision": "approved|rejected|changes_requested|deferred",
+    "conditions": [],
+    "evidence_reviewed": [],
+    "timestamp": "timestamp",
+    "scope_of_approval": "string"
+  },
+  "mandatory_rules": [
+    "The reviewer must have the required authority for the decision.",
+    "An AI-generated response is not a human approval.",
+    "Approval applies only to the documented scope and version.",
+    "Changed requirements or material evidence may require reapproval.",
+    "If the required reviewer is unavailable, defer the gated action rather than fabricate authorization."
+  ]
+}

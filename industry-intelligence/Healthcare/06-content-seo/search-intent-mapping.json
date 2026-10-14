@@ -1,0 +1,90 @@
+
+{
+  "schema_version": "1.0",
+  "intent_categories": [
+    {
+      "id": "informational",
+      "user_goal": "Understand a healthcare topic or service.",
+      "example_queries": [
+        "What is remote patient monitoring?",
+        "How does telehealth work?"
+      ],
+      "candidate_pages": [
+        "Educational article",
+        "Service explainer",
+        "FAQ"
+      ]
+    },
+    {
+      "id": "service_discovery",
+      "user_goal": "Find a suitable healthcare service.",
+      "example_queries": [
+        "Diagnostic testing services",
+        "Physical therapy clinic"
+      ],
+      "candidate_pages": [
+        "Service directory",
+        "Service detail",
+        "Specialty page"
+      ]
+    },
+    {
+      "id": "local",
+      "user_goal": "Find a relevant nearby service location.",
+      "example_queries": [
+        "Diagnostic laboratory in Chandigarh",
+        "Clinic near me"
+      ],
+      "candidate_pages": [
+        "Location page",
+        "Location directory"
+      ]
+    },
+    {
+      "id": "transactional",
+      "user_goal": "Initiate a service or contact an organization.",
+      "example_queries": [
+        "Book a lab test",
+        "Schedule a consultation"
+      ],
+      "candidate_pages": [
+        "Booking page",
+        "Appointment request",
+        "Contact page"
+      ]
+    },
+    {
+      "id": "commercial_investigation",
+      "user_goal": "Evaluate products or vendors.",
+      "example_queries": [
+        "Point of care testing equipment",
+        "Remote monitoring platform comparison"
+      ],
+      "candidate_pages": [
+        "Product page",
+        "Solutions page",
+        "Technical documentation"
+      ]
+    },
+    {
+      "id": "navigational",
+      "user_goal": "Reach a specific organization or resource.",
+      "example_queries": [
+        "Hospital patient portal",
+        "Laboratory contact number"
+      ],
+      "candidate_pages": [
+        "Portal entry",
+        "Contact page",
+        "Support page"
+      ]
+    }
+  ],
+  "rules": [
+    "Example queries are illustrative, not verified keyword research.",
+    "Validate actual demand with available search data.",
+    "One page may satisfy multiple related intents.",
+    "Do not create duplicate pages for minor keyword variations.",
+    "Match calls to action to confirmed website functionality."
+  ]
+}

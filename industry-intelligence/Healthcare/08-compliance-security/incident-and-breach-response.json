@@ -1,0 +1,78 @@
+
+{
+  "schema_version": "1.0",
+  "incident_categories": [
+    "Unauthorized access",
+    "Sensitive data exposure",
+    "Compromised credentials",
+    "Malicious file upload",
+    "Integration failure affecting sensitive data",
+    "Website defacement",
+    "Data loss",
+    "Unexpected disclosure through logs or analytics"
+  ],
+  "response_stages": [
+    {
+      "stage": "detect",
+      "actions": [
+        "Record the reported issue.",
+        "Identify affected systems.",
+        "Preserve relevant evidence."
+      ]
+    },
+    {
+      "stage": "contain",
+      "actions": [
+        "Follow approved incident procedures.",
+        "Restrict affected access or integrations where authorized.",
+        "Avoid destructive actions that compromise evidence."
+      ]
+    },
+    {
+      "stage": "assess",
+      "actions": [
+        "Determine affected data and systems.",
+        "Assess potential impact.",
+        "Escalate to the designated security and privacy owners."
+      ]
+    },
+    {
+      "stage": "notify",
+      "actions": [
+        "Identify applicable notification requirements.",
+        "Record deadlines and decision ownership.",
+        "Use approved communications."
+      ]
+    },
+    {
+      "stage": "recover",
+      "actions": [
+        "Remediate the cause.",
+        "Validate system integrity.",
+        "Restore services through approved procedures."
+      ]
+    },
+    {
+      "stage": "learn",
+      "actions": [
+        "Document findings.",
+        "Identify preventive improvements.",
+        "Track remediation to completion."
+      ]
+    }
+  ],
+  "required_escalation_roles": [
+    "Security incident owner",
+    "Privacy or compliance owner",
+    "Customer technical owner",
+    "Legal counsel where required",
+    "Affected service owner"
+  ],
+  "rules": [
+    "Do not let the AI agent independently decide whether a legally reportable breach occurred.",
+    "Do not invent notification deadlines.",
+    "Do not notify regulators or affected individuals without authorized direction.",
+    "Preserve evidence and follow the approved incident response plan.",
+    "Apply current jurisdiction-specific requirements."
+  ]
+}

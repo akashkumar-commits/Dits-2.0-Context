@@ -1,0 +1,206 @@
+
+{
+  "schema_version": "1.0",
+  "archetypes": [
+    {
+      "id": "care_provider",
+      "name": "Healthcare Service Provider",
+      "applicable_segments": [
+        "hospitals-clinics",
+        "behavioral-health"
+      ],
+      "primary_purposes": [
+        "Service discovery",
+        "Provider discovery",
+        "Patient acquisition",
+        "Patient information",
+        "Appointment initiation"
+      ],
+      "candidate_pages": [
+        "Home",
+        "Services",
+        "Specialties",
+        "Providers",
+        "Locations",
+        "About",
+        "Patient Resources",
+        "Contact"
+      ],
+      "candidate_ctas": [
+        "Find a Provider",
+        "Request an Appointment",
+        "Contact Us"
+      ],
+      "conditional_features": [
+        "Online booking",
+        "Patient portal",
+        "Referral submission",
+        "Insurance information"
+      ]
+    },
+    {
+      "id": "diagnostic_laboratory",
+      "name": "Diagnostic Laboratory",
+      "applicable_segments": ["diagnostic-labs"],
+      "primary_purposes": [
+        "Test discovery",
+        "Collection information",
+        "Referral guidance",
+        "Test booking",
+        "Professional resources"
+      ],
+      "candidate_pages": [
+        "Home",
+        "Tests and Services",
+        "Locations",
+        "Patient Information",
+        "For Healthcare Professionals",
+        "About",
+        "Contact"
+      ],
+      "candidate_ctas": [
+        "Explore Tests",
+        "Find a Location",
+        "Book a Test"
+      ],
+      "conditional_features": [
+        "Test booking",
+        "Home collection",
+        "Secure results portal",
+        "Referral portal"
+      ]
+    },
+    {
+      "id": "telehealth",
+      "name": "Virtual Healthcare Provider",
+      "applicable_segments": [
+        "telehealth",
+        "behavioral-health"
+      ],
+      "primary_purposes": [
+        "Explain virtual care",
+        "Establish trust",
+        "Communicate eligibility",
+        "Initiate consultations"
+      ],
+      "candidate_pages": [
+        "Home",
+        "Services",
+        "How It Works",
+        "Providers",
+        "Eligibility",
+        "FAQs",
+        "Contact"
+      ],
+      "candidate_ctas": [
+        "Explore Services",
+        "Request a Consultation"
+      ],
+      "conditional_features": [
+        "Virtual appointment booking",
+        "Patient onboarding",
+        "Secure consultation access"
+      ]
+    },
+    {
+      "id": "healthcare_marketplace",
+      "name": "Healthcare Marketplace",
+      "applicable_segments": ["healthcare-marketplaces"],
+      "primary_purposes": [
+        "Connect participant groups",
+        "Support search and discovery",
+        "Explain matching and verification",
+        "Generate inquiries or bookings"
+      ],
+      "candidate_pages": [
+        "Home",
+        "Browse Professionals or Services",
+        "How It Works",
+        "For Professionals",
+        "About",
+        "Help",
+        "Contact"
+      ],
+      "candidate_ctas": [
+        "Find a Professional",
+        "Join as a Professional"
+      ],
+      "conditional_features": [
+        "Profile registration",
+        "Search and filters",
+        "Matching",
+        "Booking",
+        "Payments"
+      ]
+    },
+    {
+      "id": "remote_monitoring",
+      "name": "Remote Monitoring Service",
+      "applicable_segments": ["rpm"],
+      "primary_purposes": [
+        "Explain monitoring services",
+        "Communicate program benefits and limits",
+        "Support enrollment inquiries",
+        "Provide device and patient resources"
+      ],
+      "candidate_pages": [
+        "Home",
+        "Solutions",
+        "How It Works",
+        "Devices",
+        "Patient Resources",
+        "For Providers",
+        "Support",
+        "Contact"
+      ],
+      "candidate_ctas": [
+        "Explore the Program",
+        "Request Information"
+      ],
+      "conditional_features": [
+        "Enrollment",
+        "Device setup guidance",
+        "Authorized monitoring portal"
+      ]
+    },
+    {
+      "id": "medical_device_company",
+      "name": "Medical Device Manufacturer",
+      "applicable_segments": ["medical-devices"],
+      "primary_purposes": [
+        "Product discovery",
+        "Technical evaluation",
+        "Commercial inquiries",
+        "Support and documentation"
+      ],
+      "candidate_pages": [
+        "Home",
+        "Products",
+        "Solutions",
+        "Applications",
+        "Documentation",
+        "Support",
+        "About",
+        "Contact"
+      ],
+      "candidate_ctas": [
+        "Explore Products",
+        "Request a Quote",
+        "Contact Sales"
+      ],
+      "conditional_features": [
+        "Product comparison",
+        "Distributor locator",
+        "Technical downloads",
+        "Demo requests"
+      ]
+    }
+  ],
+  "selection_rules": [
+    "Classify using business model and website objective.",
+    "Allow hybrid archetypes.",
+    "Do not equate industry segment with one fixed sitemap.",
+    "Prioritize customer-confirmed services and audiences.",
+    "Do not automatically include conditional features."
+  ]
+}

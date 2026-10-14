@@ -1,0 +1,54 @@
+
+{
+  "workflow_id": "HC-WF-004",
+  "workflow_name": "Patient Referral",
+  "knowledge_status": "reference_pattern",
+  "trigger": "A referring provider seeks to transfer or request care from another service.",
+  "actors": [
+    "referring_provider",
+    "receiving_team",
+    "patient"
+  ],
+  "steps": [
+    "Referring provider identifies a relevant receiving service.",
+    "Provider reviews confirmed referral criteria.",
+    "Required referral information is prepared.",
+    "Referral is submitted through an approved channel.",
+    "Receiving team reviews the referral.",
+    "Referral is accepted, declined, or returned for additional information.",
+    "Appropriate participants receive authorized status information.",
+    "Scheduling or further coordination follows if applicable."
+  ],
+  "decisions": [
+    "Is the service accepting referrals?",
+    "Is the referral complete?",
+    "Does the referral meet the receiving organization's criteria?",
+    "Is additional information needed?"
+  ],
+  "exceptions": [
+    "Incomplete referral",
+    "Incorrect destination",
+    "Unsupported service",
+    "Referral declined",
+    "Secure submission failure"
+  ],
+  "website_features": [
+    "Referral information",
+    "Referral criteria",
+    "Professional contact details",
+    "Approved forms",
+    "Secure submission where supported"
+  ],
+  "safety_rules": [
+    "Do not invent referral acceptance criteria.",
+    "Do not use an unsecured public form for sensitive patient details.",
+    "Do not reveal patient-specific referral status without authorization."
+  ],
+  "validation_questions": [
+    "Who can submit referrals?",
+    "Which referral types are accepted?",
+    "What documentation is required?",
+    "Which systems receive referrals?",
+    "How are referral statuses communicated?"
+  ]
+}

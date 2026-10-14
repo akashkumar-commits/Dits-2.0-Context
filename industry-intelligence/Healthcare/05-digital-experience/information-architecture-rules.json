@@ -1,0 +1,75 @@
+
+{
+  "schema_version": "1.0",
+  "principles": [
+    {
+      "id": "IA001",
+      "name": "Organize around user goals",
+      "rule": "Prioritize how users seek information and complete tasks, not only the organization's internal departments."
+    },
+    {
+      "id": "IA002",
+      "name": "Use clear navigation labels",
+      "rule": "Prefer familiar, descriptive labels over vague marketing terminology."
+    },
+    {
+      "id": "IA003",
+      "name": "Support distinct audiences",
+      "rule": "Provide audience-specific entry points when their tasks and information needs materially differ."
+    },
+    {
+      "id": "IA004",
+      "name": "Avoid unnecessary duplication",
+      "rule": "Reuse shared content rather than creating multiple competing versions without a clear need."
+    },
+    {
+      "id": "IA005",
+      "name": "Make critical information discoverable",
+      "rule": "Surface locations, contact methods, service eligibility, preparation information, and support where relevant."
+    },
+    {
+      "id": "IA006",
+      "name": "Separate public and private experiences",
+      "rule": "Public pages may link to authenticated portals, but must not expose restricted functionality or data."
+    },
+    {
+      "id": "IA007",
+      "name": "Preserve content relationships",
+      "rule": "During migration, maintain relevant connections among services, providers, locations, resources, and existing URLs."
+    }
+  ],
+  "sitemap_generation": {
+    "inputs": [
+      "business_objectives",
+      "audiences",
+      "services",
+      "user_tasks",
+      "workflows",
+      "existing_content_inventory"
+    ],
+    "process": [
+      "Identify content entities.",
+      "Group related information.",
+      "Map user tasks to content.",
+      "Identify primary navigation groups.",
+      "Define page relationships.",
+      "Identify search and filtering needs.",
+      "Validate the sitemap against key journeys."
+    ],
+    "outputs": [
+      "sitemap",
+      "page_inventory",
+      "navigation_groups",
+      "content_relationships",
+      "unresolved_questions"
+    ]
+  },
+  "anti_patterns": [
+    "Copying a competitor sitemap without validation",
+    "Creating pages solely to fill a template",
+    "Using vague navigation labels",
+    "Hiding essential patient information",
+    "Duplicating conflicting service information",
+    "Breaking existing URLs without a migration plan"
+  ]
+}

@@ -1,0 +1,70 @@
+
+{
+  "schema_version": "1.0",
+  "discovery_stages": [
+    {
+      "stage": "existing_website",
+      "questions": [
+        "What technology powers the current website?",
+        "Where is it hosted?",
+        "Is there an existing CMS?",
+        "Who manages the domain and DNS?",
+        "Which pages and functions must be preserved?"
+      ]
+    },
+    {
+      "stage": "connected_systems",
+      "questions": [
+        "Which external systems does the website use?",
+        "Which systems manage appointments or patient accounts?",
+        "Are there CRM, EHR, LIS, or other integrations?",
+        "Who owns and maintains each integration?"
+      ]
+    },
+    {
+      "stage": "data",
+      "questions": [
+        "What information does the website collect?",
+        "Where is each type of data stored?",
+        "Which system is authoritative?",
+        "Does the website process sensitive health information?",
+        "What retention and deletion requirements apply?"
+      ]
+    },
+    {
+      "stage": "integration",
+      "questions": [
+        "Are official APIs or supported integration methods available?",
+        "What authentication methods are required?",
+        "Are sandbox environments available?",
+        "What are the rate limits and failure behaviors?",
+        "Is vendor approval required?"
+      ]
+    },
+    {
+      "stage": "operations",
+      "questions": [
+        "Who publishes content?",
+        "Who manages user access?",
+        "What monitoring and backup processes exist?",
+        "What are the availability and recovery requirements?"
+      ]
+    }
+  ],
+  "output": {
+    "confirmed_technologies": [],
+    "connected_systems": [],
+    "integration_requirements": [],
+    "data_classes": [],
+    "technical_constraints": [],
+    "unknowns": [],
+    "required_documents": [],
+    "approvals": []
+  },
+  "rules": [
+    "Prioritize questions that affect architecture or security.",
+    "Do not assume integration support without documentation.",
+    "Do not request production passwords in ordinary discovery.",
+    "Distinguish verified findings from customer statements and hypotheses."
+  ]
+}

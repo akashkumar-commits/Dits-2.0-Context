@@ -1,0 +1,74 @@
+
+{
+  "schema_version": "1.0",
+  "workflows": [
+    {
+      "id": "HC-WF-001",
+      "name": "Patient Appointment Booking",
+      "segments": [
+        "hospitals-clinics",
+        "telehealth",
+        "behavioral-health"
+      ],
+      "actors": ["patient", "provider", "scheduler"],
+      "website_relevance": "high",
+      "reference_file": "workflows/patient-appointment-booking.json"
+    },
+    {
+      "id": "HC-WF-002",
+      "name": "Diagnostic Test Booking",
+      "segments": ["diagnostic-labs"],
+      "actors": ["patient", "laboratory", "referring_provider"],
+      "website_relevance": "high",
+      "reference_file": "workflows/diagnostic-test-booking.json"
+    },
+    {
+      "id": "HC-WF-003",
+      "name": "Telehealth Consultation",
+      "segments": ["telehealth", "behavioral-health"],
+      "actors": ["patient", "clinician", "support_team"],
+      "website_relevance": "high",
+      "reference_file": "workflows/telehealth-consultation.json"
+    },
+    {
+      "id": "HC-WF-004",
+      "name": "Patient Referral",
+      "segments": ["hospitals-clinics", "diagnostic-labs"],
+      "actors": ["referring_provider", "receiving_team", "patient"],
+      "website_relevance": "medium",
+      "reference_file": "workflows/patient-referral.json"
+    },
+    {
+      "id": "HC-WF-005",
+      "name": "Remote Patient Monitoring",
+      "segments": ["rpm"],
+      "actors": ["patient", "care_team", "administrator"],
+      "website_relevance": "conditional",
+      "reference_file": "workflows/remote-patient-monitoring.json"
+    },
+    {
+      "id": "HC-WF-006",
+      "name": "Healthcare Marketplace Matching",
+      "segments": ["healthcare-marketplaces"],
+      "actors": ["service_seeker", "professional", "platform"],
+      "website_relevance": "high",
+      "reference_file": "workflows/healthcare-marketplace-matching.json"
+    },
+    {
+      "id": "HC-WF-007",
+      "name": "Laboratory Quality Control",
+      "segments": ["diagnostic-labs", "medical-devices"],
+      "actors": ["laboratory_worker", "supervisor", "administrator"],
+      "website_relevance": "conditional",
+      "reference_file": "workflows/laboratory-quality-control.json"
+    },
+    {
+      "id": "HC-WF-008",
+      "name": "Medical Device Inquiry",
+      "segments": ["medical-devices"],
+      "actors": ["buyer", "sales_team", "technical_team"],
+      "website_relevance": "high",
+      "reference_file": "workflows/medical-device-inquiry.json"
+    }
+  ]
+}

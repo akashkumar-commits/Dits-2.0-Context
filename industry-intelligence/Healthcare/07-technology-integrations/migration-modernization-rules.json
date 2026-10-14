@@ -1,0 +1,96 @@
+
+{
+  "schema_version": "1.0",
+  "migration_modes": [
+    {
+      "id": "same_stack_redesign",
+      "description": "Improve design while retaining the existing technical platform."
+    },
+    {
+      "id": "frontend_modernization",
+      "description": "Replace or modernize the presentation layer while preserving approved backend services."
+    },
+    {
+      "id": "cms_migration",
+      "description": "Move content management to a different CMS while preserving approved content and behavior."
+    },
+    {
+      "id": "full_stack_migration",
+      "description": "Replace multiple technology layers according to an approved migration architecture."
+    }
+  ],
+  "migration_process": [
+    {
+      "stage": "discover",
+      "activities": [
+        "Inventory existing pages and assets.",
+        "Identify frameworks and hosting.",
+        "Discover forms, integrations, and authentication.",
+        "Identify data dependencies."
+      ]
+    },
+    {
+      "stage": "assess",
+      "activities": [
+        "Identify technical debt.",
+        "Evaluate compatibility.",
+        "Classify migration risks.",
+        "Identify functionality that must be preserved."
+      ]
+    },
+    {
+      "stage": "plan",
+      "activities": [
+        "Define target architecture.",
+        "Map existing functionality to target functionality.",
+        "Plan content and URL migration.",
+        "Define data migration and rollback approach."
+      ]
+    },
+    {
+      "stage": "execute",
+      "activities": [
+        "Implement approved components.",
+        "Configure supported integrations.",
+        "Migrate approved content.",
+        "Apply security and accessibility requirements."
+      ]
+    },
+    {
+      "stage": "validate",
+      "activities": [
+        "Test critical user journeys.",
+        "Verify integration behavior.",
+        "Validate content and data integrity.",
+        "Test redirects and SEO settings.",
+        "Perform security and accessibility checks."
+      ]
+    },
+    {
+      "stage": "release",
+      "activities": [
+        "Obtain launch approval.",
+        "Execute deployment.",
+        "Monitor errors and availability.",
+        "Use rollback procedures if required."
+      ]
+    }
+  ],
+  "preservation_rules": [
+    "Preserve confirmed business rules.",
+    "Preserve required integrations.",
+    "Preserve access restrictions.",
+    "Preserve critical content and data.",
+    "Preserve SEO-relevant URL relationships.",
+    "Do not replace an operational system without explicit approval."
+  ],
+  "high_risk_changes": [
+    "Authentication replacement",
+    "Patient data migration",
+    "Clinical system integration changes",
+    "Payment workflow changes",
+    "Permission model changes",
+    "Production database changes"
+  ],
+  "approval_rule": "High-risk changes require explicit customer and appropriate technical or domain approval before execution."
+}

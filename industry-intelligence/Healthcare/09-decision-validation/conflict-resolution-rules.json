@@ -1,0 +1,62 @@
+
+{
+  "conflict_types": [
+    "customer_requirement_vs_general_pattern",
+    "customer_requirement_vs_technical_constraint",
+    "source_vs_source",
+    "current_evidence_vs_stale_evidence",
+    "workflow_vs_design",
+    "business_goal_vs_security_requirement",
+    "agent_output_vs_agent_output",
+    "approved_scope_vs_new_request"
+  ],
+  "resolution_rules": [
+    {
+      "conflict": "customer_requirement_vs_general_pattern",
+      "rule": "Prefer the customer's confirmed project-specific requirement when safe, feasible, and within applicable constraints.",
+      "if_unresolved": "Ask for clarification."
+    },
+    {
+      "conflict": "customer_requirement_vs_technical_constraint",
+      "rule": "Do not promise infeasible functionality. Explain the constraint and offer verified alternatives.",
+      "if_unresolved": "Escalate to the technical owner and customer."
+    },
+    {
+      "conflict": "source_vs_source",
+      "rule": "Compare authority, scope, date, jurisdiction, methodology, and applicability.",
+      "if_unresolved": "Record both sources and seek qualified review when material."
+    },
+    {
+      "conflict": "current_evidence_vs_stale_evidence",
+      "rule": "Prefer sufficiently verified current evidence when it applies to the same question.",
+      "if_unresolved": "Mark the claim unverified and obtain updated evidence."
+    },
+    {
+      "conflict": "workflow_vs_design",
+      "rule": "Do not sacrifice a required user task or approved workflow merely to preserve a visual design.",
+      "if_unresolved": "Rework the design and validate the workflow."
+    },
+    {
+      "conflict": "business_goal_vs_security_requirement",
+      "rule": "Do not bypass mandatory safeguards to achieve a business goal. Identify safer alternatives.",
+      "if_unresolved": "Block the unsafe action and route for authorized review."
+    },
+    {
+      "conflict": "agent_output_vs_agent_output",
+      "rule": "Compare underlying evidence, assumptions, dependencies, and decision ownership rather than voting between agents.",
+      "if_unresolved": "Create a conflict record and route it to the accountable owner."
+    },
+    {
+      "conflict": "approved_scope_vs_new_request",
+      "rule": "Treat the new request as a proposed scope change, not as automatically approved work.",
+      "if_unresolved": "Obtain the required customer decision before implementation."
+    }
+  ],
+  "prohibited_behaviors": [
+    "Silently discarding contradictory evidence",
+    "Choosing whichever agent responds most confidently",
+    "Treating general industry knowledge as stronger than verified project evidence without reason",
+    "Inventing a compromise that satisfies neither requirement",
+    "Allowing customer preference to bypass mandatory safety controls"
+  ]
+}

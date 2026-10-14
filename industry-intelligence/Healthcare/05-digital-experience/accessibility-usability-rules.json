@@ -1,0 +1,67 @@
+
+{
+  "schema_version": "1.0",
+  "reference_standard": "WCAG 2.2",
+  "principles": [
+    {
+      "category": "perceivable",
+      "requirements": [
+        "Provide text alternatives for meaningful images.",
+        "Use sufficient text and interface contrast.",
+        "Support text resizing and reflow.",
+        "Do not communicate information through color alone.",
+        "Provide appropriate captions and alternatives for media."
+      ]
+    },
+    {
+      "category": "operable",
+      "requirements": [
+        "Support keyboard navigation.",
+        "Provide visible keyboard focus.",
+        "Avoid keyboard traps.",
+        "Use accessible navigation and controls.",
+        "Ensure interactive targets meet applicable requirements."
+      ]
+    },
+    {
+      "category": "understandable",
+      "requirements": [
+        "Use clear labels and instructions.",
+        "Explain validation errors.",
+        "Keep navigation consistent.",
+        "Avoid unexpected context changes.",
+        "Make important next steps understandable."
+      ]
+    },
+    {
+      "category": "robust",
+      "requirements": [
+        "Use semantic structure.",
+        "Provide programmatically determinable names and roles.",
+        "Ensure status messages are accessible.",
+        "Test with relevant assistive technologies."
+      ]
+    }
+  ],
+  "healthcare_specific_considerations": [
+    "Use understandable language for patient-facing content.",
+    "Do not assume users are medically knowledgeable.",
+    "Consider older users without stereotyping.",
+    "Provide alternatives to complex digital interactions where supported.",
+    "Make critical instructions easy to locate.",
+    "Ensure sensitive forms clearly communicate purpose and next steps."
+  ],
+  "validation": [
+    "Automated accessibility testing",
+    "Keyboard testing",
+    "Screen-reader testing",
+    "Responsive and zoom testing",
+    "Manual usability review",
+    "Testing with representative users where feasible"
+  ],
+  "rules": [
+    "Automated tools alone cannot establish full accessibility.",
+    "Confirm applicable legal and contractual accessibility obligations.",
+    "Do not claim WCAG conformance without appropriate evaluation."
+  ]
+}

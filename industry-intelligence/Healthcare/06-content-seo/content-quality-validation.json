@@ -1,0 +1,76 @@
+
+{
+  "schema_version": "1.0",
+  "validation_dimensions": [
+    {
+      "id": "factual_accuracy",
+      "checks": [
+        "Claims match approved evidence.",
+        "No invented facts.",
+        "No material contradictions.",
+        "Sources are applicable to the claim."
+      ]
+    },
+    {
+      "id": "clinical_safety",
+      "checks": [
+        "Clinical content receives required qualified review.",
+        "No invented diagnoses or treatment instructions.",
+        "Important limitations remain visible."
+      ]
+    },
+    {
+      "id": "regulatory_accuracy",
+      "checks": [
+        "Certifications and approvals are verified.",
+        "Jurisdiction-specific claims are supported.",
+        "Intended-use statements match approved documentation."
+      ]
+    },
+    {
+      "id": "content_quality",
+      "checks": [
+        "Content addresses the intended audience.",
+        "Language is understandable.",
+        "Page has a clear purpose.",
+        "Content avoids unnecessary duplication."
+      ]
+    },
+    {
+      "id": "seo",
+      "checks": [
+        "Title is descriptive.",
+        "Meta description is relevant.",
+        "Heading structure is logical.",
+        "Internal links are useful.",
+        "Canonical and indexability settings are appropriate."
+      ]
+    },
+    {
+      "id": "accessibility",
+      "checks": [
+        "Headings follow a logical structure.",
+        "Links are descriptive.",
+        "Images have appropriate text alternatives.",
+        "Content does not depend solely on visual presentation."
+      ]
+    }
+  ],
+  "publication_statuses": [
+    "draft",
+    "evidence_pending",
+    "expert_review_pending",
+    "customer_approval_pending",
+    "approved",
+    "published",
+    "needs_revision"
+  ],
+  "blocking_conditions": [
+    "Unsupported material clinical claim",
+    "Unverified regulatory approval claim",
+    "Fabricated credential or testimonial",
+    "Unapproved sensitive patient information",
+    "Required expert approval missing"
+  ],
+  "rule": "Automated validation supports but does not replace qualified human review."
+}

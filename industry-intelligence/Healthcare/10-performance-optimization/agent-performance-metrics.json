@@ -1,0 +1,55 @@
+
+{
+  "agent_metrics": [
+    {
+      "metric": "task_success_rate",
+      "definition": "Percentage of evaluated tasks that satisfy their predefined acceptance criteria.",
+      "guardrail": "Use representative test cases and disclose the evaluation scope."
+    },
+    {
+      "metric": "unsupported_claim_rate",
+      "definition": "Rate at which evaluated outputs contain material claims lacking required evidence.",
+      "guardrail": "Define claim categories and assess severity."
+    },
+    {
+      "metric": "workflow_validation_pass_rate",
+      "definition": "Percentage of workflow implementations passing their required tests.",
+      "guardrail": "Critical failures must not be hidden by a high aggregate score."
+    },
+    {
+      "metric": "regression_rate",
+      "definition": "Rate at which changes break previously passing behavior.",
+      "guardrail": "Use a stable, versioned regression suite."
+    },
+    {
+      "metric": "clarification_quality",
+      "definition": "Whether agents ask necessary questions and avoid unnecessary ones.",
+      "guardrail": "Evaluate against expert-labelled scenarios."
+    },
+    {
+      "metric": "human_escalation_rate",
+      "definition": "Share of evaluated tasks routed to human review.",
+      "guardrail": "A lower rate is not automatically better; appropriate escalation is desirable."
+    },
+    {
+      "metric": "execution_failure_rate",
+      "definition": "Rate of failed or incomplete agent actions.",
+      "guardrail": "Distinguish tool failures, model errors, missing permissions, and external-service failures."
+    },
+    {
+      "metric": "time_and_cost_per_task",
+      "definition": "Measured processing time and cost for a defined task.",
+      "guardrail": "Compare equivalent tasks and include retries and human-review effort where possible."
+    }
+  ],
+  "evaluation_rules": [
+    "Measure each agent against its own responsibilities.",
+    "Evaluate multi-agent workflows end to end as well as individual agents.",
+    "Use versioned evaluation datasets.",
+    "Include negative cases and ambiguous requirements.",
+    "Track critical errors separately from minor quality issues.",
+    "Do not use a single aggregate score to approve production readiness.",
+    "Re-evaluate after changes to prompts, models, knowledge sources, tools, or workflows.",
+    "Do not learn from customer or patient data unless the data use is authorized and appropriately governed."
+  ]
+}

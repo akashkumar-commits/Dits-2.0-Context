@@ -1,0 +1,63 @@
+
+{
+  "schema_version": "1.0",
+  "workflow_template": {
+    "workflow_id": "unique_identifier",
+    "workflow_name": "Human-readable name",
+    "industry": "healthcare",
+    "segments": [],
+    "workflow_type": "business_or_service",
+    "description": "",
+    "business_objective": "",
+    "trigger": "",
+    "actors": [],
+    "preconditions": [],
+    "required_inputs": [],
+    "steps": [
+      {
+        "step_id": "S01",
+        "actor": "",
+        "action": "",
+        "system_behavior": "",
+        "decision": null,
+        "next_step": "",
+        "evidence_status": "industry_pattern"
+      }
+    ],
+    "business_rules": [],
+    "exception_paths": [],
+    "integrations": [],
+    "outcomes": [],
+    "website_implications": {
+      "pages": [],
+      "features": [],
+      "form_fields": [],
+      "interface_states": [],
+      "notifications": []
+    },
+    "privacy_and_safety": [],
+    "human_approvals": [],
+    "customer_validation_questions": [],
+    "source_ids": [],
+    "knowledge_status": "reference_pattern",
+    "last_reviewed": null
+  },
+  "allowed_evidence_statuses": [
+    "industry_pattern",
+    "source_supported",
+    "customer_confirmed",
+    "hypothesis",
+    "unknown",
+    "expert_review_required"
+  ],
+  "required_validation": [
+    "actors",
+    "preconditions",
+    "business_rules",
+    "decision_points",
+    "exceptions",
+    "integrations",
+    "sensitive_data_handling",
+    "customer_approval"
+  ]
+}

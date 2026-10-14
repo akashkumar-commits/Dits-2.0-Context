@@ -1,0 +1,54 @@
+
+{
+  "schema_version": "1.0",
+  "concepts": [
+    {
+      "id": "authentication",
+      "definition": "Verification of a user's identity."
+    },
+    {
+      "id": "authorization",
+      "definition": "Determination of permitted resources and actions."
+    },
+    {
+      "id": "sso",
+      "definition": "Single sign-on through a supported identity arrangement."
+    },
+    {
+      "id": "mfa",
+      "definition": "Authentication using multiple factors."
+    },
+    {
+      "id": "rbac",
+      "definition": "Role-based access control."
+    },
+    {
+      "id": "abac",
+      "definition": "Attribute-based access control."
+    }
+  ],
+  "requirements": [
+    "Identify the approved identity provider.",
+    "Determine whether SSO is required.",
+    "Define authentication strength based on risk.",
+    "Define role and resource permissions.",
+    "Verify authorization server-side.",
+    "Define session expiration and recovery behavior.",
+    "Protect credentials and tokens.",
+    "Define audit and access review requirements."
+  ],
+  "healthcare_specific_rules": [
+    "Do not infer patient-record access from login alone.",
+    "Validate caregiver or proxy authorization.",
+    "Separate public, patient, professional, and administrator access.",
+    "Require approval for sensitive permissions.",
+    "Do not expose protected resources through client-side checks alone."
+  ],
+  "approval_requirements": [
+    "Identity architecture",
+    "Role-permission model",
+    "Delegated access",
+    "Sensitive data access",
+    "Administrative privileges"
+  ]
+}

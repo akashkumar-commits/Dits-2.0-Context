@@ -1,0 +1,154 @@
+
+{
+  "schema_version": "1.0",
+  "content_types": [
+    {
+      "id": "service_page",
+      "applicable_segments": [
+        "hospitals-clinics",
+        "telehealth",
+        "behavioral-health",
+        "rpm"
+      ],
+      "purpose": "Explain a healthcare service.",
+      "required_information_candidates": [
+        "Approved service description",
+        "Intended audience",
+        "Service process",
+        "Eligibility and limitations",
+        "Locations or delivery methods",
+        "Next steps"
+      ],
+      "review_requirements": [
+        "Service owner",
+        "Qualified clinical reviewer when needed"
+      ]
+    },
+    {
+      "id": "provider_profile",
+      "applicable_segments": [
+        "hospitals-clinics",
+        "telehealth",
+        "behavioral-health",
+        "healthcare-marketplaces"
+      ],
+      "purpose": "Provide verified professional information.",
+      "required_information_candidates": [
+        "Name",
+        "Professional title",
+        "Verified qualifications",
+        "Specialties",
+        "Affiliations",
+        "Locations",
+        "Supported appointment options"
+      ],
+      "review_requirements": [
+        "Credential verification",
+        "Profile owner approval"
+      ]
+    },
+    {
+      "id": "diagnostic_test_page",
+      "applicable_segments": ["diagnostic-labs"],
+      "purpose": "Explain an available diagnostic test.",
+      "required_information_candidates": [
+        "Test name",
+        "Approved test description",
+        "Specimen requirements",
+        "Preparation instructions",
+        "Collection options",
+        "Locations",
+        "Booking information"
+      ],
+      "review_requirements": [
+        "Laboratory subject matter expert",
+        "Approved technical documentation"
+      ]
+    },
+    {
+      "id": "medical_device_product_page",
+      "applicable_segments": ["medical-devices"],
+      "purpose": "Support technical and commercial product evaluation.",
+      "required_information_candidates": [
+        "Product name",
+        "Intended use",
+        "Approved specifications",
+        "Applications",
+        "Compatibility",
+        "Documentation",
+        "Support",
+        "Inquiry process"
+      ],
+      "review_requirements": [
+        "Product owner",
+        "Regulatory reviewer where applicable"
+      ]
+    },
+    {
+      "id": "location_page",
+      "applicable_segments": [
+        "hospitals-clinics",
+        "diagnostic-labs",
+        "behavioral-health"
+      ],
+      "purpose": "Help users find and access a location.",
+      "required_information_candidates": [
+        "Location name",
+        "Verified address",
+        "Contact details",
+        "Operating hours",
+        "Services available",
+        "Directions",
+        "Accessibility information"
+      ],
+      "review_requirements": [
+        "Location owner"
+      ]
+    },
+    {
+      "id": "educational_article",
+      "applicable_segments": [
+        "hospitals-clinics",
+        "diagnostic-labs",
+        "telehealth",
+        "behavioral-health",
+        "rpm"
+      ],
+      "purpose": "Provide useful educational information.",
+      "required_information_candidates": [
+        "Clearly defined topic",
+        "Intended audience",
+        "Evidence-backed explanation",
+        "Relevant limitations",
+        "Source references",
+        "Review information"
+      ],
+      "review_requirements": [
+        "Qualified reviewer for clinical material"
+      ]
+    },
+    {
+      "id": "case_study",
+      "applicable_segments": [
+        "medical-devices",
+        "rpm",
+        "telehealth",
+        "healthcare-marketplaces"
+      ],
+      "purpose": "Demonstrate verified organizational outcomes.",
+      "required_information_candidates": [
+        "Customer context",
+        "Problem",
+        "Solution",
+        "Implementation",
+        "Verified outcomes",
+        "Approved attribution"
+      ],
+      "review_requirements": [
+        "Customer approval",
+        "Evidence verification",
+        "Privacy review where relevant"
+      ]
+    }
+  ]
+}

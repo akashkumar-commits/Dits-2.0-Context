@@ -1,0 +1,44 @@
+
+{
+  "question_policy": {
+    "ask_when": [
+      "Missing information changes the recommended solution.",
+      "Two requirements conflict.",
+      "The workflow, data owner, or user permission is unclear.",
+      "Migration could remove or alter existing functionality.",
+      "An integration or external service capability is unverified.",
+      "The decision materially affects budget, deadline, scope, or operations.",
+      "Sensitive data handling or a required approval is unclear."
+    ],
+    "do_not_ask_when": [
+      "The answer is already explicitly documented and still current.",
+      "The choice is low impact, reversible, and within approved constraints.",
+      "The answer would not change the available options or next action."
+    ],
+    "question_priority": {
+      "P0_blocking": "Must be answered before a risky or irreversible action.",
+      "P1_important": "Needed before finalizing scope or a material recommendation.",
+      "P2_optional": "Useful for refinement but does not block safe progress."
+    },
+    "question_record": {
+      "question_id": "string",
+      "question": "plain_language_question",
+      "reason": "why_the_answer_matters",
+      "priority": "P0_blocking|P1_important|P2_optional",
+      "decision_ids_affected": [],
+      "answer_type": "text|single_choice|multiple_choice|document|approval",
+      "default_allowed": false,
+      "default_value": null,
+      "consequence_if_unanswered": "string"
+    },
+    "interaction_rules": [
+      "Group related questions into a short discovery step when practical.",
+      "Explain why important questions are being asked.",
+      "Offer understandable options when the decision is bounded.",
+      "Allow unknown or not-yet-decided answers where safe.",
+      "Never imply that silence means approval.",
+      "If a blocking answer is missing, continue only with independent safe work.",
+      "Do not repeatedly ask questions that have already been answered."
+    ]
+  }
+}

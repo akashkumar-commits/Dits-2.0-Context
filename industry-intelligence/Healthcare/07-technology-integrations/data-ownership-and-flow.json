@@ -1,0 +1,80 @@
+
+{
+  "schema_version": "1.0",
+  "data_categories": [
+    {
+      "id": "public_content",
+      "examples": [
+        "Service descriptions",
+        "Published locations",
+        "Approved product information"
+      ],
+      "typical_system": "CMS",
+      "sensitivity": "context_dependent"
+    },
+    {
+      "id": "inquiry_data",
+      "examples": [
+        "Contact requests",
+        "Product inquiries"
+      ],
+      "typical_system": "Approved CRM or inquiry system",
+      "sensitivity": "context_dependent"
+    },
+    {
+      "id": "appointment_data",
+      "examples": [
+        "Booking requests",
+        "Confirmed appointments"
+      ],
+      "typical_system": "Scheduling system",
+      "sensitivity": "potentially_sensitive"
+    },
+    {
+      "id": "clinical_data",
+      "examples": [
+        "Patient observations",
+        "Diagnostic results",
+        "Clinical records"
+      ],
+      "typical_system": "Authorized clinical system",
+      "sensitivity": "high"
+    },
+    {
+      "id": "identity_data",
+      "examples": [
+        "Account identifiers",
+        "Authentication information"
+      ],
+      "typical_system": "Identity provider or approved account system",
+      "sensitivity": "high"
+    }
+  ],
+  "data_flow_template": {
+    "flow_id": "",
+    "source_system": "",
+    "destination_system": "",
+    "data_categories": [],
+    "purpose": "",
+    "direction": "unknown",
+    "trigger": "",
+    "transport": "",
+    "authentication": "",
+    "authorization": "",
+    "storage_location": "",
+    "retention": "",
+    "logging_policy": "",
+    "error_handling": "",
+    "owner": "",
+    "approval_status": "pending"
+  },
+  "rules": [
+    "Identify the authoritative system for each data category.",
+    "Minimize unnecessary duplication.",
+    "Do not send sensitive data to unapproved analytics or marketing services.",
+    "Do not expose secrets or sensitive data in URLs.",
+    "Use approved secure transport and storage.",
+    "Define retention, deletion, and access requirements.",
+    "Require appropriate review for cross-border data transfers."
+  ]
+}

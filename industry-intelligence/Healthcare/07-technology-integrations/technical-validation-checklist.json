@@ -1,0 +1,55 @@
+
+{
+  "schema_version": "1.0",
+  "validation_categories": [
+    {
+      "category": "functionality",
+      "checks": [
+        "Critical journeys work as approved.",
+        "Forms submit to the correct destination.",
+        "Success and failure states are accurate.",
+        "Existing required behavior is preserved."
+      ]
+    },
+    {
+      "category": "integrations",
+      "checks": [
+        "API authentication works.",
+        "Authorization is enforced.",
+        "Timeouts and failures are handled.",
+        "Retries do not create duplicate transactions.",
+        "Data mappings are validated."
+      ]
+    },
+    {
+      "category": "security",
+      "checks": [
+        "Secrets are securely managed.",
+        "Sensitive data is protected.",
+        "Permissions are tested.",
+        "Logging does not expose protected data.",
+        "Applicable security reviews are complete."
+      ]
+    },
+    {
+      "category": "migration",
+      "checks": [
+        "Required content is preserved.",
+        "Data integrity is verified.",
+        "Redirects are tested.",
+        "Rollback procedures are available.",
+        "Critical integrations remain functional."
+      ]
+    },
+    {
+      "category": "operations",
+      "checks": [
+        "Monitoring is configured.",
+        "Backups and recovery are tested as required.",
+        "Deployment approval is recorded.",
+        "Support ownership is defined."
+      ]
+    }
+  ],
+  "release_rule": "Do not publish or deploy high-risk changes until mandatory validation and approvals are complete."
+}

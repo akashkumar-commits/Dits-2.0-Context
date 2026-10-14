@@ -1,0 +1,69 @@
+
+{
+  "schema_version": "1.0",
+  "lifecycle_stages": [
+    {
+      "stage": "discovery",
+      "rules": [
+        "Request system descriptions and data schemas before requesting real records.",
+        "Use synthetic examples where possible.",
+        "Do not ask customers to paste passwords or production secrets into prompts."
+      ]
+    },
+    {
+      "stage": "ai_processing",
+      "rules": [
+        "Use only approved AI services for the data involved.",
+        "Verify applicable data processing, retention, and training settings.",
+        "Minimize sensitive information sent to models.",
+        "Keep customer data isolated according to approved architecture."
+      ]
+    },
+    {
+      "stage": "development",
+      "rules": [
+        "Use synthetic or appropriately de-identified test data.",
+        "Store secrets in approved secret-management systems.",
+        "Restrict access to sensitive development environments."
+      ]
+    },
+    {
+      "stage": "testing",
+      "rules": [
+        "Test access controls with synthetic identities.",
+        "Avoid real patient information in screenshots and test reports.",
+        "Verify data leakage across users, roles, and sessions."
+      ]
+    },
+    {
+      "stage": "deployment",
+      "rules": [
+        "Verify production configuration.",
+        "Confirm approved data flows.",
+        "Restrict access to logs and backups.",
+        "Obtain required security and privacy approval."
+      ]
+    },
+    {
+      "stage": "retirement",
+      "rules": [
+        "Identify retained data and backups.",
+        "Apply approved deletion or archival requirements.",
+        "Revoke obsolete credentials and integrations.",
+        "Verify data transfer and deletion responsibilities."
+      ]
+    }
+  ],
+  "prohibited_defaults": [
+    "Sending patient records to an unapproved AI model",
+    "Using production data in public demonstrations",
+    "Exposing tokens in frontend code",
+    "Sending clinical form fields to general-purpose analytics",
+    "Making sensitive records accessible through public URLs"
+  ],
+  "rules": [
+    "Determine handling requirements from actual data classification and applicable obligations.",
+    "Do not assume that removing names makes health data anonymous.",
+    "Document exceptions and obtain appropriate authorization."
+  ]
+}

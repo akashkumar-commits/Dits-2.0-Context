@@ -1,0 +1,102 @@
+
+{
+  "schema_version": "1.0",
+  "jurisdictions": [
+    {
+      "id": "united_states",
+      "name": "United States",
+      "frameworks_to_assess": [
+        {
+          "name": "HIPAA",
+          "scope": "Assess whether the organization, information, and activities fall within applicable HIPAA requirements."
+        },
+        {
+          "name": "FTC Health Breach Notification Rule",
+          "scope": "Assess applicability to relevant health apps, vendors, and personal health record products."
+        },
+        {
+          "name": "State privacy and breach notification laws",
+          "scope": "Assess applicable state laws based on business operations, data, and affected individuals."
+        },
+        {
+          "name": "State consumer health data laws",
+          "scope": "Assess whether specific state laws apply to the collection or use of consumer health data."
+        }
+      ]
+    },
+    {
+      "id": "european_union",
+      "name": "European Union",
+      "frameworks_to_assess": [
+        {
+          "name": "GDPR",
+          "scope": "Assess territorial scope, lawful basis, special-category data conditions, rights, and transfer requirements."
+        },
+        {
+          "name": "National health and professional rules",
+          "scope": "Assess country-specific healthcare, confidentiality, and professional obligations."
+        },
+        {
+          "name": "EU accessibility requirements",
+          "scope": "Assess the relevant accessibility laws and their scope for the service."
+        }
+      ]
+    },
+    {
+      "id": "united_kingdom",
+      "name": "United Kingdom",
+      "frameworks_to_assess": [
+        {
+          "name": "UK GDPR and Data Protection Act 2018",
+          "scope": "Assess personal data processing, special-category data, rights, and applicable safeguards."
+        },
+        {
+          "name": "PECR",
+          "scope": "Assess applicable rules for cookies, electronic marketing, and related technologies."
+        },
+        {
+          "name": "UK accessibility requirements",
+          "scope": "Assess the obligations applicable to the organization and service."
+        }
+      ]
+    },
+    {
+      "id": "india",
+      "name": "India",
+      "frameworks_to_assess": [
+        {
+          "name": "Digital Personal Data Protection Act and applicable rules",
+          "scope": "Verify commencement, applicable provisions, rules, and obligations at the relevant date."
+        },
+        {
+          "name": "Information Technology Act and applicable rules",
+          "scope": "Assess relevant provisions and rules for the specific data and activities."
+        },
+        {
+          "name": "Healthcare-specific requirements",
+          "scope": "Assess applicable health-sector, medical-device, recordkeeping, and professional requirements."
+        }
+      ]
+    }
+  ],
+  "assessment_fields": [
+    "organization_location",
+    "customer_location",
+    "user_locations",
+    "data_subject_locations",
+    "service_type",
+    "data_categories",
+    "processing_purpose",
+    "controller_or_business_role",
+    "processor_or_vendor_role",
+    "cross_border_transfers",
+    "applicable_contracts"
+  ],
+  "rules": [
+    "This registry is a starting point, not a complete legal inventory.",
+    "Do not infer applicability solely from a company's headquarters.",
+    "Check current legislation, commencement dates, amendments, and official guidance.",
+    "Record unresolved applicability questions for qualified review.",
+    "Do not use a generic compliance checklist as a substitute for legal assessment."
+  ]
+}

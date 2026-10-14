@@ -1,0 +1,72 @@
+
+{
+  "schema_version": "1.0",
+  "mapping_rules": [
+    {
+      "workflow_condition": "User must choose among multiple services",
+      "ux_recommendations": [
+        "Service discovery",
+        "Clear service descriptions",
+        "Selection interface"
+      ]
+    },
+    {
+      "workflow_condition": "User must provide structured information",
+      "ux_recommendations": [
+        "Purpose-specific form",
+        "Input validation",
+        "Clear privacy explanation"
+      ]
+    },
+    {
+      "workflow_condition": "User must choose an available time",
+      "ux_recommendations": [
+        "Availability interface",
+        "Time zone clarity",
+        "Unavailable-slot handling"
+      ],
+      "dependency": "Verified availability source"
+    },
+    {
+      "workflow_condition": "A request requires staff approval",
+      "ux_recommendations": [
+        "Pending status",
+        "Expected next-step explanation",
+        "Notification when supported"
+      ]
+    },
+    {
+      "workflow_condition": "A workflow can fail",
+      "ux_recommendations": [
+        "Specific error messages",
+        "Recovery path",
+        "Support alternative"
+      ]
+    },
+    {
+      "workflow_condition": "A user must access restricted data",
+      "ux_recommendations": [
+        "Authentication",
+        "Authorization checks",
+        "Session handling",
+        "Privacy safeguards"
+      ],
+      "dependency": "Approved security and access model"
+    },
+    {
+      "workflow_condition": "A process is informational only",
+      "ux_recommendations": [
+        "Clear instructions",
+        "Relevant FAQs",
+        "Contact or next-step CTA"
+      ]
+    }
+  ],
+  "implementation_constraints": [
+    "A proposed interface feature is not proof that the customer supports the underlying operation.",
+    "Do not turn a manual request process into instant confirmation without approval.",
+    "Do not invent integrations.",
+    "Distinguish public website functionality from internal application functionality.",
+    "Require confirmation before changing existing workflows during migration."
+  ]
+}

@@ -1,0 +1,59 @@
+
+{
+  "workflow_id": "HC-WF-006",
+  "workflow_name": "Healthcare Marketplace Matching",
+  "knowledge_status": "reference_pattern",
+  "trigger": "A service seeker searches for a healthcare professional or service.",
+  "actors": [
+    "service_seeker",
+    "professional",
+    "marketplace_platform",
+    "administrator"
+  ],
+  "steps": [
+    "Service seeker specifies the needed service.",
+    "Platform applies confirmed search and eligibility criteria.",
+    "Available professional or service profiles are presented.",
+    "Service seeker reviews relevant profiles.",
+    "Service seeker initiates a booking, inquiry, or connection request.",
+    "Professional or platform responds according to the business model.",
+    "Platform displays the confirmed connection status.",
+    "Further scheduling or service delivery occurs through the supported process."
+  ],
+  "decisions": [
+    "Are professionals verified?",
+    "What determines search ranking?",
+    "Is location relevant?",
+    "Can users book instantly?",
+    "Does the professional need to accept a request?",
+    "Are platform fees involved?"
+  ],
+  "exceptions": [
+    "No matching professionals",
+    "Professional unavailable",
+    "Verification incomplete",
+    "Request declined",
+    "Payment failure",
+    "Booking cancelled"
+  ],
+  "website_features": [
+    "Search and filters",
+    "Professional profiles",
+    "Availability or inquiry",
+    "Request status",
+    "User accounts where required"
+  ],
+  "safety_rules": [
+    "Do not invent professional credentials.",
+    "Do not infer clinical suitability from marketplace filters alone.",
+    "Do not invent ratings or reviews.",
+    "Do not assume the platform guarantees provider quality or outcomes."
+  ],
+  "validation_questions": [
+    "Who are the two or more marketplace participant groups?",
+    "How are professionals verified?",
+    "How are results ranked?",
+    "Is the interaction a booking or a connection request?",
+    "How are fees and cancellations handled?"
+  ]
+}

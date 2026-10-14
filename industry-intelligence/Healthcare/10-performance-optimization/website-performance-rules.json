@@ -1,0 +1,82 @@
+
+{
+  "performance_dimensions": {
+    "loading": {
+      "metrics": [
+        "Largest Contentful Paint",
+        "initial server response",
+        "resource loading time"
+      ],
+      "checks": [
+        "Measure representative page templates.",
+        "Inspect image sizes and formats.",
+        "Inspect font loading and render-blocking resources.",
+        "Check caching and server response."
+      ]
+    },
+    "interactivity": {
+      "metrics": [
+        "Interaction to Next Paint",
+        "input responsiveness",
+        "long main-thread tasks"
+      ],
+      "checks": [
+        "Measure interactions on representative pages.",
+        "Inspect excessive JavaScript execution.",
+        "Test menus, search, forms, and booking interactions."
+      ]
+    },
+    "visual_stability": {
+      "metrics": [
+        "Cumulative Layout Shift",
+        "unexpected content movement"
+      ],
+      "checks": [
+        "Reserve image and media dimensions.",
+        "Inspect late-loading banners and fonts.",
+        "Check dynamic content for layout shifts."
+      ]
+    },
+    "reliability": {
+      "metrics": [
+        "HTTP error rate",
+        "JavaScript error rate",
+        "integration failure rate",
+        "availability"
+      ],
+      "checks": [
+        "Monitor failed requests and browser errors.",
+        "Check critical journeys and external dependencies.",
+        "Verify graceful handling of service failures."
+      ]
+    }
+  },
+  "core_web_vitals_reference": {
+    "LCP": {
+      "good": "2.5 seconds or less",
+      "poor": "greater than 4 seconds"
+    },
+    "INP": {
+      "good": "200 milliseconds or less",
+      "poor": "greater than 500 milliseconds"
+    },
+    "CLS": {
+      "good": "0.1 or less",
+      "poor": "greater than 0.25"
+    },
+    "evaluation_context": "Use the applicable official measurement methodology, preferably field data at the 75th percentile where available. The ranges are reference thresholds, not a guarantee of user experience or ranking."
+  },
+  "measurement_modes": {
+    "field": "Real-user measurements under actual device and network conditions.",
+    "lab": "Controlled tests useful for repeatable diagnosis and regression checks.",
+    "synthetic": "Scheduled tests from defined locations, devices, and network settings."
+  },
+  "optimization_rules": [
+    "Record device class, network conditions, region, page template, and test method where available.",
+    "Use both field and lab evidence when practical.",
+    "Prioritize issues by user impact, business importance, and implementation risk.",
+    "Re-test the same pages and conditions after optimization.",
+    "Do not remove accessibility, security, or essential workflow functionality to improve speed scores.",
+    "Do not report a lab result as a real-user field result."
+  ]
+}

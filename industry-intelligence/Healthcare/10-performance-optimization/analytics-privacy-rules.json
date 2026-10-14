@@ -1,0 +1,49 @@
+
+{
+  "data_minimization": {
+    "principles": [
+      "Collect only data necessary for an approved measurement purpose.",
+      "Prefer aggregate metrics when individual-level data is unnecessary.",
+      "Use synthetic data for development and testing where practical.",
+      "Document data sources, recipients, retention, and access controls.",
+      "Review vendors and processing arrangements before enabling new collection."
+    ]
+  },
+  "restricted_analytics_content": [
+    "Patient names linked to healthcare activity",
+    "Medical record numbers",
+    "Diagnoses or symptoms",
+    "Test results",
+    "Appointment details that reveal sensitive information",
+    "Authentication credentials or session tokens",
+    "Sensitive form contents",
+    "Other personal or health information not approved for the analytics purpose"
+  ],
+  "collection_controls": [
+    "Do not send protected health information to general analytics tools without an appropriate, reviewed, and authorized arrangement.",
+    "Prevent sensitive information from entering URLs, event names, page titles, session replay, and error logs.",
+    "Review form analytics and session recording separately from ordinary page-view analytics.",
+    "Apply consent and notice requirements where applicable.",
+    "Do not assume pseudonymized data is automatically anonymous.",
+    "Use least-privilege access and defined retention periods.",
+    "Verify data flows before enabling new tracking."
+  ],
+  "incident_response": {
+    "trigger": "Sensitive information is unexpectedly recorded, transmitted, or exposed.",
+    "actions": [
+      "Stop or contain the affected collection where authorized.",
+      "Preserve necessary incident evidence securely.",
+      "Notify the designated privacy or security owner.",
+      "Assess impact through the approved incident process.",
+      "Make notifications only through authorized people and procedures.",
+      "Verify the remediation before resuming collection."
+    ]
+  },
+  "validation": [
+    "Inspect actual network requests and analytics payloads.",
+    "Test forms with synthetic information.",
+    "Verify consent behavior and tracking configuration.",
+    "Check that logs and dashboards do not expose sensitive content.",
+    "Re-test after analytics vendor or implementation changes."
+  ]
+}

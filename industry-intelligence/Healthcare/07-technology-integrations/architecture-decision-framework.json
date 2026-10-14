@@ -1,0 +1,57 @@
+
+{
+  "schema_version": "1.0",
+  "decision_dimensions": [
+    {
+      "id": "functional_fit",
+      "question": "Does the architecture support confirmed website and workflow requirements?"
+    },
+    {
+      "id": "integration_fit",
+      "question": "Can it reliably connect with the customer's existing systems?"
+    },
+    {
+      "id": "security",
+      "question": "Can the required security and access controls be implemented and validated?"
+    },
+    {
+      "id": "content_management",
+      "question": "Can non-technical users manage approved content effectively?"
+    },
+    {
+      "id": "performance",
+      "question": "Can the architecture meet agreed performance requirements?"
+    },
+    {
+      "id": "maintainability",
+      "question": "Can the customer or delivery team maintain and evolve the solution?"
+    },
+    {
+      "id": "migration_risk",
+      "question": "What existing capabilities or data could be affected?"
+    },
+    {
+      "id": "cost",
+      "question": "What are the implementation and ongoing operating costs?"
+    }
+  ],
+  "decision_output": {
+    "recommended_architecture": "",
+    "alternatives": [],
+    "supporting_requirements": [],
+    "confirmed_constraints": [],
+    "assumptions": [],
+    "integration_dependencies": [],
+    "risks": [],
+    "estimated_cost_status": "not_estimated",
+    "approval_status": "pending"
+  },
+  "rules": [
+    "Do not assume one framework is always optimal.",
+    "Do not invent vendor capabilities or prices.",
+    "Compare meaningful alternatives when the choice is consequential.",
+    "Require validation before committing to unsupported integrations.",
+    "Prefer simpler architectures when they satisfy the confirmed requirements."
+  ]
+}
+    
